@@ -1,0 +1,2851 @@
+[
+  {
+    "slug": "openai",
+    "name": "OpenAI",
+    "englishName": "OpenAI",
+    "glyph": "O",
+    "color": "#111111",
+    "country": "美国",
+    "headquarters": "旧金山",
+    "website": "https://openai.com",
+    "docsUrl": "https://developers.openai.com/api/docs",
+    "pricingUrl": "https://developers.openai.com/api/docs/pricing",
+    "freeTier": "无公开通用 API 试用金；个别嵌入型号有免费限速档",
+    "apiStyles": [
+      "REST",
+      "流式",
+      "Realtime WebSocket"
+    ],
+    "summary": "把推理、工具调用、多模态输入与计算机操作放在同一套 API 里。产品线分层清楚，旗舰贵，低价档极具攻击性。",
+    "positioning": "OpenAI 的优势不只在单个模型，而在于把推理、工具、视觉和行动能力放进一套成熟接口的完整度。它适合做产品主干，但需要主动管理模型路由与长上下文成本。",
+    "highlights": [
+      {
+        "title": "一套 API，覆盖完整任务链",
+        "text": "推理强度、函数调用、搜索、文件和计算机操作都在同一套接口内，减少为不同环节拼接多个供应商的成本。"
+      },
+      {
+        "title": "价格阶梯拉得很开",
+        "text": "从 Luna 的 $0.10 输入价到 Astra 的 $10，可以把抽取、路由和重推理拆给不同档位，不必所有请求都走旗舰。"
+      },
+      {
+        "title": "超长上下文要读细则",
+        "text": "1.05M 上下文很有吸引力，但输入超过 272K 后就进入长上下文费率，长文档任务应先按真实 token 分布测算。"
+      }
+    ],
+    "fitFor": "希望用单一供应商覆盖 Agent、代码、文档与多模态入口，并愿意按任务难度做模型路由的团队。",
+    "watchOuts": [
+      "长上下文触发加价后，实际单价可能明显高于首页标价。",
+      "免费额度并非普遍可用，不能用嵌入型号的免费限速档推断通用试用政策。",
+      "模型代际更新快，上线时应固定 model ID 并关注迁移公告。"
+    ],
+    "pricingNote": "标价为官网标准输入 / 输出 token 价；输入超过 272K 的请求按长上下文费率计费，缓存与批处理价格另计。",
+    "sources": [
+      {
+        "label": "API 定价",
+        "url": "https://developers.openai.com/api/docs/pricing"
+      },
+      {
+        "label": "模型总览",
+        "url": "https://developers.openai.com/api/docs/models"
+      },
+      {
+        "label": "GPT-6 Astra 型号页",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      }
+    ],
+    "models": [
+      {
+        "name": "GPT-6 Astra",
+        "id": "gpt-6-astra",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "旗舰",
+        "description": "旗舰推理型号，面向复杂 Agent、代码与高价值任务。支持从 low 到 max 的多档推理强度，并把搜索、文件和计算机操作纳入工具链。",
+        "tags": [
+          "复杂推理",
+          "工具调用",
+          "视觉输入",
+          "计算机操作"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1.05M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "128K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$10",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $50 / 百万 tokens",
+          "note": "输入 > 272K 时：输入 $20 / 输出 $75"
+        },
+        "docsUrl": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      {
+        "name": "GPT-6.1 Sol",
+        "id": "gpt-6.1-sol",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "均衡",
+        "description": "保留完整工具调用与视觉输入的均衡档位，把旗舰级能力压到更常见的业务预算内，适合作为大多数产品的主模型。",
+        "tags": [
+          "推理",
+          "工具调用",
+          "视觉输入",
+          "长上下文"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1.05M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "128K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$2",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $10 / 百万 tokens",
+          "note": "长上下文与缓存价格按官方细则另计"
+        },
+        "docsUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      },
+      {
+        "name": "GPT-6 Luna",
+        "id": "gpt-6-luna",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "高性价比",
+        "description": "面向高并发与低单价场景的轻量档位，仍支持推理与工具调用。适合分类、信息抽取、批处理和对话前置层。",
+        "tags": [
+          "低成本",
+          "推理",
+          "工具调用",
+          "视觉输入"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1.05M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "128K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$0.10",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $0.50 / 百万 tokens",
+          "note": "长上下文与缓存价格按官方细则另计"
+        },
+        "docsUrl": "https://developers.openai.com/api/docs/models/gpt-6-luna"
+      }
+    ]
+  },
+  {
+    "slug": "anthropic",
+    "name": "Anthropic",
+    "englishName": "Anthropic · Claude",
+    "glyph": "A",
+    "color": "#a84e2c",
+    "country": "美国",
+    "headquarters": "旧金山",
+    "website": "https://www.anthropic.com",
+    "docsUrl": "https://platform.claude.com/docs/en/home",
+    "pricingUrl": "https://claude.com/pricing",
+    "freeTier": "无独立免费 API 额度；订阅计划的 API credits 需另行确认",
+    "apiStyles": [
+      "REST",
+      "流式"
+    ],
+    "summary": "Claude 的产品线围绕长程 Agent 与编程任务展开，全系 1M 上下文、128K 输出。四档分工清晰，但高阶型号并不便宜。",
+    "positioning": "Anthropic 把“能持续工作很久”当成核心卖点：长上下文、长输出、工具调用与自适应思考全系保持一致。选它更多是在为长程 Agent 的稳定性付费，而不是寻找最低 token 价。",
+    "highlights": [
+      {
+        "title": "长程任务的默认选项",
+        "text": "自适应思考与工具调用贯穿全系，适合多步骤编码、研究、审阅与需要持续保持状态的 Agent 工作流。"
+      },
+      {
+        "title": "全系 1M 上下文",
+        "text": "从 Haiku 到 Fable 都是 1M 上下文与 128K 输出，减少为长文档单独切换模型的复杂度。"
+      },
+      {
+        "title": "低价档有明确阶梯",
+        "text": "Haiku 5.5 把入门输入价压到 $0.10，但输入超过 100K 后会跳档，适合短上下文高吞吐，而非无脑长文档处理。"
+      }
+    ],
+    "fitFor": "需要长时间多轮任务、复杂代码与工具编排，并且愿意为稳定性和长上下文支付溢价的团队。",
+    "watchOuts": [
+      "整体单价偏高，没有可直接使用的独立免费 API 额度。",
+      "Haiku 5.5 超过 100K 输入后价格跳档，长上下文成本需要单独测算。",
+      "不提供独立嵌入或语音模型，完整多模态产品仍需拼接其他供应商。"
+    ],
+    "pricingNote": "全系标准上下文为 1M tokens、输出上限 128K；Haiku 5.5 在输入超过 100K 后适用更高档位价格。",
+    "sources": [
+      {
+        "label": "官方定价页",
+        "url": "https://claude.com/pricing"
+      },
+      {
+        "label": "模型总览",
+        "url": "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      {
+        "label": "详细定价文档",
+        "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+      }
+    ],
+    "models": [
+      {
+        "name": "Claude Fable 5.1",
+        "id": "claude-fable-5-1",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "旗舰",
+        "description": "面向高难度长程任务、复杂代码与深度研究的旗舰档。自适应思考常开，适合把工具调用链拉得很长的工作流。",
+        "tags": [
+          "长程 Agent",
+          "代码",
+          "自适应思考",
+          "视觉"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "128K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$10",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $50 / 百万 tokens"
+        },
+        "docsUrl": "https://platform.claude.com/docs/en/models/fable-5-1/overview"
+      },
+      {
+        "name": "Claude Opus 5.5",
+        "id": "claude-opus-5-5",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "旗舰·通用",
+        "description": "比 Fable 更适合通用生产负载的高阶型号，保留 1M 上下文、自适应思考、工具调用与视觉理解。",
+        "tags": [
+          "通用旗舰",
+          "工具调用",
+          "视觉",
+          "长上下文"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "128K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$4",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $20 / 百万 tokens"
+        },
+        "docsUrl": "https://platform.claude.com/docs/en/models/opus-5-5/overview"
+      },
+      {
+        "name": "Claude Sonnet 5.5",
+        "id": "claude-sonnet-5-5",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "均衡",
+        "description": "产品线里最常用的均衡档位，在质量、延迟与价格之间取平衡，适合大多数编程助手和文档分析场景。",
+        "tags": [
+          "均衡",
+          "编程",
+          "工具调用",
+          "视觉"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "128K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$2",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $10 / 百万 tokens"
+        },
+        "docsUrl": "https://platform.claude.com/docs/en/models/sonnet-5-5/overview"
+      },
+      {
+        "name": "Claude Haiku 5.5",
+        "id": "claude-haiku-5-5",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "低价",
+        "description": "面向高吞吐、短上下文任务的小型档位，支持思考、工具调用与视觉。输入超过 100K 后价格会进入更高阶梯。",
+        "tags": [
+          "低成本",
+          "高吞吐",
+          "工具调用",
+          "视觉"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "128K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$0.10",
+          "unit": "/ 百万输入 tokens（≤100K）",
+          "detail": "输出 $0.50 / 百万 tokens（≤100K）",
+          "note": "输入 > 100K 后：输入 $0.50 / 输出 $2.50"
+        },
+        "docsUrl": "https://platform.claude.com/docs/en/models/haiku-5-5/overview"
+      }
+    ]
+  },
+  {
+    "slug": "google",
+    "name": "Google Gemini",
+    "englishName": "Google · Gemini Developer API",
+    "glyph": "G",
+    "color": "#1558c9",
+    "country": "美国",
+    "headquarters": "山景城",
+    "website": "https://ai.google.dev",
+    "docsUrl": "https://ai.google.dev/gemini-api/docs",
+    "pricingUrl": "https://ai.google.dev/gemini-api/docs/pricing",
+    "freeTier": "有免费层；Flash 与 Flash-Lite 可免费调用，数据用于产品改进",
+    "apiStyles": [
+      "REST",
+      "流式"
+    ],
+    "summary": "把 1M 上下文、全模态输入和免费层放在同一条产品线上。Flash 系列价格很有竞争力，但部分价格目前是限时促销。",
+    "positioning": "Gemini 的差异化在输入侧：文本、图像、音频、视频和 PDF 都能直接进入同一条 API。免费层让它非常适合快速验证，但生产预算仍要按促销结束后的正式价格重新计算。",
+    "highlights": [
+      {
+        "title": "全模态输入是一等公民",
+        "text": "文本、图片、音频、视频和 PDF 走同一套 API 与 1M 上下文，适合视频理解、会议分析与多格式文档工作流。"
+      },
+      {
+        "title": "免费层是真实的入口",
+        "text": "Flash 和 Flash-Lite 提供免费调用额度，适合原型与学习。代价是免费层数据可能被用于改进产品。"
+      },
+      {
+        "title": "别把促销价当长期价",
+        "text": "Argon 与 Flash 当前均为限时价格，分别在 2026 年 11 月与 12 月后调整；预算模型应使用常规价做压力测试。"
+      }
+    ],
+    "fitFor": "需要长视频、长文档或多种输入模态，且希望先用免费层验证，再逐步放量的团队。",
+    "watchOuts": [
+      "Argon 与 Flash 的当前价格是限时价，到期后会明显调整。",
+      "免费层内容和数据可能用于产品改进，敏感业务应使用付费层。",
+      "免费层不覆盖 Argon，旗舰型号的试用预算需单独安排。"
+    ],
+    "pricingNote": "Argon 当前为 2026-11-30 前限时价，Flash 为 2026-12-31 前限时价；免费层有速率限制与数据使用条款。",
+    "sources": [
+      {
+        "label": "Gemini API 定价",
+        "url": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      {
+        "label": "模型总览",
+        "url": "https://ai.google.dev/gemini-api/docs/models"
+      },
+      {
+        "label": "Gemini 4 Argon 型号页",
+        "url": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"
+      }
+    ],
+    "models": [
+      {
+        "name": "Gemini 4 Argon",
+        "id": "gemini-4-argon",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "限时价",
+        "description": "旗舰多模态型号，支持高挡位思考、函数调用、搜索接地与代码执行，并可直接读取图像、音频、视频和 PDF。",
+        "tags": [
+          "全模态输入",
+          "思考强度",
+          "函数调用",
+          "搜索接地"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1,048,576 tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "65,536 tokens"
+          },
+          {
+            "label": "长输出",
+            "value": "可扩展至 1M"
+          }
+        ],
+        "price": {
+          "primary": "$2",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $10 / 百万 tokens",
+          "note": "2026-11-30 前限时价；12-01 起 $4 / $20"
+        },
+        "docsUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-4-argon"
+      },
+      {
+        "name": "Gemini 3.8 Flash",
+        "id": "gemini-3.8-flash",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "高性价比",
+        "description": "面向生产的快速多模态档位，具备思考、函数调用、搜索接地和代码执行能力。有免费层，适合原型与低延迟业务。",
+        "tags": [
+          "免费层",
+          "多模态",
+          "低延迟",
+          "函数调用"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1,048,576 tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "65,536 tokens"
+          }
+        ],
+        "price": {
+          "primary": "$0.75",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $3.75 / 百万 tokens",
+          "note": "2026-12-31 前限时价；2027-01-01 起 $1.50 / $7.50"
+        },
+        "docsUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash"
+      },
+      {
+        "name": "Gemini 3.5 Flash-Lite",
+        "id": "gemini-3.5-flash-lite",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "低成本",
+        "description": "产品线里最低门槛的多模态档位，具备思考、函数调用、代码执行与 1M 上下文，并可使用免费层。",
+        "tags": [
+          "免费层",
+          "最低价",
+          "多模态",
+          "1M 上下文"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1,048,576 tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "65,536 tokens"
+          }
+        ],
+        "price": {
+          "primary": "$0.30",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $2.50 / 百万 tokens"
+        },
+        "docsUrl": "https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite"
+      }
+    ]
+  },
+  {
+    "slug": "deepseek",
+    "name": "DeepSeek",
+    "englishName": "DeepSeek · 深度求索",
+    "glyph": "深",
+    "color": "#3d4ff0",
+    "country": "中国",
+    "headquarters": "杭州",
+    "website": "https://www.deepseek.com",
+    "docsUrl": "https://api-docs.deepseek.com",
+    "pricingUrl": "https://api-docs.deepseek.com/quick_start/pricing",
+    "freeTier": "无固定免费额度；可能存在赠送余额",
+    "apiStyles": [
+      "REST",
+      "OpenAI 兼容"
+    ],
+    "summary": "用极低的 token 单价提供 1M 上下文、384K 输出与双币计价。型号不多，但 Flash 与 Pro 的价格都很有穿透力。",
+    "positioning": "DeepSeek 把竞争点压在单位成本与长上下文上：在售只有两款型号，却覆盖了多模态 Flash 和纯文本 Pro 两条路线。适合把每一分 token 成本都算进毛利的产品。",
+    "highlights": [
+      {
+        "title": "1M 上下文不是高价专属",
+        "text": "Flash 与 Pro 都提供 1M 上下文和 384K 输出，长文档与长代码分析不再只能依赖高价位旗舰。"
+      },
+      {
+        "title": "错峰使用更便宜",
+        "text": "价格随空闲与高峰时段浮动，高峰约为空闲价的两倍。可调度的批处理任务可以通过错峰直接降低账单。"
+      },
+      {
+        "title": "双币结算，中文友好",
+        "text": "官网同时给出美元与人民币价格，缓存命中输入价格更低，对中文团队的预算核算更直接。"
+      }
+    ],
+    "fitFor": "高吞吐、成本敏感、以中文或长上下文任务为主，且能够接受按峰谷调度任务的团队。",
+    "watchOuts": [
+      "工作日高峰时段价格约为空闲价的两倍，需要把时段纳入成本模型。",
+      "在售型号仅两款，复杂多模态或丰富产品线需求可能需要其他供应商补充。",
+      "Pro 不支持视觉，图片理解要走 Flash。"
+    ],
+    "pricingNote": "工作日高峰（北京时间 09:00–12:00、14:00–18:00）价格较高，其余时段为空闲价；缓存命中输入按更低价格计费。",
+    "sources": [
+      {
+        "label": "中文定价",
+        "url": "https://api-docs.deepseek.com/zh-cn/quick_start/pricing"
+      },
+      {
+        "label": "英文定价",
+        "url": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      {
+        "label": "API 文档",
+        "url": "https://api-docs.deepseek.com"
+      }
+    ],
+    "models": [
+      {
+        "name": "DeepSeek V4.1 Flash",
+        "id": "deepseek-flash",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "高性价比",
+        "description": "默认开启思考的多模态型号，覆盖工具调用、JSON 输出与视觉输入。价格随峰谷浮动，是长上下文与高吞吐场景的低成本入口。",
+        "tags": [
+          "视觉",
+          "默认思考",
+          "工具调用",
+          "JSON 输出"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "384K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$0.15–0.30",
+          "unit": "/ 百万输入 tokens（空闲–高峰）",
+          "detail": "输出 $0.60–1.20 / 百万 tokens",
+          "note": "人民币：输入 ¥1–2 / 输出 ¥4–8；缓存命中输入 $0.003–0.006"
+        },
+        "docsUrl": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      {
+        "name": "DeepSeek V4 Pro",
+        "id": "deepseek-v4-pro",
+        "category": "text",
+        "badge": "旗舰",
+        "description": "旗舰纯文本型号，默认开启思考，面向复杂推理、代码与工具调用。不支持视觉，但提供同样的 1M 上下文与 384K 输出。",
+        "tags": [
+          "复杂推理",
+          "默认思考",
+          "工具调用",
+          "纯文本"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "384K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$0.66–1.32",
+          "unit": "/ 百万输入 tokens（空闲–高峰）",
+          "detail": "输出 $1.98–3.96 / 百万 tokens",
+          "note": "人民币：输入 ¥4.5–9 / 输出 ¥13.5–27；缓存命中输入 $0.022–0.044"
+        },
+        "docsUrl": "https://api-docs.deepseek.com/quick_start/pricing"
+      }
+    ]
+  },
+  {
+    "slug": "alibaba-bailian",
+    "name": "阿里云百炼",
+    "englishName": "Alibaba Cloud Model Studio · 通义千问",
+    "glyph": "通",
+    "color": "#ff6a00",
+    "country": "中国",
+    "headquarters": "杭州",
+    "website": "https://www.aliyun.com/product/bailian",
+    "docsUrl": "https://help.aliyun.com/zh/model-studio/",
+    "pricingUrl": "https://help.aliyun.com/zh/model-studio/model-pricing",
+    "freeTier": "有；文本模型通常每模型 100 万 tokens、90 天，仅限华北2（北京）",
+    "apiStyles": [
+      "REST",
+      "DashScope SDK"
+    ],
+    "summary": "国内少见的全模态货架：从 1M 上下文的 Qwen 文本与视觉模型，到图像、视频和语音，都能在同一套百炼平台内接入与结算。",
+    "positioning": "百炼的优势是“一家买齐”。Qwen3.8 覆盖旗舰与走量档位，Wan 与 Qwen-Image 补齐图像视频，TTS 补上语音；代价是旗舰单价不低，部分模型的区域、并发与免费额度限制需要提前核对。",
+    "highlights": [
+      {
+        "title": "一套平台覆盖五种模态",
+        "text": "文本、视觉理解、图像、视频与语音共用百炼的鉴权、计费与文档体系，适合希望减少供应商管理成本的团队。"
+      },
+      {
+        "title": "Flash 档位承接高并发",
+        "text": "Qwen3.8-Flash 以不到 1 元的输入价提供 1M 上下文与图/视频理解，适合大流量 Agent 与文档流水线。"
+      },
+      {
+        "title": "视频按秒、图像按张",
+        "text": "Wan3.0 提供 480P–1080P 分档，Qwen-Image 按输出张数计费，创作类预算可以逐次核算。"
+      }
+    ],
+    "fitFor": "希望在一个国内平台上覆盖文本、视觉、图像、视频与语音，并重视中文文档与服务支持的团队。",
+    "watchOuts": [
+      "旗舰 Qwen3.8-Max 的输入价是 Flash 的十余倍，主力业务通常需要按任务分层选型。",
+      "免费额度绑定华北2（北京）地域，跨区或海外调用需自行核对可用性与价格。",
+      "图像模型的默认并发较低（RPM 5），批量出图前需要申请提额。"
+    ],
+    "pricingNote": "均为人民币刊例价，按百万 tokens、张、秒或万字符计费；免费额度与地域、时间限制以官方规则为准。",
+    "sources": [
+      {
+        "label": "百炼产品页",
+        "url": "https://www.aliyun.com/product/bailian"
+      },
+      {
+        "label": "模型定价",
+        "url": "https://help.aliyun.com/zh/model-studio/model-pricing"
+      },
+      {
+        "label": "免费额度规则",
+        "url": "https://help.aliyun.com/zh/model-studio/new-free-quota"
+      }
+    ],
+    "models": [
+      {
+        "name": "Qwen3.8-Max",
+        "id": "qwen3.8-max",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "旗舰",
+        "description": "通义千问的旗舰档位，面向复杂推理、工具调用与智能体任务，并可直接读取图像和视频。1M 上下文适合长文档与整库代码分析。",
+        "tags": [
+          "旗舰推理",
+          "图/视频输入",
+          "工具调用",
+          "上下文缓存"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "131K tokens"
+          }
+        ],
+        "price": {
+          "primary": "¥12",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 ¥36 / 百万 tokens"
+        },
+        "docsUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-max"
+      },
+      {
+        "name": "Qwen3.8-Flash",
+        "id": "qwen3.8-flash",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "高性价比",
+        "description": "走量档位的多模态型号，以不到 1 元的输入价提供 1M 上下文、图/视频理解与 Agent 能力，适合高并发生产环境。",
+        "tags": [
+          "图/视频理解",
+          "Agent",
+          "低成本",
+          "1M 上下文"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "131K tokens"
+          }
+        ],
+        "price": {
+          "primary": "¥0.8",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 ¥2.7 / 百万 tokens"
+        },
+        "docsUrl": "https://help.aliyun.com/zh/model-studio/qwen3-8-flash"
+      },
+      {
+        "name": "Qwen-Image-3.0-Pro",
+        "id": "qwen-image-3.0-pro",
+        "category": "image",
+        "badge": "文字渲染",
+        "description": "面向商业出图的图像模型，支持文生图、图像编辑与较精准的文字渲染。按输出张数计费，2K 输出价格是 1K 的两倍。",
+        "tags": [
+          "文生图",
+          "图像编辑",
+          "文字渲染",
+          "1K / 2K"
+        ],
+        "specs": [
+          {
+            "label": "输出分辨率",
+            "value": "1K / 2K"
+          },
+          {
+            "label": "默认并发",
+            "value": "5 RPM"
+          }
+        ],
+        "price": {
+          "primary": "¥0.25",
+          "unit": "/ 张（1K 输出）",
+          "detail": "2K 输出 ¥0.5 / 张；输入图 ¥0.02 / 张",
+          "note": "默认 RPM 5，批量生产前需申请提额"
+        },
+        "docsUrl": "https://help.aliyun.com/zh/model-studio/qwen-image-3-0-pro"
+      },
+      {
+        "name": "Wan3.0-Video",
+        "id": "wan3.0-video",
+        "category": "video",
+        "badge": "多模态参考",
+        "description": "通义万相的视频生成型号，支持文本、图像、视频与音频参考，输出 480P–1080P，单次最长 30 秒。价格随分辨率按秒分档。",
+        "tags": [
+          "多模态参考",
+          "图生视频",
+          "1080P",
+          "最长 30 秒"
+        ],
+        "specs": [
+          {
+            "label": "最长时长",
+            "value": "30 秒"
+          },
+          {
+            "label": "输入",
+            "value": "文 / 图 / 视频 / 音频参考"
+          }
+        ],
+        "price": {
+          "primary": "¥0.3 起",
+          "unit": "/ 秒",
+          "detail": "480P ¥0.3、720P ¥0.6、1080P ¥1.2 / 秒"
+        },
+        "docsUrl": "https://help.aliyun.com/zh/model-studio/wan3-0-video"
+      },
+      {
+        "name": "Qwen-Audio-3.0-TTS-Plus",
+        "id": "qwen-audio-3.0-tts-plus",
+        "category": "speech",
+        "badge": "多语言 TTS",
+        "description": "覆盖多语言与方言的语音合成型号，支持情绪与风格控制，适合客服、有声内容与品牌播报等需要中文自然度的场景。",
+        "tags": [
+          "多语言",
+          "方言",
+          "情绪控制",
+          "TTS"
+        ],
+        "specs": [
+          {
+            "label": "能力",
+            "value": "多语言 / 方言语音合成"
+          },
+          {
+            "label": "控制",
+            "value": "情绪与风格"
+          }
+        ],
+        "price": {
+          "primary": "¥1.4",
+          "unit": "/ 万字符",
+          "detail": "按合成字符量计费"
+        },
+        "docsUrl": "https://help.aliyun.com/zh/model-studio/qwen-audio-3-0-tts-plus"
+      }
+    ]
+  },
+  {
+    "slug": "moonshot",
+    "name": "月之暗面 Kimi",
+    "englishName": "Moonshot AI · Kimi",
+    "glyph": "月",
+    "color": "#5546e8",
+    "country": "中国",
+    "headquarters": "北京",
+    "website": "https://platform.kimi.com/",
+    "docsUrl": "https://platform.kimi.com/docs/models",
+    "pricingUrl": "https://platform.kimi.com/docs/pricing/chat",
+    "freeTier": "有；国内实名新用户可领 15 元代金券，K3 需充值 ≥ ¥10 且代金券不可用于 K3",
+    "apiStyles": [
+      "REST",
+      "流式"
+    ],
+    "summary": "把长上下文、编程与 Agent 能力集中在少数型号上。K3 提供 1M 上下文与原生视觉，K2.7 Code 给出更务实的日常编程档位。",
+    "positioning": "Kimi 的产品线很克制：K3 打旗舰，K2.7 Code 打编程，K2.6 打通用。三款型号都强调长上下文与 Agent 工作流，缓存命中与未命中的价差明显，适合把重复前缀纳入架构设计。",
+    "highlights": [
+      {
+        "title": "K3 把输出上限拉到 1M",
+        "text": "长报告、整库代码与连续 Agent 轨迹都能在单次请求中完成，原生视觉省去单独的 OCR 环节。"
+      },
+      {
+        "title": "缓存价差值得做工程",
+        "text": "未命中与命中输入价最高相差十倍，稳定系统提示词和长文档前缀能显著摊薄账单。"
+      },
+      {
+        "title": "编程线单独定价",
+        "text": "K2.7 Code 以不到 K3 一半的价格提供 256K 上下文与图/视频输入，适合作为日常编码 Agent 的主力。"
+      }
+    ],
+    "fitFor": "以中文长文档、编程与 Agent 自动化为主，并愿意为缓存命中和上下文工程做优化的团队。",
+    "watchOuts": [
+      "K3 的输入与输出价格均较高，且免费代金券不可用于 K3。",
+      "K2.6 与 K2.7 Code 的上下文为 256K，明显低于 K3。",
+      "只覆盖文本与视觉理解，不提供图像、视频或语音生成 API。"
+    ],
+    "pricingNote": "人民币刊例价；输入价格区分缓存命中与未命中，K3 需充值满 ¥10 才能开通。",
+    "sources": [
+      {
+        "label": "Kimi 开放平台",
+        "url": "https://platform.kimi.com/"
+      },
+      {
+        "label": "模型列表",
+        "url": "https://platform.kimi.com/docs/models"
+      },
+      {
+        "label": "Chat 定价",
+        "url": "https://platform.kimi.com/docs/pricing/chat"
+      }
+    ],
+    "models": [
+      {
+        "name": "Kimi K3",
+        "id": "kimi-k3",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "旗舰",
+        "description": "Kimi 的旗舰型号，原生视觉、1M 上下文、最高 1M 输出。面向复杂推理、编程与长程 Agent，缓存命中后的输入价显著降低。",
+        "tags": [
+          "原生视觉",
+          "推理",
+          "编程",
+          "Agent"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "1M tokens"
+          }
+        ],
+        "price": {
+          "primary": "¥20",
+          "unit": "/ 百万输入 tokens（未命中缓存）",
+          "detail": "输出 ¥100 / 百万 tokens",
+          "note": "缓存命中输入 ¥2 / 百万 tokens；K3 需充值满 ¥10 开通"
+        },
+        "docsUrl": "https://platform.kimi.com/docs/guide/kimi-k3-quickstart"
+      },
+      {
+        "name": "Kimi K2.7 Code",
+        "id": "kimi-k2.7-code",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "编程",
+        "description": "面向编程与 Agent 工作流的型号，支持图像与视频输入、工具调用，256K 上下文。高速版以双倍单价换取更低延迟。",
+        "tags": [
+          "编程",
+          "Agent",
+          "图/视频输入",
+          "工具调用"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "256K tokens"
+          },
+          {
+            "label": "输入模态",
+            "value": "文本 / 图像 / 视频"
+          }
+        ],
+        "price": {
+          "primary": "¥6.5",
+          "unit": "/ 百万输入 tokens（未命中缓存）",
+          "detail": "输出 ¥27 / 百万 tokens",
+          "note": "缓存命中输入 ¥1.3；高速版输入 ¥13 / 输出 ¥54"
+        },
+        "docsUrl": "https://platform.kimi.com/docs/guide/kimi-k2-7-code-quickstart"
+      },
+      {
+        "name": "Kimi K2.6",
+        "id": "kimi-k2.6",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "通用",
+        "description": "通用对话型号，能理解图像与视频，256K 上下文。价格与 K2.7 Code 接近，适合非编程类的高频业务与内容处理。",
+        "tags": [
+          "通用对话",
+          "图/视频理解",
+          "256K 上下文"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "256K tokens"
+          },
+          {
+            "label": "输入模态",
+            "value": "文本 / 图像 / 视频"
+          }
+        ],
+        "price": {
+          "primary": "¥6.5",
+          "unit": "/ 百万输入 tokens（未命中缓存）",
+          "detail": "输出 ¥27 / 百万 tokens",
+          "note": "缓存命中输入 ¥1.1"
+        },
+        "docsUrl": "https://platform.kimi.com/docs/guide/kimi-k2-6-quickstart"
+      }
+    ]
+  },
+  {
+    "slug": "zhipu",
+    "name": "智谱 AI GLM",
+    "englishName": "Zhipu AI · BigModel",
+    "glyph": "智",
+    "color": "#5c3bd1",
+    "country": "中国",
+    "headquarters": "北京",
+    "website": "https://open.bigmodel.cn/",
+    "docsUrl": "https://docs.bigmodel.cn/cn/guide/start/model-overview",
+    "pricingUrl": "https://docs.bigmodel.cn/cn/guide/start/pricing",
+    "freeTier": "有；GLM-4.7-Flash、GLM-4.6V-Flash、CogView-3-Flash、CogVideoX-Flash 提供免费档",
+    "apiStyles": [
+      "REST",
+      "流式"
+    ],
+    "summary": "文本、视觉、图像、视频与语音均有在售型号，并用 Flash 与免费档把入门成本压得很低。GLM-5.3 负责旗舰编程与 Agent。",
+    "positioning": "智谱用一条相对完整的国产模型线覆盖五类需求：GLM-5.3 对标旗舰，GLM-5.3-Flash 以极低价格提供原生视觉，CogVideoX 与 GLM-Image 负责生成。它更适合愿意组合多款型号、而非只盯单一旗舰的团队。",
+    "highlights": [
+      {
+        "title": "Flash 也能读图看视频",
+        "text": "GLM-5.3-Flash 在 1 元以内提供原生多模态理解，适合把视觉输入做成默认能力。"
+      },
+      {
+        "title": "生成能力按次试水",
+        "text": "GLM-Image 按次 ¥0.1、CogVideoX-3 按次 ¥1，创作验证的成本清晰。"
+      },
+      {
+        "title": "免费档覆盖多个模态",
+        "text": "文本、视觉、图像、视频都有 Flash 级免费型号，便于搭建原型与教学示例。"
+      }
+    ],
+    "fitFor": "需要国产模型全家桶、看重编程与 Agent，并希望用低价 Flash 验证多模态产品形态的团队。",
+    "watchOuts": [
+      "CogVideoX-3 与 GLM-Image 按次计价，高分辨率或特殊参数是否加价需以具体文档为准。",
+      "旗舰 GLM-5.3 的输入价与 Flash 相差十倍，通用任务不必默认上旗舰。",
+      "部分免费型号有速率或功能限制，生产前需核对最新条款。"
+    ],
+    "pricingNote": "人民币刊例价；文本按百万 tokens，图像与视频按次，语音按万字符计费。",
+    "sources": [
+      {
+        "label": "BigModel 开放平台",
+        "url": "https://open.bigmodel.cn/"
+      },
+      {
+        "label": "模型总览",
+        "url": "https://docs.bigmodel.cn/cn/guide/start/model-overview"
+      },
+      {
+        "label": "定价文档",
+        "url": "https://docs.bigmodel.cn/cn/guide/start/pricing"
+      }
+    ],
+    "models": [
+      {
+        "name": "GLM-5.3",
+        "id": "glm-5.3",
+        "category": "text",
+        "badge": "旗舰编程",
+        "description": "智谱旗舰文本型号，面向复杂编程与 Agent 任务，1M 上下文。输入价与 Flash 拉开明显档位，适合高难任务而非通用流量。",
+        "tags": [
+          "编程",
+          "Agent",
+          "复杂推理",
+          "1M 上下文"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          }
+        ],
+        "price": {
+          "primary": "¥8",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 ¥28 / 百万 tokens"
+        },
+        "docsUrl": "https://docs.bigmodel.cn/cn/guide/models/text/glm-5.3"
+      },
+      {
+        "name": "GLM-5.3-Flash",
+        "id": "glm-5.3-flash",
+        "category": "multimodal",
+        "alsoIn": [
+          "text"
+        ],
+        "badge": "低价多模态",
+        "description": "以 Flash 价格提供原生图像、视频与文件理解的多模态型号，1M 上下文，也适合视觉编程与文档 Agent。",
+        "tags": [
+          "原生多模态",
+          "视觉编程",
+          "低成本",
+          "1M 上下文"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "输入",
+            "value": "图 / 视频 / 文件"
+          }
+        ],
+        "price": {
+          "primary": "¥0.8",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 ¥2.8 / 百万 tokens"
+        },
+        "docsUrl": "https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash"
+      },
+      {
+        "name": "GLM-Image",
+        "id": "glm-image",
+        "category": "image",
+        "badge": "按次计费",
+        "description": "文生图型号，强调较精准的文字渲染，支持 512–2048px 输出。按次计费，单张成本低，适合批量海报与配图。",
+        "tags": [
+          "文生图",
+          "文字渲染",
+          "低成本",
+          "多尺寸"
+        ],
+        "specs": [
+          {
+            "label": "输出分辨率",
+            "value": "512–2048 px"
+          },
+          {
+            "label": "计费",
+            "value": "按次"
+          }
+        ],
+        "price": {
+          "primary": "¥0.1",
+          "unit": "/ 次",
+          "detail": "单次生成一张图像"
+        },
+        "docsUrl": "https://docs.bigmodel.cn/cn/guide/models/image-generation/glm-image"
+      },
+      {
+        "name": "CogVideoX-3",
+        "id": "cogvideox-3",
+        "category": "video",
+        "badge": "最高 4K",
+        "description": "智谱视频生成型号，支持文生视频、图生视频与首尾帧控制，时长 5 秒或 10 秒，最高 4K。按次计费便于估算镜头成本。",
+        "tags": [
+          "文生视频",
+          "图生视频",
+          "首尾帧",
+          "4K"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "5s / 10s"
+          },
+          {
+            "label": "分辨率",
+            "value": "最高 4K"
+          }
+        ],
+        "price": {
+          "primary": "¥1",
+          "unit": "/ 次",
+          "detail": "按生成任务计费"
+        },
+        "docsUrl": "https://docs.bigmodel.cn/cn/guide/models/video-generation/cogvideox-3"
+      },
+      {
+        "name": "GLM-TTS",
+        "id": "glm-tts",
+        "category": "speech",
+        "badge": "情感 TTS",
+        "description": "支持流式与非流式的语音合成型号，强调情感表达。按万字符计费，适合对话、旁白与客服播报。",
+        "tags": [
+          "情感 TTS",
+          "流式输出",
+          "中文"
+        ],
+        "specs": [
+          {
+            "label": "模式",
+            "value": "流式 / 非流式"
+          },
+          {
+            "label": "能力",
+            "value": "情感语音合成"
+          }
+        ],
+        "price": {
+          "primary": "¥2",
+          "unit": "/ 万字符",
+          "detail": "按合成字符量计费"
+        },
+        "docsUrl": "https://docs.bigmodel.cn/cn/guide/models/sound-and-video/glm-tts"
+      }
+    ]
+  },
+  {
+    "slug": "minimax",
+    "name": "MiniMax",
+    "englishName": "MiniMax · 海螺",
+    "glyph": "M",
+    "color": "#d93a56",
+    "country": "中国",
+    "headquarters": "上海",
+    "website": "https://platform.minimaxi.com/",
+    "docsUrl": "https://platform.minimax.cn/docs/guides/models-intro",
+    "pricingUrl": "https://platform.minimax.cn/docs/pricing/overview",
+    "freeTier": "未公开统一额度；以控制台活动与优惠为准",
+    "apiStyles": [
+      "REST",
+      "流式"
+    ],
+    "summary": "语音与海螺视频是两张差异化牌。新发布的 M3.1 Flash 以 1M 上下文和 ¥1 / ¥4 的文本价格补强入口，产品线覆盖文本、语音、图像与视频四个模态。",
+    "positioning": "MiniMax 更像一家“多模态专才”：TTS 高保真、视频有海螺，图像与文本则用低价补位。M3.1 Flash 于 2026 年 10 月发布，输入 ¥1、输出 ¥4，思考默认开启；M3 仍以永久五折价在售，但超过 512K 上下文后会跳价。",
+    "highlights": [
+      {
+        "title": "语音是长板",
+        "text": "Speech-2.8-HD 面向高保真、情绪与混音需求，支持同步与超长异步合成。"
+      },
+      {
+        "title": "视频按条计价",
+        "text": "Hailuo 2.3 以 768P / 1080P 与 6s / 10s 组合给出明确单条价格，适合镜头级预算。"
+      },
+      {
+        "title": "M3.1 Flash 把文本入口压到 ¥1",
+        "text": "1M 上下文、图像与视频输入，输入 ¥1 / 输出 ¥4 每百万 tokens，适合高频 Agent 与批量任务。"
+      }
+    ],
+    "fitFor": "以语音合成、短视频生成或中文内容生产为核心，同时需要一款多模态文本模型的团队。",
+    "watchOuts": [
+      "M3.1 Flash 的思考模式默认开启且不可关闭，输出 token 会包含推理消耗，预算需按 max_completion_tokens 预留。",
+      "M3 超过 512K tokens 的输入与输出价格约为低价档的两倍。",
+      "语音按“万字符”计费，且一个汉字按两个字符计算，估算时需换算。",
+      "官方未公开统一免费额度，试用成本需按控制台活动确认。"
+    ],
+    "pricingNote": "人民币刊例价；M3.1 Flash 输入 ¥1 / 输出 ¥4、缓存输入 ¥0.1（每百万 tokens），M3 为永久五折后价格；语音按万字符（1 汉字 = 2 字符）、视频按条、图像按张计费。",
+    "sources": [
+      {
+        "label": "MiniMax 开放平台",
+        "url": "https://platform.minimaxi.com/"
+      },
+      {
+        "label": "模型总览",
+        "url": "https://platform.minimax.cn/docs/guides/models-intro"
+      },
+      {
+        "label": "定价总览",
+        "url": "https://platform.minimax.cn/docs/pricing/overview"
+      }
+    ],
+    "models": [
+      {
+        "name": "MiniMax-M3.1-Flash",
+        "id": "MiniMax-M3.1-Flash",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "2026.10 新发布",
+        "description": "2026 年 10 月发布的高性价比多模态文本型号，1M 上下文、可调思考深度，支持文本、图像与视频输入，主打 Coding 与 Agent 场景。",
+        "tags": [
+          "原生多模态",
+          "Coding",
+          "Agent",
+          "1M 上下文",
+          "低延迟"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "输入模态",
+            "value": "文本 / 图像 / 视频"
+          },
+          {
+            "label": "思考模式",
+            "value": "默认开启，强度可调"
+          }
+        ],
+        "price": {
+          "primary": "¥1",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 ¥4 / 百万 tokens",
+          "note": "隐式缓存输入 ¥0.1 / 百万 tokens"
+        },
+        "docsUrl": "https://platform.minimax.cn/docs/guides/text-generation"
+      },
+      {
+        "name": "MiniMax-M3",
+        "id": "MiniMax-M3",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "原生多模态",
+        "description": "原生多模态文本型号，覆盖 Coding 与 Agent，1M 上下文。输入输出按 512K 分档，页面展示的是永久五折后的低价档。",
+        "tags": [
+          "原生多模态",
+          "Coding",
+          "Agent",
+          "1M 上下文"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "价格分档",
+            "value": "≤ 512K / > 512K"
+          }
+        ],
+        "price": {
+          "primary": "¥2.1",
+          "unit": "/ 百万输入 tokens（≤ 512K）",
+          "detail": "输出 ¥8.4 / 百万 tokens",
+          "note": "> 512K：输入 ¥4.2 / 输出 ¥16.8；为永久五折后价"
+        },
+        "docsUrl": "https://platform.minimax.cn/docs/guides/text-generation"
+      },
+      {
+        "name": "Speech-2.8-HD",
+        "id": "speech-2.8-hd",
+        "category": "speech",
+        "badge": "高保真 TTS",
+        "description": "MiniMax 的高保真语音合成型号，支持情绪与混音，单次同步合成最多 1 万字符，异步可处理 100 万字符的长文本。",
+        "tags": [
+          "高保真",
+          "情绪 TTS",
+          "混音",
+          "长文本"
+        ],
+        "specs": [
+          {
+            "label": "同步上限",
+            "value": "1 万字符 / 次"
+          },
+          {
+            "label": "异步上限",
+            "value": "100 万字符 / 次"
+          }
+        ],
+        "price": {
+          "primary": "¥3.5",
+          "unit": "/ 万字符",
+          "detail": "1 个汉字按 2 个字符计算"
+        },
+        "docsUrl": "https://platform.minimax.cn/docs/api-reference/speech-t2a-http"
+      },
+      {
+        "name": "MiniMax-Hailuo-2.3",
+        "id": "MiniMax-Hailuo-2.3",
+        "category": "video",
+        "badge": "海螺视频",
+        "description": "海螺视频生成型号，支持文生视频与图生视频，提供 768P / 1080P 与 6s / 10s 组合。按条计价，镜头预算直观。",
+        "tags": [
+          "文生视频",
+          "图生视频",
+          "768P",
+          "1080P"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "6s / 10s"
+          },
+          {
+            "label": "分辨率",
+            "value": "768P / 1080P"
+          }
+        ],
+        "price": {
+          "primary": "¥2.00 起",
+          "unit": "/ 条",
+          "detail": "768P 6s ¥2.00；1080P 6s ¥3.50"
+        },
+        "docsUrl": "https://platform.minimax.cn/docs/guides/video-generation"
+      },
+      {
+        "name": "Image-01",
+        "id": "image-01",
+        "category": "image",
+        "badge": "低价出图",
+        "description": "低成本图像型号，支持文生图与图生图、多尺寸输出。按张计费，适合大批量配图与初步创意探索。",
+        "tags": [
+          "文生图",
+          "图生图",
+          "多尺寸",
+          "低价"
+        ],
+        "specs": [
+          {
+            "label": "能力",
+            "value": "文生图 / 图生图"
+          },
+          {
+            "label": "尺寸",
+            "value": "多尺寸"
+          }
+        ],
+        "price": {
+          "primary": "¥0.025",
+          "unit": "/ 张",
+          "detail": "按生成张数计费"
+        },
+        "docsUrl": "https://platform.minimax.cn/docs/guides/image-generation"
+      }
+    ]
+  },
+  {
+    "slug": "volcengine",
+    "name": "火山方舟",
+    "englishName": "Volcengine Ark · 豆包大模型",
+    "glyph": "火",
+    "color": "#1661ff",
+    "country": "中国",
+    "headquarters": "北京",
+    "website": "https://www.volcengine.com/product/ark",
+    "docsUrl": "https://www.volcengine.com/docs/82379/1554679",
+    "pricingUrl": "https://www.volcengine.com/docs/82379/1544106",
+    "freeTier": "有；新用户与活动赠送单模型约 50 万 tokens，协作奖励每日单模型最高 500 万",
+    "apiStyles": [
+      "REST",
+      "流式"
+    ],
+    "summary": "模型覆盖全、更新节奏快，Seedream 与 Seedance 在图像视频创作上尤其突出。价格激进，但快照 ID 与活动规则需要接入前核对。",
+    "positioning": "火山方舟把豆包系列做成一条快速迭代的产品线：文本有周更的 Seed-Evolving，多模态与 Turbo 覆盖日常流量，图像视频则用 Seedream / Seedance 打出创作能力。代价是型号命名与快照较多，稳定性优先的项目要锁定版本。",
+    "highlights": [
+      {
+        "title": "Seedance 走向有声与全参考",
+        "text": "2.5 版本支持文、图、视频与音频参考，可生成带声音的视频，时长覆盖 4–30 秒、最高 4K。"
+      },
+      {
+        "title": "文本型号更新极快",
+        "text": "Doubao-Seed-Evolving 按周迭代，适合追新；生产环境则应锁定快照版本。"
+      },
+      {
+        "title": "图像编辑分项计价",
+        "text": "Seedream 5.0 Pro 输入图 ¥0.02、输出 ¥0.3 起，便于估算整条编辑流水线的成本。"
+      }
+    ],
+    "fitFor": "重视中文创作、图像视频生成与快速模型迭代，并具备版本管理能力的团队。",
+    "watchOuts": [
+      "型号 ID 带有日期快照（如 -260628），不同快照的价格与能力可能不同。",
+      "Seedance 按视频 tokens 计费，是否包含参考视频会改变单价。",
+      "免费额度依赖活动规则与协作奖励，不适合当作稳定的生产能力。"
+    ],
+    "pricingNote": "人民币刊例价；文本按百万 tokens，图像按张，视频按视频 tokens，语音按万字符计费。",
+    "sources": [
+      {
+        "label": "火山方舟",
+        "url": "https://www.volcengine.com/product/ark"
+      },
+      {
+        "label": "模型文档",
+        "url": "https://www.volcengine.com/docs/82379/1554679"
+      },
+      {
+        "label": "模型定价",
+        "url": "https://www.volcengine.com/docs/82379/1544106"
+      }
+    ],
+    "models": [
+      {
+        "name": "Doubao-Seed-Evolving",
+        "id": "doubao-seed-evolving",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "周更旗舰",
+        "description": "豆包的主力旗舰，按周迭代，覆盖复杂 Coding 与 Agent 任务，支持图像和视频输入。1M 上下文、最高 256K 输出。",
+        "tags": [
+          "Coding",
+          "Agent",
+          "图/视频输入",
+          "周级迭代"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "256K tokens"
+          }
+        ],
+        "price": {
+          "primary": "¥6",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 ¥30 / 百万 tokens"
+        },
+        "docsUrl": "https://ark.volcengine.com/region:cn-beijing/model/detail?Id=doubao-seed-evolving"
+      },
+      {
+        "name": "Doubao-Seed-2.1-Turbo",
+        "id": "doubao-seed-2-1-turbo",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "均衡款",
+        "description": "效果与成本之间的均衡档位，支持图像与视频输入，256K 上下文。适合作为大流量业务的默认文本模型。",
+        "tags": [
+          "高性价比",
+          "图/视频输入",
+          "大流量"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "256K tokens"
+          },
+          {
+            "label": "输入模态",
+            "value": "文本 / 图像 / 视频"
+          }
+        ],
+        "price": {
+          "primary": "¥3",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 ¥15 / 百万 tokens"
+        },
+        "docsUrl": "https://ark.volcengine.com/region:cn-beijing/model/detail?Id=doubao-seed-2-1-turbo"
+      },
+      {
+        "name": "Doubao-Seedream-5.0-Pro",
+        "id": "doubao-seedream-5-0-pro-260628",
+        "category": "image",
+        "badge": "精准编辑",
+        "description": "豆包图像生成与编辑型号，强调精准编辑，输入图与输出图分别计价。默认 1K 输出，更高分辨率另计。",
+        "tags": [
+          "文生图",
+          "精准编辑",
+          "1K 输出"
+        ],
+        "specs": [
+          {
+            "label": "默认输出",
+            "value": "1K"
+          },
+          {
+            "label": "计费",
+            "value": "输入图 / 输出张分别计价"
+          }
+        ],
+        "price": {
+          "primary": "¥0.3 起",
+          "unit": "/ 张输出",
+          "detail": "输入图 ¥0.02 / 张；更高分辨率另计"
+        },
+        "docsUrl": "https://www.volcengine.com/docs/ark/seedream-5-0-pro"
+      },
+      {
+        "name": "Doubao-Seedance-2.5",
+        "id": "doubao-seedance-2-5-260628",
+        "category": "video",
+        "badge": "有声视频",
+        "description": "全模态参考的视频生成型号，可生成带声音的视频，支持 4–30 秒与 480P–4K 输出。按视频 tokens 计费，参考视频会改变单价。",
+        "tags": [
+          "全模态参考",
+          "有声视频",
+          "4K",
+          "最长 30 秒"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "4–30 秒"
+          },
+          {
+            "label": "分辨率",
+            "value": "480P–4K"
+          }
+        ],
+        "price": {
+          "primary": "¥42",
+          "unit": "/ 百万视频 tokens（含视频输入）",
+          "detail": "不含视频输入 ¥70 / 百万 tokens"
+        },
+        "docsUrl": "https://www.volcengine.com/docs/ark/seedance-2-5"
+      },
+      {
+        "name": "Doubao 语音合成 2.0",
+        "id": "seed-tts-2.0",
+        "category": "speech",
+        "badge": "高保真 TTS",
+        "description": "豆包语音合成模型，支持情绪与口音风格，通过 ResourceId 接入。按万字符计费，适合中文客服与内容播报。",
+        "tags": [
+          "高保真",
+          "情绪",
+          "口音",
+          "TTS"
+        ],
+        "specs": [
+          {
+            "label": "接入方式",
+            "value": "ResourceId"
+          },
+          {
+            "label": "风格",
+            "value": "情绪 / 口音"
+          }
+        ],
+        "price": {
+          "primary": "¥5",
+          "unit": "/ 万字符",
+          "detail": "按合成字符量计费"
+        },
+        "docsUrl": "https://www.volcengine.com/docs/DoubaoVoice/unidirectional-streaming-text-to-speech-http"
+      }
+    ]
+  },
+  {
+    "slug": "black-forest-labs",
+    "name": "Black Forest Labs",
+    "englishName": "BFL · FLUX",
+    "glyph": "B",
+    "color": "#2f2f2b",
+    "country": "德国",
+    "headquarters": "弗赖堡",
+    "website": "https://bfl.ai/",
+    "docsUrl": "https://docs.bfl.ml/",
+    "pricingUrl": "https://bfl.ai/pricing",
+    "freeTier": "未列免费额度；需先购买 credits（1 credit = $0.01）",
+    "apiStyles": [
+      "REST",
+      "异步任务"
+    ],
+    "summary": "FLUX 系列把图像生成做成一条可精确定价的产线：FLUX 3 以分辨率分档，FLUX.2 按百万像素与参考图计费。4K、参考图与编辑控制是它的主卖点。",
+    "positioning": "BFL 只做图像，因此参数与计价都围着输出质量转。FLUX 3 提供最高 4K、最多 10 张参考图、bbox 与 grounding；FLUX.2 的 pro 与 max 用按 MP 计价覆盖 4MP 以内的生产需求。选型时先定尺寸、参考图数量与是否需要联网检索，起价本身没有太大意义。",
+    "highlights": [
+      {
+        "title": "4K 与十张参考图",
+        "text": "FLUX 3 最高输出约 16MP 的 4K 图像，支持 1–10 张参考图、图像编辑、bbox 与 grounding，适合品牌资产与复杂改图。"
+      },
+      {
+        "title": "FLUX.2 按像素算账",
+        "text": "首 MP $0.03 起、后续每 MP $0.015，参考图再按 MP 计价；输出越大、参考越多，单张成本越接近生产预算而不是起价。"
+      },
+      {
+        "title": "分辨率台阶很陡",
+        "text": "FLUX 3 从 2K 的 $0.10 跳到 4K 的 $0.607。是否真的需要 4K，应该先用实际投放尺寸验证。"
+      }
+    ],
+    "fitFor": "需要高分辨率、参考图一致性与可编辑图像输出的电商、广告与品牌团队。",
+    "watchOuts": [
+      "FLUX.2 按百万像素与参考图分别计费，首 MP 的低价不能代表整张图成本。",
+      "FLUX 3 的 4K 单张约 $0.607，是 2K 档的六倍。",
+      "官方未列免费额度，需要先购买 credits；并发与排队规则以账户等级为准。"
+    ],
+    "pricingNote": "美元计价；FLUX 3 按张与输出分辨率分档，FLUX.2 按首 MP 加后续 MP 计费，参考图另计。",
+    "sources": [
+      {
+        "label": "FLUX 3 图像文档",
+        "url": "https://docs.bfl.ml/flux_3/flux3_image_overview"
+      },
+      {
+        "label": "FLUX.2 文档",
+        "url": "https://docs.bfl.ml/flux_2/flux2_overview"
+      },
+      {
+        "label": "官方定价",
+        "url": "https://bfl.ai/pricing"
+      }
+    ],
+    "models": [
+      {
+        "name": "FLUX 3 Image",
+        "id": "/v1/flux-3-image",
+        "category": "image",
+        "badge": "4K / 编辑",
+        "description": "BFL 的旗舰图像型号，支持文生图、图像编辑、bbox 与 grounding，可使用 1–10 张参考图，输出最高约 16MP 的 4K 图像。价格按输出分辨率分为五档。",
+        "tags": [
+          "最高 4K",
+          "10 张参考图",
+          "bbox",
+          "图像编辑"
+        ],
+        "specs": [
+          {
+            "label": "输出档位",
+            "value": "768² / 1K / 1.5K / 2K / 4K"
+          },
+          {
+            "label": "参考图",
+            "value": "1–10 张"
+          },
+          {
+            "label": "能力",
+            "value": "文生图 / 编辑 / grounding"
+          }
+        ],
+        "price": {
+          "primary": "$0.041 起",
+          "unit": "/ 张（768²）",
+          "detail": "1K $0.048 / 1.5K $0.07 / 2K $0.10 / 4K $0.607",
+          "note": "4K 约 16MP；按输出分辨率与功能计费"
+        },
+        "docsUrl": "https://docs.bfl.ml/flux_3/flux3_image_overview"
+      },
+      {
+        "name": "FLUX.2 [pro]",
+        "id": "/v1/flux-2-pro",
+        "category": "image",
+        "badge": "生产默认",
+        "description": "面向生产环境的 FLUX.2 档位，支持文生图与图像编辑、最多 8 张参考图，输出不超过 4MP。按百万像素与参考图分别计费。",
+        "tags": [
+          "按 MP 计费",
+          "8 张参考图",
+          "图像编辑",
+          "≤ 4MP"
+        ],
+        "specs": [
+          {
+            "label": "最大输出",
+            "value": "4MP"
+          },
+          {
+            "label": "参考图",
+            "value": "最多 8 张（API）"
+          },
+          {
+            "label": "计费",
+            "value": "首 MP + 后续 MP"
+          }
+        ],
+        "price": {
+          "primary": "$0.03",
+          "unit": "/ 首 MP",
+          "detail": "后续 $0.015 / MP；参考图 $0.015 / MP"
+        },
+        "docsUrl": "https://docs.bfl.ml/flux_2/flux2_overview"
+      },
+      {
+        "name": "FLUX.2 [max]",
+        "id": "/v1/flux-2-max",
+        "category": "image",
+        "badge": "联网 grounding",
+        "description": "FLUX.2 的最高质量档位，支持联网 grounding、最多 8 张参考图与不超过 4MP 的输出。首 MP 与参考图的单价都比 pro 高，适合对细节和事实性要求更高的任务。",
+        "tags": [
+          "grounding",
+          "最高质量",
+          "8 张参考图",
+          "≤ 4MP"
+        ],
+        "specs": [
+          {
+            "label": "最大输出",
+            "value": "4MP"
+          },
+          {
+            "label": "参考图",
+            "value": "最多 8 张"
+          },
+          {
+            "label": "能力",
+            "value": "grounding / 编辑"
+          }
+        ],
+        "price": {
+          "primary": "$0.07",
+          "unit": "/ 首 MP",
+          "detail": "后续 $0.03 / MP；参考图 $0.03 / MP"
+        },
+        "docsUrl": "https://docs.bfl.ml/flux_2/flux2_overview"
+      }
+    ]
+  },
+  {
+    "slug": "luma",
+    "name": "Luma AI",
+    "englishName": "Luma · Ray & Uni",
+    "glyph": "L",
+    "color": "#0b7f83",
+    "country": "美国",
+    "headquarters": "旧金山湾区",
+    "website": "https://lumalabs.ai/api",
+    "docsUrl": "https://docs.agents.lumalabs.ai/guides/model/",
+    "pricingUrl": "https://docs.agents.lumalabs.ai/guides/pricing/",
+    "freeTier": "官网称各计划含免费试用额度，API 具体额度未公开",
+    "apiStyles": [
+      "REST",
+      "异步任务"
+    ],
+    "summary": "Ray3.2 把多关键帧、HDR/EXR 与改画幅带进视频生成；Uni-1.1 用约 4 美分一张的 2K 图像补齐静态创作。它的强项是后期可控性，而不是最低价。",
+    "positioning": "Luma 的视频价格按条而非按秒，5 秒与 10 秒、三档分辨率需要逐项预算；HDR 与 EXR 还要乘以倍率。Uni-1.1 则用固定 2K 输出和低单价承接图像需求，适合与视频工作流搭配。",
+    "highlights": [
+      {
+        "title": "关键帧与后期友好",
+        "text": "Ray3.2 支持最多 64 个关键帧、首尾帧、改画幅以及 HDR/EXR 输出，适合需要把生成结果接进后期管线的团队。"
+      },
+      {
+        "title": "四美分一张的 2K 图像",
+        "text": "Uni-1.1 以约 $0.0404 输出固定 2K，并可最多使用 9 张参考图，适合批量概念图与分镜。"
+      },
+      {
+        "title": "高分辨率与 HDR 会迅速抬价",
+        "text": "1080p 的 10 秒视频单条 $3.60，HDR 再乘 2 倍、HDR+EXR 乘 3 倍。"
+      }
+    ],
+    "fitFor": "重视关键帧控制、HDR/EXR 与改画幅，并希望图像与视频出自同一供应商的后期与广告团队。",
+    "watchOuts": [
+      "Ray3.2 只有 5 秒与 10 秒两档，官方未列原生音频参数。",
+      "HDR 与 EXR 输出按倍率加价，10 秒 1080p 加 HDR 后远高于页面起价。",
+      "视频编辑与改画幅是否另计费，需要在调用前核对具体参数。"
+    ],
+    "pricingNote": "美元计价；Ray3.2 按条与分辨率分档，编辑另计；Uni-1.1 按张计费，编辑与参考图会加价。",
+    "sources": [
+      {
+        "label": "模型文档",
+        "url": "https://docs.agents.lumalabs.ai/guides/model/"
+      },
+      {
+        "label": "API 定价",
+        "url": "https://docs.agents.lumalabs.ai/guides/pricing/"
+      },
+      {
+        "label": "Luma API 平台",
+        "url": "https://lumalabs.ai/api"
+      }
+    ],
+    "models": [
+      {
+        "name": "Ray3.2",
+        "id": "ray-3.2",
+        "category": "video",
+        "badge": "HDR 后期",
+        "description": "支持文生视频、首尾帧图生视频、最多 64 个关键帧与视频编辑的型号，24fps，输出 540p / 720p / 1080p，可选 HDR/EXR。5 秒与 10 秒按条计费。",
+        "tags": [
+          "64 关键帧",
+          "HDR / EXR",
+          "改画幅",
+          "24fps"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "5s / 10s"
+          },
+          {
+            "label": "帧率",
+            "value": "24fps"
+          },
+          {
+            "label": "分辨率",
+            "value": "540p / 720p / 1080p"
+          }
+        ],
+        "price": {
+          "primary": "$0.15 起",
+          "unit": "/ 条（5s 540p）",
+          "detail": "5s：$0.15 / $0.30 / $1.20；10s：$0.45 / $0.90 / $3.60",
+          "note": "HDR 2×；HDR+EXR 3×；视频编辑另计"
+        },
+        "docsUrl": "https://docs.agents.lumalabs.ai/guides/model/"
+      },
+      {
+        "name": "Uni-1.1",
+        "id": "uni-1",
+        "category": "image",
+        "badge": "2K 低价",
+        "description": "固定 2K 输出的图像型号，支持文生图、图生图与编辑，最多 9 张参考图（编辑 8 张），可选 grounding。单张约 $0.0404。",
+        "tags": [
+          "固定 2K",
+          "9 张参考图",
+          "图像编辑",
+          "grounding"
+        ],
+        "specs": [
+          {
+            "label": "输出",
+            "value": "固定 2K"
+          },
+          {
+            "label": "参考图",
+            "value": "≤ 9 张（编辑 ≤ 8 张）"
+          }
+        ],
+        "price": {
+          "primary": "$0.0404",
+          "unit": "/ 张",
+          "detail": "编辑 $0.0434 / 张；每加一张参考图 +$0.003"
+        },
+        "docsUrl": "https://docs.agents.lumalabs.ai/guides/model/"
+      },
+      {
+        "name": "Uni-1.1 Max",
+        "id": "uni-1-max",
+        "category": "image",
+        "badge": "更高质量",
+        "description": "与 Uni-1.1 相同的固定 2K 输出与参考图范围，面向更高质量要求的版本。单张 $0.10，编辑与参考图同样加价。",
+        "tags": [
+          "固定 2K",
+          "更高质量",
+          "图像编辑"
+        ],
+        "specs": [
+          {
+            "label": "输出",
+            "value": "固定 2K"
+          },
+          {
+            "label": "参考图",
+            "value": "≤ 9 张（编辑 ≤ 8 张）"
+          }
+        ],
+        "price": {
+          "primary": "$0.10",
+          "unit": "/ 张",
+          "detail": "编辑 $0.103 / 张；每加一张参考图 +$0.003"
+        },
+        "docsUrl": "https://docs.agents.lumalabs.ai/guides/model/"
+      }
+    ]
+  },
+  {
+    "slug": "runway",
+    "name": "Runway",
+    "englishName": "Runway · Gen-4 & Aleph",
+    "glyph": "R",
+    "color": "#30594a",
+    "country": "美国",
+    "headquarters": "纽约",
+    "website": "https://dev.runwayml.com/",
+    "docsUrl": "https://docs.dev.runwayml.com/",
+    "pricingUrl": "https://docs.dev.runwayml.com/guides/pricing/",
+    "freeTier": "定价页未列通用免费额度；部分教程称新账户赠送 600 credits，是否通用需核实",
+    "apiStyles": [
+      "REST",
+      "异步任务"
+    ],
+    "summary": "Gen-4.5 负责原生镜头的质感，Gen-4 Turbo 用不到一半的价格承担批量试错，Aleph 2 则把已有视频重绘成新的画幅与风格。",
+    "positioning": "Runway 不是单纯按秒卖视频，而是把生成、重绘和后期需求分开定价。Gen-4.5 与 Turbo 输出 720p 级、没有原生音频；Aleph 2 接受最长 30 秒的素材并支持 HDR/ProRes 输出。它适合已经有素材与剪辑流程的团队，而不是只追求一键出片。",
+    "highlights": [
+      {
+        "title": "Turbo 把试错价打下来",
+        "text": "每秒 $0.05，约为 Gen-4.5 的四成。可以先用 Turbo 锁定提示词与构图，再用旗舰重跑关键镜头。"
+      },
+      {
+        "title": "Aleph 2 是视频重绘",
+        "text": "支持最长 30 秒输入、最多 5 个关键帧与改画幅/outpaint，适合已有广告片、短剧素材的二次创作。"
+      },
+      {
+        "title": "分辨率与音频不是卖点",
+        "text": "Gen-4.5 与 Turbo 都是 720p 级，且没有原生音频参数。需要 4K 或原生音画的场景应另选供应商。"
+      }
+    ],
+    "fitFor": "已有实拍或成片素材，需要视频重绘、改画幅与镜头迭代，并把生成接进现有剪辑工作流的团队。",
+    "watchOuts": [
+      "Gen-4.5 与 Gen-4 Turbo 都是 720p 级输出，且没有音频参数。",
+      "Aleph 2 的最低消费约 $0.56，即使只做很短的测试也要按最低额度核算。",
+      "视频按秒与 credits 计费，失败任务是否扣费需查看官方条款。"
+    ],
+    "pricingNote": "1 credit = $0.01；Gen-4.5 与 Turbo 按输出秒数计费，Aleph 2 按秒计费且设有最低消费。",
+    "sources": [
+      {
+        "label": "API 文档",
+        "url": "https://docs.dev.runwayml.com/"
+      },
+      {
+        "label": "API 定价",
+        "url": "https://docs.dev.runwayml.com/guides/pricing/"
+      },
+      {
+        "label": "开发者平台",
+        "url": "https://dev.runwayml.com/"
+      }
+    ],
+    "models": [
+      {
+        "name": "Gen-4.5",
+        "id": "gen4.5",
+        "category": "video",
+        "badge": "原生旗舰",
+        "description": "Runway 的原生视频旗舰，支持文生视频与首帧图生视频，单次 2–10 秒、720p 级输出。按输出秒数计费，没有原生音频参数，适合把预算集中在关键镜头上。",
+        "tags": [
+          "文生视频",
+          "首帧生视频",
+          "720p",
+          "2–10 秒"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "2–10 秒"
+          },
+          {
+            "label": "分辨率",
+            "value": "720p 级"
+          },
+          {
+            "label": "输出音频",
+            "value": "无原生音频参数"
+          }
+        ],
+        "price": {
+          "primary": "$0.12",
+          "unit": "/ 秒",
+          "detail": "约 12 credits / 秒"
+        },
+        "docsUrl": "https://docs.dev.runwayml.com/api"
+      },
+      {
+        "name": "Gen-4 Turbo",
+        "id": "gen4_turbo",
+        "category": "video",
+        "badge": "低成本",
+        "description": "Gen-4 的降本档位，支持文生视频与首帧图生视频，2–10 秒、720p 级输出。价格约为 Gen-4.5 的四成，适合批量抽卡与分镜预演。",
+        "tags": [
+          "低成本",
+          "文生视频",
+          "首帧生视频",
+          "720p"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "2–10 秒"
+          },
+          {
+            "label": "分辨率",
+            "value": "720p 级"
+          },
+          {
+            "label": "输出音频",
+            "value": "无原生音频参数"
+          }
+        ],
+        "price": {
+          "primary": "$0.05",
+          "unit": "/ 秒",
+          "detail": "约 5 credits / 秒"
+        },
+        "docsUrl": "https://docs.dev.runwayml.com/api"
+      },
+      {
+        "name": "Aleph 2",
+        "id": "aleph2",
+        "category": "video",
+        "badge": "视频重绘",
+        "description": "面向既有视频的编辑与重绘型号，可接受最长 30 秒输入与最多 5 个关键帧，支持改画幅/outpaint、HDR 与 ProRes 输出。每次任务设有最低消费。",
+        "tags": [
+          "视频重绘",
+          "改画幅",
+          "HDR / ProRes",
+          "关键帧"
+        ],
+        "specs": [
+          {
+            "label": "输入时长",
+            "value": "最长 30 秒"
+          },
+          {
+            "label": "关键帧",
+            "value": "最多 5 个"
+          },
+          {
+            "label": "输出",
+            "value": "HDR / ProRes"
+          }
+        ],
+        "price": {
+          "primary": "$0.28",
+          "unit": "/ 秒",
+          "detail": "最低约 $0.56 / 次"
+        },
+        "docsUrl": "https://docs.dev.runwayml.com/api"
+      }
+    ]
+  },
+  {
+    "slug": "kling",
+    "name": "可灵 AI Kling",
+    "englishName": "Kling AI · 快手",
+    "glyph": "可",
+    "color": "#0a84d8",
+    "country": "中国",
+    "headquarters": "北京",
+    "website": "https://kling.ai/dev",
+    "docsUrl": "https://kling.ai/document-api/guides/get-started/overview",
+    "pricingUrl": "https://kling.ai/document-api/pricing/base/video",
+    "freeTier": "有试用资源包；具体额度未公开，以控制台为准",
+    "apiStyles": [
+      "REST",
+      "异步任务"
+    ],
+    "summary": "3.0 系列把原生音画、首尾帧、多镜头与最高 4K 收进同一套 API。Turbo 负责量产，3.0 与 Omni 更适合带声音、带参考的成片。",
+    "positioning": "可灵的核心竞争点是可控的成片：3.0 支持首尾帧与最多 6 个分镜，Omni 还能读视频与元素参考，原生音频让对白与氛围声直接随画面生成。按秒计价，但音频、4K 和视频输入都会改变单价。",
+    "highlights": [
+      {
+        "title": "原生音画与多镜头",
+        "text": "3.0 支持原生音频与最多 6 个分镜，适合短视频、广告分镜与带对白的镜头。"
+      },
+      {
+        "title": "首尾帧与 4K",
+        "text": "3.0 支持首尾帧控制并输出最高 4K；Turbo 不支持尾帧与 4K，选型时不要混淆。"
+      },
+      {
+        "title": "音频和 4K 是加价项",
+        "text": "3.0 的 720p 无声价约 $0.084/秒，带音频约 $0.126/秒，4K 则到 $0.42/秒。"
+      }
+    ],
+    "fitFor": "需要中文语境、带声音的短视频与广告镜头，并重视分镜、首尾帧与参考素材控制的创作团队。",
+    "watchOuts": [
+      "Turbo 不支持尾帧与 4K，但价格更低；功能差异需按型号确认。",
+      "音频、4K 与视频参考都会改变每秒单价，预算要按最终参数组合计算。",
+      "异步任务与并发限制会影响批量出片节拍，接入前需核对账户等级。"
+    ],
+    "pricingNote": "美元计价，按输出秒数计费；价格随模型、分辨率、音频与视频输入变化。",
+    "sources": [
+      {
+        "label": "API 文档",
+        "url": "https://kling.ai/document-api/guides/get-started/overview"
+      },
+      {
+        "label": "视频定价",
+        "url": "https://kling.ai/document-api/pricing/base/video"
+      },
+      {
+        "label": "开发者平台",
+        "url": "https://kling.ai/dev"
+      }
+    ],
+    "models": [
+      {
+        "name": "Kling 3.0 Turbo",
+        "id": "kling-3.0-turbo",
+        "category": "video",
+        "badge": "量产款",
+        "description": "3.0 系列的低成本档位，支持文生视频、首帧图生视频与原生音频，3–15 秒，输出 720p 或 1080p。不支持尾帧和 4K。",
+        "tags": [
+          "原生音频",
+          "1080p",
+          "3–15 秒",
+          "首帧"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "3–15 秒"
+          },
+          {
+            "label": "分辨率",
+            "value": "720p / 1080p"
+          },
+          {
+            "label": "限制",
+            "value": "无尾帧 / 4K"
+          }
+        ],
+        "price": {
+          "primary": "$0.112",
+          "unit": "/ 秒（720p）",
+          "detail": "1080p $0.14 / 秒"
+        },
+        "docsUrl": "https://kling.ai/document-api/api/video/3-0-turbo/image-to-video"
+      },
+      {
+        "name": "Kling 3.0",
+        "id": "kling-3.0",
+        "category": "video",
+        "badge": "旗舰",
+        "description": "支持首尾帧、最多 6 个分镜与原生音频的主力型号，3–15 秒，最高 4K。无声、有声和不同分辨率分别计价。",
+        "tags": [
+          "首尾帧",
+          "6 分镜",
+          "原生音频",
+          "4K"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "3–15 秒"
+          },
+          {
+            "label": "分辨率",
+            "value": "720p / 1080p / 4K"
+          },
+          {
+            "label": "分镜",
+            "value": "最多 6 个"
+          }
+        ],
+        "price": {
+          "primary": "$0.084 起",
+          "unit": "/ 秒（720p 无声）",
+          "detail": "1080p $0.112；4K $0.42；带音频 720p $0.126 / 1080p $0.168"
+        },
+        "docsUrl": "https://kling.ai/document-api/api/video/3-0-omni/image-to-video"
+      },
+      {
+        "name": "Kling 3.0 Omni",
+        "id": "kling-3.0-omni",
+        "category": "video",
+        "badge": "多模态参考",
+        "description": "支持视频输入和元素参考的 3.0 版本，可把现有素材带进生成，并支持多镜头与最高 4K。价格随输入类型、音频和分辨率变化。",
+        "tags": [
+          "视频输入",
+          "元素参考",
+          "多镜头",
+          "4K"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "3–15 秒"
+          },
+          {
+            "label": "输入",
+            "value": "视频 / 元素参考"
+          },
+          {
+            "label": "分辨率",
+            "value": "最高 4K"
+          }
+        ],
+        "price": {
+          "primary": "$0.084 起",
+          "unit": "/ 秒（无视频输入、无声）",
+          "detail": "带音频 $0.112 起；视频输入无声 $0.126 起；4K $0.42"
+        },
+        "docsUrl": "https://kling.ai/document-api/api/video/3-0-omni/video-omni"
+      }
+    ]
+  },
+  {
+    "slug": "elevenlabs",
+    "name": "ElevenLabs",
+    "englishName": "ElevenLabs",
+    "glyph": "XI",
+    "color": "#171512",
+    "country": "美国",
+    "headquarters": "美国",
+    "website": "https://elevenlabs.io",
+    "docsUrl": "https://elevenlabs.io/docs",
+    "pricingUrl": "https://elevenlabs.io/pricing/api",
+    "freeTier": "Free 计划每月 10k credits；含有限 TTS 与转写试用",
+    "apiStyles": [
+      "REST",
+      "WebSocket 实时",
+      "SDK"
+    ],
+    "summary": "表达力与音色库最强的高端语音平台之一，覆盖 TTS、STT、实时语音、克隆与配音。适合高体验产品，长文本成本不低。",
+    "positioning": "ElevenLabs 卖的不只是“把字读出来”，而是可辨认的音色、情绪和完整语音生产管线。它更适合把声音体验当成产品差异化的团队，而不是只追求最低单价的批量转写。",
+    "highlights": [
+      {
+        "title": "声音表达力本身就是产品",
+        "text": "多语言、情绪、多说话人与声音克隆放在同一条 API 产品线上，适合有声内容、角色配音和高体验 voice agent。"
+      },
+      {
+        "title": "从 TTS 延伸成完整语音栈",
+        "text": "Scribe 系列覆盖预录与实时转写，配音、音乐和 Agent 工具也能纳入同一个账号体系。"
+      },
+      {
+        "title": "低延迟型号可选",
+        "text": "Eleven v4 Turbo 官方中位推理约 100ms，面向实时对话和需要在首包延迟上较真的交互。"
+      }
+    ],
+    "fitFor": "内容制作、角色配音、高体验 TTS 与语音 Agent 团队，尤其是愿意为音色和表现力支付溢价的产品。",
+    "watchOuts": [
+      "按字符计的 TTS 成本在长文本与高频对话中会快速累积。",
+      "免费层的商用许可、并发与功能限制需要逐项确认。",
+      "高质量不等于低延迟；实时场景应优先评估 Turbo / 实时型号并做端到端测试。"
+    ],
+    "pricingNote": "TTS 按字符、STT 按音频小时计价；不同型号、套餐与 credits 规则会导致实际单价不同。",
+    "sources": [
+      {
+        "label": "API 定价",
+        "url": "https://elevenlabs.io/pricing/api"
+      },
+      {
+        "label": "模型文档",
+        "url": "https://elevenlabs.io/docs/overview/models"
+      },
+      {
+        "label": "套餐定价",
+        "url": "https://elevenlabs.io/pricing"
+      }
+    ],
+    "models": [
+      {
+        "name": "Eleven v4",
+        "id": "eleven_v4",
+        "category": "speech",
+        "badge": "高表现力",
+        "description": "高质量 TTS 型号，覆盖 90+ 语言、情感表达与多说话人。适合有声内容、角色配音和需要自然韵律的场景。",
+        "tags": [
+          "90+ 语言",
+          "情感表达",
+          "多说话人",
+          "声音克隆"
+        ],
+        "specs": [
+          {
+            "label": "单次长度",
+            "value": "最高 10K 字符"
+          },
+          {
+            "label": "类型",
+            "value": "TTS"
+          }
+        ],
+        "price": {
+          "primary": "$0.08",
+          "unit": "/ 每 1K 字符",
+          "detail": "按官网 credits 与用量档换算"
+        },
+        "docsUrl": "https://elevenlabs.io/docs/overview/models"
+      },
+      {
+        "name": "Eleven v4 Turbo",
+        "id": "eleven_v4_turbo",
+        "category": "speech",
+        "badge": "低延迟",
+        "description": "低延迟 TTS 型号，保留多语言与情感能力，适合实时对话、语音 Agent 和交互式内容生成。",
+        "tags": [
+          "约 100ms",
+          "90+ 语言",
+          "实时",
+          "Voice Agent"
+        ],
+        "specs": [
+          {
+            "label": "推理延迟",
+            "value": "中位约 100ms"
+          },
+          {
+            "label": "类型",
+            "value": "TTS"
+          }
+        ],
+        "price": {
+          "primary": "$0.04",
+          "unit": "/ 每 1K 字符",
+          "detail": "按官网 credits 与用量档换算"
+        },
+        "docsUrl": "https://elevenlabs.io/docs/overview/models"
+      },
+      {
+        "name": "Scribe v2",
+        "id": "scribe_v2",
+        "category": "speech",
+        "badge": "高精度 STT",
+        "description": "预录语音转写型号，覆盖 90+ 语言，支持关键术语提示与说话人分离，适合播客、会议和媒体转写。",
+        "tags": [
+          "90+ 语言",
+          "说话人分离",
+          "关键术语",
+          "预录转写"
+        ],
+        "specs": [
+          {
+            "label": "类型",
+            "value": "STT · 预录"
+          },
+          {
+            "label": "语言",
+            "value": "90+"
+          }
+        ],
+        "price": {
+          "primary": "$0.22",
+          "unit": "/ 音频小时",
+          "detail": "转写质量与功能以官方模型页为准"
+        },
+        "docsUrl": "https://elevenlabs.io/docs/overview/models"
+      },
+      {
+        "name": "Scribe v2 Realtime",
+        "id": "scribe_v2_realtime",
+        "category": "speech",
+        "badge": "实时",
+        "description": "面向实时语音的转写型号，官方标称约 150ms 延迟，适合实时字幕、语音助手和电话场景。",
+        "tags": [
+          "约 150ms",
+          "实时流式",
+          "90+ 语言",
+          "低延迟"
+        ],
+        "specs": [
+          {
+            "label": "延迟",
+            "value": "约 150ms"
+          },
+          {
+            "label": "类型",
+            "value": "STT · 实时"
+          }
+        ],
+        "price": {
+          "primary": "$0.39",
+          "unit": "/ 音频小时",
+          "detail": "实时并发与流式规则以官网为准"
+        },
+        "docsUrl": "https://elevenlabs.io/docs/overview/models"
+      }
+    ]
+  },
+  {
+    "slug": "deepgram",
+    "name": "Deepgram",
+    "englishName": "Deepgram",
+    "glyph": "DG",
+    "color": "#0b7057",
+    "country": "美国",
+    "headquarters": "旧金山",
+    "website": "https://deepgram.com",
+    "docsUrl": "https://developers.deepgram.com/docs",
+    "pricingUrl": "https://deepgram.com/pricing",
+    "freeTier": "$200 试用额度，官方称无需信用卡",
+    "apiStyles": [
+      "REST",
+      "WebSocket 实时",
+      "Voice Agent"
+    ],
+    "summary": "以低价实时 STT 为核心的语音基础设施，Nova-3 与 Flux 覆盖预录、流式和轮次检测。TTS 是补充，不是主角。",
+    "positioning": "Deepgram 更像一层语音基础设施：STT 价格低、流式能力强，并附带 Voice Agent 能力。若你的核心问题是“把大量音频便宜、稳定地转成结构化文本”，它通常值得先测。",
+    "highlights": [
+      {
+        "title": "用低价把 STT 做成基础设施",
+        "text": "Nova-3 预录转写公开价低至每分钟不到半美分，适合大规模字幕、呼叫中心录音与语音分析。"
+      },
+      {
+        "title": "实时与预录都覆盖",
+        "text": "Flux 提供面向对话的轮次检测，Nova-3 同时支持流式与预录，方便从同一套账号搭建不同延迟要求的链路。"
+      },
+      {
+        "title": "Voice Agent 顺带打包",
+        "text": "官方 Voice Agent API 把语音识别、轮次与响应编排在一起，适合快速验证电话与客服场景。"
+      }
+    ],
+    "fitFor": "需要大规模、低单价 STT 与实时转写的呼叫中心、字幕、会议记录和语音 Agent 团队。",
+    "watchOuts": [
+      "TTS 音色和语言覆盖相对有限，复杂配音需求通常要搭配其他厂商。",
+      "Nova-3 当前价格为促销，长期预算要关注恢复后的报价。",
+      "实时、预录与 Voice Agent 是不同计价单元，不能只看一个 STT 单价。"
+    ],
+    "pricingNote": "Nova-3 的公开单价为当前促销价，流式与预录价格不同；Flux TTS 与 Aura-2 按字符另计。",
+    "sources": [
+      {
+        "label": "官方定价",
+        "url": "https://deepgram.com/pricing"
+      },
+      {
+        "label": "STT 模型与语言",
+        "url": "https://developers.deepgram.com/docs/models-languages-overview"
+      },
+      {
+        "label": "TTS 模型与语言",
+        "url": "https://developers.deepgram.com/docs/tts-models-languages-overview"
+      }
+    ],
+    "models": [
+      {
+        "name": "Nova-3",
+        "id": "nova-3",
+        "category": "speech",
+        "badge": "低价 STT",
+        "description": "Deepgram 的主力转写型号，覆盖 45+ 语言，支持批量与流式识别。当前促销价把实时 STT 成本压得很低。",
+        "tags": [
+          "45+ 语言",
+          "流式",
+          "预录",
+          "说话人分离"
+        ],
+        "specs": [
+          {
+            "label": "语言",
+            "value": "45+"
+          },
+          {
+            "label": "模式",
+            "value": "预录 / 流式"
+          }
+        ],
+        "price": {
+          "primary": "$0.0043",
+          "unit": "/ 音频分钟（预录）",
+          "detail": "流式 $0.0048 / 分钟",
+          "note": "当前促销价，后续价格以官网为准"
+        },
+        "docsUrl": "https://developers.deepgram.com/docs/models-languages-overview"
+      },
+      {
+        "name": "Flux 英语 / 多语",
+        "id": "flux-general-en",
+        "category": "speech",
+        "badge": "对话级实时",
+        "description": "面向语音 Agent 的实时识别型号，强化轮次检测与对话体验。英语与多语种分别提供 `flux-general-en`、`flux-general-multi` 型号。",
+        "tags": [
+          "轮次检测",
+          "实时",
+          "约 260ms",
+          "对话"
+        ],
+        "specs": [
+          {
+            "label": "语言",
+            "value": "英语 / 10 语种"
+          },
+          {
+            "label": "轮次延迟",
+            "value": "约 260ms"
+          }
+        ],
+        "price": {
+          "primary": "$0.0065",
+          "unit": "/ 音频分钟（英语）",
+          "detail": "多语种 flux-general-multi $0.0078 / 分钟"
+        },
+        "docsUrl": "https://developers.deepgram.com/docs/models-languages-overview"
+      },
+      {
+        "name": "Flux TTS",
+        "id": "flux-alexis-en",
+        "category": "speech",
+        "badge": "实时 TTS",
+        "description": "面向实时语音的流式 TTS，英文提供多种口音，支持中断与低延迟合成，适合语音 Agent 的响应层。",
+        "tags": [
+          "流式",
+          "可打断",
+          "英语",
+          "低延迟"
+        ],
+        "specs": [
+          {
+            "label": "语言",
+            "value": "英语"
+          },
+          {
+            "label": "口音",
+            "value": "7 种"
+          }
+        ],
+        "price": {
+          "primary": "$0.045",
+          "unit": "/ 每 1K 字符",
+          "detail": "按 /v2/speak 流式接口计费"
+        },
+        "docsUrl": "https://developers.deepgram.com/docs/flux-tts/overview"
+      },
+      {
+        "name": "Aura-2",
+        "id": "aura-2-thalia-en",
+        "category": "speech",
+        "badge": "低价 TTS",
+        "description": "预置音色 TTS，覆盖 7 种语言，适合播报、客服与批量内容生成。价格低，但音色和语言选择不如专做表达力的平台丰富。",
+        "tags": [
+          "7 语言",
+          "预置音色",
+          "批量合成",
+          "低价"
+        ],
+        "specs": [
+          {
+            "label": "语言",
+            "value": "7"
+          },
+          {
+            "label": "接口",
+            "value": "/v1/speak"
+          }
+        ],
+        "price": {
+          "primary": "$0.030",
+          "unit": "/ 每 1K 字符",
+          "detail": "按所选预置音色与套餐计费"
+        },
+        "docsUrl": "https://developers.deepgram.com/docs/tts-models-languages-overview"
+      }
+    ]
+  },
+  {
+    "slug": "cartesia",
+    "name": "Cartesia",
+    "englishName": "Cartesia",
+    "glyph": "C",
+    "color": "#a53c17",
+    "country": "美国",
+    "headquarters": "旧金山",
+    "website": "https://cartesia.ai",
+    "docsUrl": "https://docs.cartesia.ai",
+    "pricingUrl": "https://cartesia.ai/pricing",
+    "freeTier": "Free 每月 20K credits，约 27 分钟 TTS 或 1 小时 51 分钟 Ink 2",
+    "apiStyles": [
+      "REST",
+      "WebSocket 实时"
+    ],
+    "summary": "主打超低延迟的实时语音平台，Sonic TTS 与 Ink STT 都为对话式 Agent 设计。按订阅 credits 计价，规模越大越便宜。",
+    "positioning": "Cartesia 把“首音频足够快”当作核心指标，Sonic 与 Ink 都紧贴实时对话设计。它更适合语音 Agent 和交互式产品，而不是只看离线转写准确率。",
+    "highlights": [
+      {
+        "title": "延迟是产品指标",
+        "text": "Sonic 3.6 官方标称首音频低于 90ms，Ink 2 提供轮次检测，减少实时语音链路的等待与抢话。"
+      },
+      {
+        "title": "TTS 与 STT 同一套订阅",
+        "text": "语音合成、识别与声音克隆共享 credits 池，便于在一个账号里核算完整语音链路成本。"
+      },
+      {
+        "title": "按规模摊薄单价",
+        "text": "从 Pro 到 Scale 档，每 credit 成本随订阅提高而下降，长期稳定用量可以显著降低千字符成本。"
+      }
+    ],
+    "fitFor": "做低延迟语音 Agent、实时客服或交互式角色，且能够接受按订阅档位管理预算的团队。",
+    "watchOuts": [
+      "价格以 credits 与订阅档位呈现，不能直接把官网数字与按分钟报价横向比较。",
+      "Ink 2 仅覆盖 5 种语言；多语言转写需要选 Ink-Whisper。",
+      "超低延迟是端到端链路结果，网络与客户端播放同样会影响体验。"
+    ],
+    "pricingNote": "页面按 Pro 订阅档给出估算；实际价格取决于 credits 计划与用量档位，以官网价格页为准。",
+    "sources": [
+      {
+        "label": "官方定价",
+        "url": "https://cartesia.ai/pricing"
+      },
+      {
+        "label": "计费文档",
+        "url": "https://docs.cartesia.ai/pricing"
+      },
+      {
+        "label": "Sonic 3.6 文档",
+        "url": "https://docs.cartesia.ai/build-with-cartesia/tts-models/latest"
+      }
+    ],
+    "models": [
+      {
+        "name": "Sonic 3.6",
+        "id": "sonic-3.6",
+        "category": "speech",
+        "badge": "超低延迟",
+        "description": "面向实时对话的 TTS 型号，覆盖 44 种语言，支持流式与声音克隆。官方标称首音频延迟低于 90ms。",
+        "tags": [
+          "44 语言",
+          "<90ms",
+          "流式",
+          "声音克隆"
+        ],
+        "specs": [
+          {
+            "label": "首音频",
+            "value": "低于 90ms"
+          },
+          {
+            "label": "语言",
+            "value": "44"
+          }
+        ],
+        "price": {
+          "primary": "$0.05",
+          "unit": "/ 每 1K 字符（Pro 估算）",
+          "detail": "Scale 档约 $0.037 / 1K 字符",
+          "note": "计费为 1 credit/字符，具体按计划换算"
+        },
+        "docsUrl": "https://docs.cartesia.ai/build-with-cartesia/tts-models/latest"
+      },
+      {
+        "name": "Ink 2",
+        "id": "ink-2",
+        "category": "speech",
+        "badge": "实时 STT",
+        "description": "为语音 Agent 设计的实时识别型号，内置轮次检测，终稿延迟约 0.1 秒，适合对话式输入。",
+        "tags": [
+          "5 语言",
+          "轮次检测",
+          "约 0.1s",
+          "实时"
+        ],
+        "specs": [
+          {
+            "label": "语言",
+            "value": "5"
+          },
+          {
+            "label": "终稿延迟",
+            "value": "约 0.1s"
+          }
+        ],
+        "price": {
+          "primary": "$0.54",
+          "unit": "/ 音频小时（Pro 估算）",
+          "detail": "Scale 档约 $0.39 / 小时",
+          "note": "计费为 3 credits/音频秒"
+        },
+        "docsUrl": "https://docs.cartesia.ai/build-with-cartesia/stt/latest"
+      },
+      {
+        "name": "Ink-Whisper",
+        "id": "ink-whisper",
+        "category": "speech",
+        "badge": "多语言",
+        "description": "多语言识别型号，覆盖 90+ 语言，价格更低。适合批处理、字幕和不必依赖 Ink 2 轮次检测的实时转写。",
+        "tags": [
+          "90+ 语言",
+          "实时",
+          "批处理",
+          "低价"
+        ],
+        "specs": [
+          {
+            "label": "语言",
+            "value": "90+"
+          },
+          {
+            "label": "类型",
+            "value": "STT"
+          }
+        ],
+        "price": {
+          "primary": "$0.18",
+          "unit": "/ 音频小时（Pro 估算）",
+          "detail": "计费为 1 credit/音频秒",
+          "note": "实际单价随订阅档位变化"
+        },
+        "docsUrl": "https://docs.cartesia.ai/build-with-cartesia/stt/older-models"
+      }
+    ]
+  },
+  {
+    "slug": "assemblyai",
+    "name": "AssemblyAI",
+    "englishName": "AssemblyAI",
+    "glyph": "AA",
+    "color": "#2853d6",
+    "country": "美国",
+    "headquarters": "旧金山",
+    "website": "https://www.assemblyai.com",
+    "docsUrl": "https://www.assemblyai.com/docs",
+    "pricingUrl": "https://www.assemblyai.com/pricing",
+    "freeTier": "185 小时预录 + 333 小时流式试用",
+    "apiStyles": [
+      "REST",
+      "WebSocket 实时",
+      "Voice Agent"
+    ],
+    "summary": "高准确度、低价格的转写与语音理解平台，免费额度大。STT 是核心，独立 TTS 尚未正式上线。",
+    "positioning": "AssemblyAI 把重心放在“听懂并整理音频”：预录、实时、说话人分离、摘要与语音理解在同一条产品线里。如果你的需求是语音转文本及结构化分析，它的性价比很高。",
+    "highlights": [
+      {
+        "title": "STT 是绝对主场",
+        "text": "从低价 Universal-2 到 Realtime 型号，覆盖 99 种语言与面向对话的低延迟转写，选择边界清晰。"
+      },
+      {
+        "title": "转写之后还能理解",
+        "text": "语音理解能力可以直接输出摘要、主题与结构化结果，减少再拼接一层 LLM 的工程量。"
+      },
+      {
+        "title": "免费额度适合真实试用",
+        "text": "185 小时预录与 333 小时流式额度足以跑完一个原型甚至小规模内部项目。"
+      }
+    ],
+    "fitFor": "以转写、会议分析、字幕与语音理解为核心，且可以接受外接 TTS 的开发者与产品团队。",
+    "watchOuts": [
+      "没有已上线的独立 TTS API，完整语音输出链路需要外接供应商。",
+      "不同型号的语言覆盖差异很大：99 语言不等于每个型号都支持 99 语言。",
+      "预录与实时价格相差明显，应按真实使用场景测试，而不是只比较最低价。"
+    ],
+    "pricingNote": "预录与流式按音频小时分别计价；Voice Agent 有单独的价格与额度，独立 TTS 尚未上线。",
+    "sources": [
+      {
+        "label": "官方定价",
+        "url": "https://www.assemblyai.com/pricing"
+      },
+      {
+        "label": "模型总览",
+        "url": "https://www.assemblyai.com/docs/getting-started/models"
+      },
+      {
+        "label": "流式模型选择",
+        "url": "https://www.assemblyai.com/docs/streaming/select-the-speech-model"
+      }
+    ],
+    "models": [
+      {
+        "name": "Universal-3.5 Pro",
+        "id": "universal-3-5-pro",
+        "category": "speech",
+        "badge": "高精度预录",
+        "description": "面向复杂音频的高精度预录转写型号，支持代码切换、说话人分离与多语言，适合会议、访谈和媒体内容。",
+        "tags": [
+          "预录",
+          "18 语言",
+          "代码切换",
+          "说话人分离"
+        ],
+        "specs": [
+          {
+            "label": "模式",
+            "value": "异步 / 预录"
+          },
+          {
+            "label": "语言",
+            "value": "18"
+          }
+        ],
+        "price": {
+          "primary": "$0.21",
+          "unit": "/ 音频小时",
+          "detail": "语音理解附加功能可能另行计费"
+        },
+        "docsUrl": "https://www.assemblyai.com/docs/getting-started/models"
+      },
+      {
+        "name": "Universal-3.6 Pro Realtime",
+        "id": "universal-3-6-pro",
+        "category": "speech",
+        "badge": "实时",
+        "description": "面向实时语音的低延迟型号，支持 32 种语言与上下文记忆，适合客服、语音助手和实时字幕。",
+        "tags": [
+          "实时",
+          "32 语言",
+          "上下文记忆",
+          "低延迟"
+        ],
+        "specs": [
+          {
+            "label": "模式",
+            "value": "流式 WebSocket"
+          },
+          {
+            "label": "语言",
+            "value": "32"
+          }
+        ],
+        "price": {
+          "primary": "$0.45",
+          "unit": "/ 音频小时",
+          "detail": "并发与实时流规则以官网为准"
+        },
+        "docsUrl": "https://www.assemblyai.com/docs/streaming/select-the-speech-model"
+      },
+      {
+        "name": "Universal-2",
+        "id": "universal-2",
+        "category": "speech",
+        "badge": "多语言低价",
+        "description": "覆盖 99 种语言的预录转写型号，价格低，适合大规模字幕、归档与内容检索等对实时性要求不高的任务。",
+        "tags": [
+          "99 语言",
+          "预录",
+          "低价",
+          "大规模"
+        ],
+        "specs": [
+          {
+            "label": "模式",
+            "value": "异步 / 预录"
+          },
+          {
+            "label": "语言",
+            "value": "99"
+          }
+        ],
+        "price": {
+          "primary": "$0.15",
+          "unit": "/ 音频小时",
+          "detail": "语音理解附加功能可能另行计费"
+        },
+        "docsUrl": "https://www.assemblyai.com/docs/pre-recorded-audio/select-the-speech-model"
+      }
+    ]
+  }
+]

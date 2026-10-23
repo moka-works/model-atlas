@@ -1,0 +1,90 @@
+{
+  "brand": {
+    "name": "MODEL ATLAS",
+    "wordmark": "Model Atlas",
+    "nameZh": "模型 API 图鉴"
+  },
+  "edition": "VOL. 01 / 2026",
+  "updatedAt": "2026-10-23",
+  "providerOrder": [
+    "volcengine",
+    "alibaba-bailian",
+    "deepseek",
+    "moonshot",
+    "zhipu",
+    "minimax",
+    "kling",
+    "openai",
+    "google",
+    "anthropic",
+    "elevenlabs",
+    "runway",
+    "black-forest-labs",
+    "luma",
+    "deepgram",
+    "assemblyai",
+    "cartesia"
+  ],
+  "hero": {
+    "kicker": "MODEL API PRICE INDEX / 2026",
+    "titleTop": "国内外主流模型",
+    "titleBottom": "API 价格，一页看清",
+    "lede": "收录 17 家主流厂商、61 个代表型号，把官方价格、上下文与能力边界放进同一张表。本站只做模型信息收录，不提供 API 服务。",
+    "note": "只收录模型信息，不提供 API · 只取官方定价 · 无联盟链接"
+  },
+  "directoryNote": "按厂商查看 API 能力、代表型号与公开价格。收录范围聚焦国内外主流平台，本站只做资料整理，不提供 API 调用、转售或代理服务。",
+  "editorPicks": [
+    {
+      "provider": "deepseek",
+      "model": "deepseek-flash",
+      "eyebrow": "TEXT / 低成本起步",
+      "reason": "空闲时段输入 $0.15 / 百万 tokens，1M 上下文，适合先把文本链路跑通。"
+    },
+    {
+      "provider": "minimax",
+      "model": "image-01",
+      "eyebrow": "IMAGE / 低价出图",
+      "reason": "¥0.025 / 张，文生图与图生图同价，适合批量草稿与风格探索。"
+    },
+    {
+      "provider": "kling",
+      "model": "kling-3.0",
+      "eyebrow": "VIDEO / 国产视频",
+      "reason": "$0.084 起 / 秒（720p 无声），最长 15 秒，适合先验证分镜与运镜。"
+    }
+  ],
+  "about": {
+    "title": "关于这份图鉴",
+    "lede": "这是一份面向开发者的国内外主流模型 API 价格资料，不提供 API 服务。我们只收录模型信息与厂商公开价格，不以“全”为目标，而是把值得比较的厂商、型号与价格放在一起，让决策有据可查。",
+    "principles": [
+      {
+        "title": "只做收录，不提供 API",
+        "text": "本站不代理、转售或转发任何厂商的 API，也不提供调用通道。所有型号均可回到厂商官网自行申请与使用。"
+      },
+      {
+        "title": "只从官方取数",
+        "text": "型号、价格与限制优先取自厂商官方定价页或 API 文档。不收录未经证实的第三方报价，也不以导购返佣排序。"
+      },
+      {
+        "title": "价格保持原貌",
+        "text": "不同模态的计价逻辑差异很大，我们保留厂商原计价单位，不把 token、字符、秒和 credits 强行换算成同一个数字。"
+      },
+      {
+        "title": "更新留有日期",
+        "text": "价格与型号会变化。每个页面都标注最近核对时间，并在必要的型号下补充计价口径与限制说明。"
+      }
+    ],
+    "scope": [
+      "聚焦国内外主流、有公开定价与稳定产品线的模型平台，不追求长尾覆盖。",
+      "面向开发者开放、可直接向厂商申请 API 的模型服务。",
+      "覆盖文本与推理、多模态理解、语音、图像生成、视频生成五类能力。",
+      "不收录需要通过非官方转售、共享账号或来源不明的 API。"
+    ],
+    "pricing": [
+      "页面价格均为厂商官网公开标价，单位与币种保持原样。",
+      "未包含税费、汇率波动、平台优惠、阶梯折扣与失败请求退款差异。",
+      "缓存价、批处理价与企业协议价通常另计，具体以厂商条款为准。",
+      "图片输入折算 token、视频按秒、语音按字符等规则，请查看对应厂商文档。"
+    ]
+  }
+}

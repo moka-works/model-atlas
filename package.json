@@ -1,0 +1,13 @@
+{
+  "name": "model-atlas",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A static, curated atlas of model APIs, capabilities and public pricing.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs",
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\""
+  }
+}
