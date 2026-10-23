@@ -24,9 +24,28 @@ make clean      # 删除 dist/
 - `categories.json` — 五个类别：图标、色彩、选购提示
 - `providers.json` — 厂商与型号：定价、规格、亮点、注意事项、官方链接
 
+## 更新监测
+
+`scripts/watch/` 是更新检测工具，配合 GitHub Actions 每天运行一次：
+
+- **方案 A：聚合目录** — 从 OpenRouter、models.dev 抓取型号与美元价格，按厂商过滤后对比新增型号和价格变化。
+- **方案 B：官方页面** — 抓取各厂商官方定价页，提取型号 ID 与价格 token 组成信号，与上次快照对比；适合发现官网直接上新或调价。
+- 前端渲染页面（Kling、火山方舟、Vidu）使用 Playwright 获取完整内容；其余页面走普通 HTTP。
+- 快照在 `data/watch/snapshot.json`，报告输出到 `reports/watch-latest.md` 与 `.json`（已 gitignore）。
+- 规则在 `scripts/watch/sources.json`：厂商聚合源映射、型号正则、渲染开关、额外监控页面。
+
+```bash
+npm ci
+npx playwright install chromium  # 首次运行或浏览器升级后执行
+
+npm run watch         # 只检测并生成报告，不修改快照
+npm run watch:update  # 确认变化、更新 data/providers.json 后，接受新基线
+```
+
+检测结果只是线索：聚合价可能与官网人民币价或区域价不同，官方页面信号变化也需要打开链接人工确认。已确认的更新再写入 `data/providers.json`，然后运行 `npm run watch:update`。目前 OpenAI 官方页会返回 403；Anthropic 模型总览有地区限制，暂时只监控可访问的定价页。
 
 ## 技术说明
 
 - 渐进增强：搜索（`/` 或 `Ctrl/Cmd+K`）、筛选、复制型号 ID 均为增强功能，禁用 JS 后全部核心内容与导航仍可正常浏览
-- 价格、规格与限制来自各厂商官网公开信息，最后核对日期 **2026-10-23**；价格可能随时调整，请以官网为准
+- 价格、规格与限制来自各厂商官网公开信息，最后核对日期 **2026-10-24**；价格可能随时调整，请以官网为准
 - 厂商名称与商标归各自所有者，本站为非官方参考资料

@@ -1,6 +1,9 @@
 # 构建产物
 dist/
 
+# 更新检测报告（快照需要提交）
+reports/
+
 # 依赖
 node_modules/
 

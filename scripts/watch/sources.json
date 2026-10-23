@@ -1,0 +1,309 @@
+{
+  "version": 1,
+  "request": {
+    "timeoutMs": 60000,
+    "retries": 1,
+    "userAgent": "ModelAtlasWatch/1.0"
+  },
+  "modelExcludeTerms": [
+    "guide",
+    "quickstart",
+    "docs",
+    "doc",
+    "api",
+    "pricing",
+    "price",
+    "terms",
+    "license",
+    "logo",
+    "social",
+    "card",
+    "platform",
+    "cost",
+    "commercial",
+    "finetune",
+    "description",
+    "conversation",
+    "prompt",
+    "asset",
+    "editing",
+    "portrait",
+    "regeneration",
+    "context",
+    "category",
+    "upscaler",
+    "per-image",
+    "per-video",
+    "per-second",
+    "per-request",
+    "for",
+    "use",
+    "zh",
+    "ai"
+  ],
+  "aggregators": {
+    "openrouter": {
+      "kind": "openrouter",
+      "url": "https://openrouter.ai/api/v1/models"
+    },
+    "modelsdev": {
+      "kind": "modelsdev",
+      "url": "https://models.dev/api.json"
+    }
+  },
+  "providers": {
+    "openai": {
+      "aggregators": {
+        "openrouter": [
+          "openai"
+        ],
+        "modelsdev": [
+          "openai"
+        ]
+      },
+      "official": {
+        "modelPatterns": [
+          "gpt-[a-z0-9][a-z0-9.\\-]*",
+          "\\bo[0-9][a-z0-9.\\-]*",
+          "sora-[a-z0-9][a-z0-9.\\-]*",
+          "text-embedding-[a-z0-9][a-z0-9.\\-]*",
+          "dall-e-[a-z0-9][a-z0-9.\\-]*"
+        ],
+        "note": "官方页面常拦截脚本访问，主要依赖聚合目录；失败会记为 unavailable。"
+      }
+    },
+    "anthropic": {
+      "aggregators": {
+        "openrouter": [
+          "anthropic"
+        ],
+        "modelsdev": [
+          "anthropic"
+        ]
+      },
+      "official": {
+        "modelPatterns": [
+          "claude-[a-z0-9][a-z0-9.\\-]*"
+        ],
+        "note": "Anthropic 模型总览存在地区限制，暂不监控；保留可访问的定价页。"
+      }
+    },
+    "google": {
+      "aggregators": {
+        "openrouter": [
+          "google"
+        ],
+        "modelsdev": [
+          "google"
+        ]
+      },
+      "official": {
+        "modelPatterns": [
+          "gemini-[a-z0-9][a-z0-9.\\-]*"
+        ]
+      }
+    },
+    "deepseek": {
+      "aggregators": {
+        "openrouter": [
+          "deepseek"
+        ],
+        "modelsdev": [
+          "deepseek"
+        ]
+      },
+      "official": {
+        "modelPatterns": [
+          "deepseek-[a-z0-9][a-z0-9.\\-]*"
+        ]
+      }
+    },
+    "alibaba-bailian": {
+      "aggregators": {
+        "openrouter": [
+          "qwen"
+        ],
+        "modelsdev": [
+          "alibaba-cn",
+          "alibaba"
+        ]
+      },
+      "official": {
+        "modelPatterns": [
+          "(?:qwen|wan|qvq)[a-z0-9][a-z0-9.\\-]*"
+        ]
+      }
+    },
+    "moonshot": {
+      "aggregators": {
+        "openrouter": [
+          "moonshotai"
+        ],
+        "modelsdev": [
+          "moonshotai-cn",
+          "moonshotai"
+        ]
+      },
+      "official": {
+        "modelPatterns": [
+          "(?:kimi|moonshot)-[a-z0-9][a-z0-9.\\-]*"
+        ]
+      }
+    },
+    "zhipu": {
+      "aggregators": {
+        "openrouter": [
+          "z-ai"
+        ],
+        "modelsdev": [
+          "zhipuai"
+        ]
+      },
+      "official": {
+        "modelPatterns": [
+          "(?:glm|cogview|cogvideo)[a-z0-9-][a-z0-9.\\-]*"
+        ]
+      }
+    },
+    "minimax": {
+      "aggregators": {
+        "openrouter": [
+          "minimax"
+        ],
+        "modelsdev": [
+          "minimax-cn",
+          "minimax"
+        ]
+      },
+      "official": {
+        "modelPatterns": [
+          "minimax-[a-z0-9][a-z0-9.\\-]*",
+          "speech-[0-9][a-z0-9.\\-]*",
+          "hailuo-[a-z0-9][a-z0-9.\\-]*",
+          "image-0[0-9]"
+        ]
+      }
+    },
+    "volcengine": {
+      "aggregators": {
+        "openrouter": [
+          "bytedance-seed"
+        ],
+        "modelsdev": [
+          "volcengine"
+        ]
+      },
+      "official": {
+        "modelPatterns": [
+          "(?:doubao|seedance|seedream|seed-tts|seed)-[a-z0-9][a-z0-9.\\-]*"
+        ],
+        "attempts": 2,
+        "render": true,
+        "waitMs": 4000,
+        "scroll": true,
+        "modelSignal": false
+      }
+    },
+    "kling": {
+      "official": {
+        "modelPatterns": [
+          "kling[- ]?v?[0-9][a-z0-9.\\-]*(?:[- ](?:flash|turbo|omni))?"
+        ],
+        "render": true,
+        "waitMs": 4000,
+        "scroll": true,
+        "attempts": 2
+      }
+    },
+    "black-forest-labs": {
+      "official": {
+        "modelPatterns": [
+          "flux-[a-z0-9][a-z0-9.\\-]*"
+        ]
+      }
+    },
+    "luma": {
+      "official": {
+        "modelPatterns": [
+          "(?:ray|uni)-[a-z0-9][a-z0-9.\\-]*"
+        ]
+      }
+    },
+    "runway": {
+      "official": {
+        "modelPatterns": [
+          "(?:gen|aleph)[0-9][a-z0-9._-]*",
+          "act_[a-z0-9]+"
+        ]
+      }
+    },
+    "elevenlabs": {
+      "official": {
+        "modelPatterns": [
+          "(?:eleven|scribe|music)_[a-z0-9_]+"
+        ]
+      }
+    },
+    "deepgram": {
+      "official": {
+        "modelPatterns": [
+          "(?:nova|aura|flux)-[a-z0-9][a-z0-9.\\-]*"
+        ],
+        "extraPages": [
+          {
+            "label": "模型与语言总览",
+            "url": "https://developers.deepgram.com/docs/models-languages-overview",
+            "priceSignal": false
+          }
+        ]
+      }
+    },
+    "assemblyai": {
+      "official": {
+        "modelPatterns": [
+          "(?:universal|slam)-[a-z0-9][a-z0-9.\\-]*"
+        ],
+        "extraPages": [
+          {
+            "label": "模型总览",
+            "url": "https://www.assemblyai.com/docs/getting-started/models",
+            "priceSignal": false
+          }
+        ]
+      }
+    },
+    "cartesia": {
+      "official": {
+        "modelPatterns": [
+          "(?:sonic|ink)-[a-z0-9][a-z0-9.\\-]*"
+        ],
+        "extraPages": [
+          {
+            "label": "TTS 模型文档",
+            "url": "https://docs.cartesia.ai/build-with-cartesia/tts-models/latest",
+            "priceSignal": false
+          }
+        ]
+      }
+    },
+    "vidu": {
+      "official": {
+        "modelPatterns": [
+          "viduq[0-9][a-z0-9.\\-]*",
+          "vidu-[a-z0-9][a-z0-9.\\-]*"
+        ],
+        "render": true,
+        "waitMs": 4000,
+        "scroll": true,
+        "attempts": 2,
+        "extraPages": [
+          {
+            "label": "模型总览",
+            "url": "https://platform.vidu.cn/models",
+            "priceSignal": false
+          }
+        ]
+      }
+    }
+  }
+}

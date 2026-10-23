@@ -1,0 +1,100 @@
+name: Model update watch
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: model-watch
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Check model sources
+        run: node scripts/watch/check.mjs
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: model-watch-report
+          path: reports/
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Open or update tracking issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("node:fs");
+            const reportPath = "reports/watch-latest.json";
+            if (!fs.existsSync(reportPath)) {
+              core.warning("watch report not found");
+              return;
+            }
+            const report = JSON.parse(fs.readFileSync(reportPath, "utf8"));
+            if (!report.changed) {
+              core.info("no changes detected");
+              return;
+            }
+
+            const title = "[model-watch] 检测到厂商模型或价格更新";
+            const body = fs.readFileSync("reports/watch-latest.md", "utf8").slice(0, 60000);
+            const { owner, repo } = context.repo;
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: "open",
+              per_page: 100,
+            });
+            const existing = issues.find(
+              (issue) => !issue.pull_request && issue.title === title,
+            );
+
+            if (existing) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: existing.number,
+                body,
+              });
+              core.info(`updated issue #${existing.number}`);
+            } else {
+              const { data: issue } = await github.rest.issues.create({
+                owner,
+                repo,
+                title,
+                body,
+              });
+              core.info(`created issue #${issue.number}`);
+            }
