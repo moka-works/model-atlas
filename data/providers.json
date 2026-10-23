@@ -2212,6 +2212,106 @@
     ]
   },
   {
+    "slug": "vidu",
+    "name": "Vidu 生数科技",
+    "englishName": "Vidu · Shengshu",
+    "glyph": "V",
+    "color": "#6f5bf5",
+    "country": "中国",
+    "headquarters": "北京",
+    "website": "https://www.vidu.cn/",
+    "docsUrl": "https://platform.vidu.cn/docs/introduction",
+    "pricingUrl": "https://platform.vidu.cn/pricing",
+    "freeTier": "未公开统一免费额度；以控制台活动与优惠为准",
+    "apiStyles": [
+      "REST",
+      "异步任务"
+    ],
+    "summary": "Q4 Preview 把 4K、16 秒、15 张参考图与 3 段参考音频压进同一套 API，原生音画同出并按秒计价。当前只支持图生 / 参考生视频，预览版的稳定性与定价仍需观察。",
+    "positioning": "生数科技的视频路线强调参考驱动：Q4 Preview 在图生视频评测中进入第一梯队，早期体验认为运镜方向感与主体稳定性是强项。官方积分表把 540p 到 4K 拉成五档，1080p 带音频折算约 ¥0.75/秒，对短剧与广告分镜很有吸引力；但它没有文生视频，且仍是预览版。",
+    "highlights": [
+      {
+        "title": "参考素材上限高",
+        "text": "参考生视频支持 1–15 张图片与 0–3 段参考音频，适合角色、场景与声音一致性的连续镜头。"
+      },
+      {
+        "title": "4K、16 秒与音画同出",
+        "text": "单次最长 16 秒，最高 4K / 10bit，audio 默认开启，并支持智能切镜与原生音频直出。"
+      },
+      {
+        "title": "价格按秒透明",
+        "text": "540p 9 积分/秒到 4K 78 积分/秒，1 积分 = ¥0.03125；1080p 折算约 ¥0.75/秒。"
+      }
+    ],
+    "fitFor": "需要参考图或参考音频驱动、带原生音频的短剧、广告分镜与角色一致性内容，且能接受预览版风险的团队。",
+    "watchOuts": [
+      "仍是 Preview：模型 ID、配额、并发与价格都可能调整，不建议按长期稳定型号规划。",
+      "不支持文生视频，也没有首尾帧模式；完整的文生与首尾帧能力要看 Q3。",
+      "输出为 24fps；watermark 参数的文档默认值与备注不一致，接入前需实测。",
+      "标准套餐并发 ≤5，积分 12 个月过期且不退款；宣传的 0.09 元/秒起与积分表折算价口径不同，以控制台报价为准。"
+    ],
+    "pricingNote": "人民币计价，按输出秒数计费；1 积分 = ¥0.03125（100 元 = 3,200 积分）。Q4 Preview 每秒 9 / 19 / 24 / 38 / 78 积分（540p / 720p / 1080p / 2K / 4K），audio 默认开启且未单列加价；限时充值套餐另有折扣。",
+    "sources": [
+      {
+        "label": "官方定价",
+        "url": "https://platform.vidu.cn/pricing"
+      },
+      {
+        "label": "图生视频 API",
+        "url": "https://platform.vidu.cn/docs/api-reference/video-models/vidu-q4-preview/image-to-video"
+      },
+      {
+        "label": "参考生视频 API",
+        "url": "https://platform.vidu.cn/docs/api-reference/video-models/vidu-q4-preview/reference-to-video"
+      },
+      {
+        "label": "模型地图",
+        "url": "https://platform.vidu.cn/models"
+      }
+    ],
+    "models": [
+      {
+        "name": "Vidu Q4 Preview",
+        "id": "viduq4-preview",
+        "category": "video",
+        "badge": "预览 · 4K",
+        "description": "生数科技 2026 年 10 月发布的旗舰视频预览版。支持首帧图生视频，以及 1–15 张参考图、0–3 段参考音频的参考生视频，3–16 秒，最高 4K / 10bit，原生音画同出并支持智能切镜；暂不支持文生视频。",
+        "tags": [
+          "图生视频",
+          "参考生视频",
+          "音频参考",
+          "原生音频",
+          "4K"
+        ],
+        "specs": [
+          {
+            "label": "时长",
+            "value": "3–16 秒"
+          },
+          {
+            "label": "分辨率",
+            "value": "540p / 720p / 1080p / 2K / 4K"
+          },
+          {
+            "label": "参考素材",
+            "value": "1–15 张图 + 0–3 段音频"
+          },
+          {
+            "label": "帧率与色深",
+            "value": "24fps / 10bit"
+          }
+        ],
+        "price": {
+          "primary": "¥0.28 起",
+          "unit": "/ 秒",
+          "detail": "540p ¥0.28；720p ¥0.59；1080p ¥0.75；2K ¥1.19；4K ¥2.44 / 秒",
+          "note": "1 积分 = ¥0.03125；音频默认开启，未单列加价"
+        },
+        "docsUrl": "https://platform.vidu.cn/docs/api-reference/video-models/vidu-q4-preview/image-to-video"
+      }
+    ]
+  },
+  {
     "slug": "elevenlabs",
     "name": "ElevenLabs",
     "englishName": "ElevenLabs",

@@ -799,8 +799,8 @@ export function renderAboutPage(data, root) {
           <div class="update-log">
             <div class="update-log__date">${escapeHtml(formatDate(site.updatedAt))}</div>
             <div>
-              <h3>价格核对与 MiniMax 型号更新</h3>
-              <p>收录 ${stats.providerCount} 家厂商、${stats.modelCount} 个代表型号，覆盖 ${stats.categoryCount} 类模型 API。新增 MiniMax-M3.1-Flash，并重新对照厂商官方页面核对价格。</p>
+              <h3>价格核对与 Vidu 型号更新</h3>
+              <p>收录 ${stats.providerCount} 家厂商、${stats.modelCount} 个代表型号，覆盖 ${stats.categoryCount} 类模型 API。新增 Vidu Q4 Preview 与生数科技厂商条目，并重新对照厂商官方页面核对价格。</p>
             </div>
           </div>
           <p class="about-endnote">模型 API 市场变化很快：型号会下线，价格会调整，限制也会随版本更新。图鉴能提供的是选型起点，不能替代你自己的评测、压测与商务确认。</p>
