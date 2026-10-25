@@ -836,34 +836,35 @@
     "website": "https://platform.kimi.com/",
     "docsUrl": "https://platform.kimi.com/docs/models",
     "pricingUrl": "https://platform.kimi.com/docs/pricing/chat",
-    "freeTier": "有；国内实名新用户可领 15 元代金券，K3 需充值 ≥ ¥10 且代金券不可用于 K3",
+    "freeTier": "有；国内实名新用户可领 15 元代金券；K3 需充值 ≥ ¥10 开通，K3.1 Pro 需充值开通，代金券均不可用",
     "apiStyles": [
       "REST",
       "流式"
     ],
-    "summary": "把长上下文、编程与 Agent 能力集中在少数型号上。K3 提供 1M 上下文与原生视觉，K2.7 Code 给出更务实的日常编程档位。",
-    "positioning": "Kimi 的产品线很克制：K3 打旗舰，K2.7 Code 打编程，K2.6 打通用。三款型号都强调长上下文与 Agent 工作流，缓存命中与未命中的价差明显，适合把重复前缀纳入架构设计。",
+    "summary": "把长上下文、编程与 Agent 能力集中在少数型号上。K3.1 Pro 以 1M 上下文、1M 输出与原生视觉坐镇旗舰，K2.7 Code 保留更便宜的日常编程档位。",
+    "positioning": "Kimi 的产品线很克制：K3.1 Pro 打旗舰，K3 退居上一代，K2.7 Code 与 K2.6 覆盖编程和通用。四款型号都强调长上下文与 Agent 工作流，缓存命中与未命中的价差明显，适合把重复前缀纳入架构设计。K2 系列已公布下线计划，新项目应把 K3.1 Pro 作为默认选项。",
     "highlights": [
       {
-        "title": "K3 把输出上限拉到 1M",
-        "text": "长报告、整库代码与连续 Agent 轨迹都能在单次请求中完成，原生视觉省去单独的 OCR 环节。"
+        "title": "K3.1 Pro 把输出上限拉到 1M",
+        "text": "新一代旗舰官方称 3 万亿参数，长报告、整库代码与连续 Agent 轨迹都能在单次请求中完成，原生视觉省去单独的 OCR 环节。"
       },
       {
         "title": "缓存价差值得做工程",
         "text": "未命中与命中输入价最高相差十倍，稳定系统提示词和长文档前缀能显著摊薄账单。"
       },
       {
-        "title": "编程线单独定价",
-        "text": "K2.7 Code 以不到 K3 一半的价格提供 256K 上下文与图/视频输入，适合作为日常编码 Agent 的主力。"
+        "title": "编程线更便宜，但即将下线",
+        "text": "K2.7 Code 以不到 K3 一半的价格提供 256K 上下文与图/视频输入；但 K2 系列将在 12 月底下线，更适合存量项目。"
       }
     ],
     "fitFor": "以中文长文档、编程与 Agent 自动化为主，并愿意为缓存命中和上下文工程做优化的团队。",
     "watchOuts": [
-      "K3 的输入与输出价格均较高，且免费代金券不可用于 K3。",
-      "K2.6 与 K2.7 Code 的上下文为 256K，明显低于 K3。",
+      "K3.1 Pro 与 K3 的输入输出价格均较高，且免费代金券不可用于两款型号。",
+      "K2 系列自 2026-10-31 起停止向新注册用户开放，并计划于 12 月底下线，K2.6 与 K2.7 Code 均在范围内。",
+      "K2.6 与 K2.7 Code 的上下文为 256K，明显低于 K3 系列。",
       "只覆盖文本与视觉理解，不提供图像、视频或语音生成 API。"
     ],
-    "pricingNote": "人民币刊例价；输入价格区分缓存命中与未命中，K3 需充值满 ¥10 才能开通。",
+    "pricingNote": "人民币刊例价；K3.1 Pro 输入 ¥13 / 输出 ¥68、Highspeed 输入 ¥26 / 输出 ¥136，缓存命中输入 ¥1.3；K3 需充值满 ¥10 才能开通。K2 系列计划于 2026 年 12 月底下线。",
     "sources": [
       {
         "label": "Kimi 开放平台",
@@ -880,14 +881,52 @@
     ],
     "models": [
       {
+        "name": "Kimi K3.1 Pro",
+        "id": "kimi-k3.1-pro",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "旗舰",
+        "description": "Kimi 新一代旗舰，官方称 3 万亿参数，1M 上下文与 1M 最大输出，原生支持图像与视频输入，推理默认开启。高速版以双倍单价换取更低延迟。",
+        "tags": [
+          "原生视觉",
+          "推理",
+          "编程",
+          "Agent",
+          "1M 上下文"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "1M tokens"
+          },
+          {
+            "label": "输入模态",
+            "value": "文本 / 图像 / 视频"
+          }
+        ],
+        "price": {
+          "primary": "¥13",
+          "unit": "/ 百万输入 tokens（未命中缓存）",
+          "detail": "输出 ¥68 / 百万 tokens",
+          "note": "缓存命中输入 ¥1.3；Highspeed 输入 ¥26 / 输出 ¥136；缓存写入 5min ¥13 / 1h ¥26"
+        },
+        "docsUrl": "https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart"
+      },
+      {
         "name": "Kimi K3",
         "id": "kimi-k3",
         "category": "text",
         "alsoIn": [
           "multimodal"
         ],
-        "badge": "旗舰",
-        "description": "Kimi 的旗舰型号，原生视觉、1M 上下文、最高 1M 输出。面向复杂推理、编程与长程 Agent，缓存命中后的输入价显著降低。",
+        "badge": "前代旗舰",
+        "description": "Kimi 的上一代旗舰型号，原生视觉、1M 上下文、最高 1M 输出。价格低于 K3.1 Pro，适合已有调用路径或需要与旧版行为对齐的场景。",
         "tags": [
           "原生视觉",
           "推理",
