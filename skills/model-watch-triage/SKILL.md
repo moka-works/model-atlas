@@ -1,6 +1,6 @@
 ---
 name: model-watch-triage
-description: Triage and resolve automated model-watch GitHub issues in this repository. Use when an issue titled "[model-watch] 检测到厂商模型或价格更新" appears, when handling reports/watch-latest.md or .json, or when asked to verify and update model pricing after a watch scan. Covers official-source verification, filtering reseller/plan/dynamic-price noise, updating data/providers.json, rebuilding, committing data separately, and refreshing data/watch/snapshot.json.
+description: Triage and resolve automated model-watch GitHub issues in this repository. Use when an issue titled "[model-watch] 检测到厂商模型或价格更新" appears, when handling reports/watch-latest.md or .json, or when asked to verify and update model pricing after a watch scan. Covers official-source verification, filtering reseller/plan/dynamic-price noise, updating data/providers.json, rebuilding, committing data separately, refreshing data/watch/snapshot.json, and pushing before closing the issue.
 ---
 
 # Model Watch Issue 处理
@@ -18,7 +18,7 @@ description: Triage and resolve automated model-watch GitHub issues in this repo
 2. **保留原币种与原计价单位**：不要为了比较而把 token、字符、秒、credits 强行换算成同一口径。
 3. **先分类再改数据**：无效变化只刷新 watcher 基线，不改站点价格。
 4. **数据、基线、自动化分开提交**：一次 commit 只做一类事情，便于回滚和 review。
-5. **Issue 最后关闭**：确认数据已更新、基线已刷新后再关闭，否则下一次扫描会继续提示。
+5. **Issue 最后关闭**：确认数据已更新、基线已刷新，并且两个 commit 都已 `git push` 到远端后再关闭 Issue。本地 commit 不等于修复，Issue 一旦关闭，下一次扫描可能新建；关闭前必须确保远端与站点拿到的是同一份修复。
 
 ## 快速处理流程
 
@@ -96,7 +96,10 @@ npm run watch:update
 git add data/watch/snapshot.json
 git commit -m "chore: update model watch baseline"
 
-# 3. 再关闭 Issue，并写清楚更新了哪些型号/价格、哪些是噪声
+# 3. 推送两个 commit，确认远端已更新
+git push origin main
+
+# 4. 推送成功后再关闭 Issue，并写清楚更新了哪些型号/价格、哪些是噪声
 ```
 
 如果只是无效变化：
@@ -105,7 +108,8 @@ git commit -m "chore: update model watch baseline"
 npm run watch:update
 git add data/watch/snapshot.json
 git commit -m "chore: update model watch baseline"
-# 关闭 Issue，说明为何判定为渠道价/套餐价/动态信号
+git push origin main
+# 推送成功后再关闭 Issue，说明为何判定为渠道价/套餐价/动态信号
 ```
 
 不要把 `data/providers.json` 和 watcher 自动化代码混在同一个 commit，除非任务本身就是修改 watcher。
@@ -128,7 +132,7 @@ git commit -m "chore: update model watch baseline"
 - 扫描发现变化时，workflow 会查找标题相同的 **open** Issue；找到就更新正文，不会重复创建。
 - Issue 只有在 **关闭** 后才可能在下次扫描新建；如果变化仍未处理，新 Issue 是预期行为。
 - 变化消失时 Issue 不会自动关闭，需要人工关闭。
-- 关闭前确认：数据已更新、`npm run build` 通过、`data/watch/snapshot.json` 已刷新并提交。
+- 关闭前确认：数据已更新、`npm run build` 通过、`data/watch/snapshot.json` 已刷新并提交，且所有 commit 已推送到远端（`git status` 干净、`main` 与 `origin/main` 同步）。未推送就关闭 Issue 视为未完成。
 
 ## 常用命令
 
@@ -153,4 +157,5 @@ npm run build                     # 构建静态站点
 - [ ] `npm run build` 通过。
 - [ ] 数据 commit 与基线 commit 分开。
 - [ ] `data/watch/snapshot.json` 已刷新并提交。
-- [ ] Issue 已关闭，并写明处理结论。
+- [ ] 数据与基线 commit 已 `git push` 到远端，工作区干净且本地与远端同步。
+- [ ] 推送成功后才关闭 Issue，并写明处理结论。
