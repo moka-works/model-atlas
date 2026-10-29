@@ -121,6 +121,39 @@
         "docsUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
       },
       {
+        "name": "GPT-6.1 Terra",
+        "id": "gpt-6.1-terra",
+        "category": "text",
+        "alsoIn": [
+          "multimodal"
+        ],
+        "badge": "视觉推理",
+        "description": "GPT-6.1 系列的中间档位，输入价低于 Sol，主打快速响应、视觉推理与计算机操作，适合日常 Agent、编码与写作任务。",
+        "tags": [
+          "视觉推理",
+          "计算机操作",
+          "工具调用",
+          "日常 Agent"
+        ],
+        "specs": [
+          {
+            "label": "上下文",
+            "value": "1.05M tokens"
+          },
+          {
+            "label": "最大输出",
+            "value": "128K tokens"
+          }
+        ],
+        "price": {
+          "primary": "$1",
+          "unit": "/ 百万输入 tokens",
+          "detail": "输出 $5 / 百万 tokens",
+          "note": "缓存读取 $0.05；输入 > 272K 时：输入 $2 / 输出 $7.5"
+        },
+        "docsUrl": "https://developers.openai.com/api/docs/models/gpt-6.1-terra"
+      },
+      {
         "name": "GPT-6 Luna",
         "id": "gpt-6-luna",
         "category": "text",
@@ -1831,7 +1864,7 @@
       "HDR 与 EXR 输出按倍率加价，10 秒 1080p 加 HDR 后远高于页面起价。",
       "视频编辑与改画幅是否另计费，需要在调用前核对具体参数。"
     ],
-    "pricingNote": "美元计价；Ray3.2 按条与分辨率分档，编辑另计；Uni-1.1 按张计费，编辑与参考图会加价。",
+    "pricingNote": "官方以 credits 计价；以下美元价按默认 list rate $0.003 / credit 换算，实际以账户套餐或合同为准。Ray3.2 按条与分辨率分档，编辑另计；Uni-1.1 按张计费，编辑与参考图会加价。",
     "sources": [
       {
         "label": "模型文档",
@@ -1886,7 +1919,7 @@
         "id": "uni-1",
         "category": "image",
         "badge": "2K 低价",
-        "description": "固定 2K 输出的图像型号，支持文生图、图生图与编辑，最多 9 张参考图（编辑 8 张），可选 grounding。单张约 $0.0404。",
+        "description": "固定 2K 输出的图像型号，支持文生图、图生图与编辑，最多 9 张参考图（编辑 8 张），可选 grounding。单张约 $0.042。",
         "tags": [
           "固定 2K",
           "9 张参考图",
@@ -1904,9 +1937,9 @@
           }
         ],
         "price": {
-          "primary": "$0.0404",
+          "primary": "$0.042",
           "unit": "/ 张",
-          "detail": "编辑 $0.0434 / 张；每加一张参考图 +$0.003"
+          "detail": "编辑 $0.045 / 张；每加一张参考图 +$0.003"
         },
         "docsUrl": "https://docs.agents.lumalabs.ai/guides/model/"
       },
@@ -1915,7 +1948,7 @@
         "id": "uni-1-max",
         "category": "image",
         "badge": "更高质量",
-        "description": "与 Uni-1.1 相同的固定 2K 输出与参考图范围，面向更高质量要求的版本。单张 $0.10，编辑与参考图同样加价。",
+        "description": "与 Uni-1.1 相同的固定 2K 输出与参考图范围，面向更高质量要求的版本。单张 $0.102，编辑与参考图同样加价。",
         "tags": [
           "固定 2K",
           "更高质量",
@@ -1932,9 +1965,9 @@
           }
         ],
         "price": {
-          "primary": "$0.10",
+          "primary": "$0.102",
           "unit": "/ 张",
-          "detail": "编辑 $0.103 / 张；每加一张参考图 +$0.003"
+          "detail": "编辑 $0.105 / 张；每加一张参考图 +$0.003"
         },
         "docsUrl": "https://docs.agents.lumalabs.ai/guides/model/"
       }
@@ -2116,11 +2149,11 @@
     "highlights": [
       {
         "title": "4.0 单次最长 30 秒",
-        "text": "预览版支持 30 秒单次生成、最多 15 个 Omni Reference 与 10 个关键帧。"
+        "text": "正式版支持 30 秒单次生成、最多 15 个 Omni Reference 与 10 个关键帧。"
       },
       {
-        "title": "4.0 还需申请早期访问",
-        "text": "当前不能直接调用，价格仅为预览；4.0 Flash 的规格与价格尚未公布。"
+        "title": "4.0 已正式上线",
+        "text": "API 已开放调用，需购买 Flagship 资源包或联系账户经理；价目仅列 720p / 1080p。"
       },
       {
         "title": "3.0 仍是生产主力",
@@ -2129,13 +2162,13 @@
     ],
     "fitFor": "需要中文语境、带声音的短视频与广告镜头，并重视分镜、首尾帧与参考素材控制的创作团队。",
     "watchOuts": [
-      "Kling 4.0 目前需申请早期访问，官方标注价格为预览，正式发布后可能调整。",
-      "4.0 预览价目只列出 720p / 1080p，未列 4K；4.0 Flash 仍是 Coming Soon。",
+      "Kling 4.0 已正式上线，但需购买 Flagship 资源包，价格仍可能随官方调整。",
+      "4.0 价目只列出 720p / 1080p，未列 4K；4.0 Flash 未出现在 API 定价页。",
       "Turbo 不支持尾帧与 4K，但价格更低；功能差异需按型号确认。",
       "音频、4K 与视频参考都会改变每秒单价，预算要按最终参数组合计算。",
       "异步任务与并发限制会影响批量出片节拍，接入前需核对账户等级。"
     ],
-    "pricingNote": "美元计价，按输出秒数计费；3.0 与 4.0 均以 Unit 计价（1 Unit ≈ $0.14），4.0 当前为预览价，4.0 Flash 待公布。",
+    "pricingNote": "美元计价，按输出秒数计费；3.0 与 4.0 均以 Unit 计价（1 Unit ≈ $0.14），4.0 需购买 Flagship 资源包。",
     "sources": [
       {
         "label": "API 文档",
@@ -2155,8 +2188,8 @@
         "name": "Kling 4.0",
         "id": "kling-4.0",
         "category": "video",
-        "badge": "预览 · 30s",
-        "description": "Kling 4.0 预览版，单次最长 30 秒，支持最多 15 个图片、视频、元素与声音混合参考，最多 10 个关键帧和成片局部编辑；当前需申请早期访问。",
+        "badge": "30s",
+        "description": "Kling 4.0 正式版，单次最长 30 秒，支持最多 15 个图片、视频、元素与声音混合参考，最多 10 个关键帧和成片局部编辑；需购买 Flagship 资源包或联系账户经理。",
         "tags": [
           "30 秒",
           "Omni Reference",
@@ -2186,34 +2219,7 @@
           "primary": "$0.084 起",
           "unit": "/ 秒（720p，带视频输入）",
           "detail": "720p 无视频输入 $0.14；1080p 无视频输入 $0.21；1080p 带视频输入 $0.126",
-          "note": "官方标注 Coming Soon；1 Unit ≈ $0.14，价格仅为预览"
-        }
-      },
-      {
-        "name": "Kling 4.0 Flash",
-        "id": "kling-4.0-flash",
-        "category": "video",
-        "badge": "即将上线",
-        "description": "Kling 4.0 的轻量档位，官方标注 Coming Soon，规格与价格尚未公布，暂不可调用。",
-        "tags": [
-          "Coming Soon",
-          "价格待公布"
-        ],
-        "specs": [
-          {
-            "label": "状态",
-            "value": "Coming Soon"
-          },
-          {
-            "label": "价格",
-            "value": "待公布"
-          }
-        ],
-        "price": {
-          "primary": "TBA",
-          "unit": "价格待公布",
-          "detail": "官方尚未公布分辨率、时长与计价",
-          "note": "Coming Soon"
+          "note": "1 Unit ≈ $0.14；需购买 Flagship 资源包"
         }
       },
       {
@@ -2410,7 +2416,7 @@
         "price": {
           "primary": "¥0.28 起",
           "unit": "/ 秒",
-          "detail": "540p ¥0.28；720p ¥0.59；1080p ¥0.75；2K ¥1.19；4K ¥2.44 / 秒",
+          "detail": "540p ¥0.28125；720p ¥0.59375；1080p ¥0.75；2K ¥1.1875；4K ¥2.4375 / 秒",
           "note": "1 积分 = ¥0.03125；音频默认开启，未单列加价"
         },
         "docsUrl": "https://platform.vidu.cn/docs/api-reference/video-models/vidu-q4-preview/image-to-video"
@@ -2996,7 +3002,7 @@
       },
       {
         "name": "Universal-3.6 Pro Realtime",
-        "id": "universal-3-6-pro",
+        "id": "universal-3-6-pro-realtime",
         "category": "speech",
         "badge": "实时",
         "description": "面向实时语音的低延迟型号，支持 32 种语言与上下文记忆，适合客服、语音助手和实时字幕。",
