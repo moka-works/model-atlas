@@ -69,7 +69,15 @@
           "text-embedding-[a-z0-9][a-z0-9.\\-]*",
           "dall-e-[a-z0-9][a-z0-9.\\-]*"
         ],
-        "note": "官方页面常拦截脚本访问，主要依赖聚合目录；失败会记为 unavailable。"
+        "extraPages": [
+          {
+            "label": "开放平台定价",
+            "url": "https://openai.com/api/pricing/",
+            "render": true,
+            "waitMs": 4000
+          }
+        ],
+        "note": "开发者定价页常拦截脚本（403）；改用可访问的开放平台定价页作为官方信号，聚合目录只作线索。"
       }
     },
     "anthropic": {
@@ -115,7 +123,9 @@
       "official": {
         "modelPatterns": [
           "deepseek-[a-z0-9][a-z0-9.\\-]*"
-        ]
+        ],
+        "render": true,
+        "waitMs": 4000
       }
     },
     "alibaba-bailian": {
@@ -226,7 +236,9 @@
       "official": {
         "modelPatterns": [
           "(?:ray|uni)-[a-z0-9][a-z0-9.\\-]*"
-        ]
+        ],
+        "priceSignal": false,
+        "note": "定价页改用 credits 计价，价格信号关闭；按默认 $0.003 / credit 人工换算。"
       }
     },
     "runway": {

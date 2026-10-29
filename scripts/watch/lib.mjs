@@ -288,9 +288,10 @@ export async function collectOfficialPage(provider, page, config, knownIds) {
 
       const text = htmlToText(result.html);
       const modelSignal = page.modelSignal ?? official.modelSignal;
+      const priceSignal = page.priceSignal ?? official.priceSignal;
       const models =
         modelSignal === false ? [] : extractModels(result.html, patterns, knownIds, config.modelExcludeTerms || []);
-      const prices = page.priceSignal === false ? [] : extractPrices(`${result.html}\n${text}`);
+      const prices = priceSignal === false ? [] : extractPrices(`${result.html}\n${text}`);
       lastResult = {
         ...page,
         ok: true,
