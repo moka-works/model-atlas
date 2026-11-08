@@ -1,11 +1,33 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-04T03:32:13.282Z",
+  "generatedAt": "2026-11-08T16:22:39.448Z",
   "aggregators": {
     "openrouter": {
       "ok": true,
-      "checkedAt": "2026-11-04T03:32:13.282Z",
+      "checkedAt": "2026-11-08T16:22:39.448Z",
       "models": {
+        "google/gemini-omni-1.2-flash": {
+          "vendor": "google",
+          "name": "Google: Gemini Omni 1.2 Flash",
+          "context": 131072,
+          "released": "2026-11-05",
+          "price": {
+            "input": 1.5,
+            "output": 9,
+            "cache": null
+          }
+        },
+        "google/gemini-omni-1.1-flash": {
+          "vendor": "google",
+          "name": "Google: Gemini Omni 1.1 Flash",
+          "context": 131072,
+          "released": "2026-11-04",
+          "price": {
+            "input": 1.5,
+            "output": 9,
+            "cache": null
+          }
+        },
         "z-ai/glm-5.3-flashx-legal": {
           "vendor": "zhipu",
           "name": "Z.ai: GLM 5.3 FlashX Legal",
@@ -56,9 +78,9 @@
           "context": 1048576,
           "released": "2026-10-19",
           "price": {
-            "input": 0.15,
-            "output": 0.6,
-            "cache": 0.015
+            "input": 0.075,
+            "output": 0.3,
+            "cache": 0.0075
           }
         },
         "deepseek/deepseek-v4.1-flash-1017": {
@@ -67,9 +89,9 @@
           "context": 1048576,
           "released": "2026-10-17",
           "price": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache": 0.006
+            "input": 0.006,
+            "output": 0.5,
+            "cache": 0.005
           }
         },
         "google/gemini-4-argon": {
@@ -243,8 +265,8 @@
           "context": 1048576,
           "released": "2026-09-10",
           "price": {
-            "input": 0.045,
-            "output": 0.5,
+            "input": 0.051,
+            "output": 0.567,
             "cache": 0.018
           }
         },
@@ -320,8 +342,8 @@
           "context": 1048576,
           "released": "2026-08-26",
           "price": {
-            "input": 0.0313,
-            "output": 0.0846,
+            "input": 0.0335,
+            "output": 0.083,
             "cache": 0.03
           }
         },
@@ -331,9 +353,9 @@
           "context": 1048576,
           "released": "2026-08-21",
           "price": {
-            "input": 0.2156,
-            "output": 0.6468,
-            "cache": 0.00686
+            "input": 0.44,
+            "output": 1.32,
+            "cache": 0.014
           }
         },
         "z-ai/glm-5.3": {
@@ -342,9 +364,9 @@
           "context": 1048576,
           "released": "2026-08-18",
           "price": {
-            "input": 0.08,
-            "output": 3.6,
-            "cache": 0.076
+            "input": 0.0699,
+            "output": 1.4,
+            "cache": 0.0689
           }
         },
         "qwen/qwen3.8-27b": {
@@ -408,9 +430,9 @@
           "context": 1048576,
           "released": "2026-08-12",
           "price": {
-            "input": 0.115,
-            "output": 4,
-            "cache": 0.11
+            "input": 0.111,
+            "output": 4.44,
+            "cache": 0.097
           }
         },
         "deepseek/deepseek-v4-flash-0731": {
@@ -419,7 +441,7 @@
           "context": 1048576,
           "released": "2026-07-31",
           "price": {
-            "input": 0.059,
+            "input": 0.0434,
             "output": 0.3,
             "cache": 0.035
           }
@@ -474,9 +496,9 @@
           "context": 1048576,
           "released": "2026-07-16",
           "price": {
-            "input": 0.2,
+            "input": 0.192,
             "output": 16,
-            "cache": 0.19
+            "cache": 0.182
           }
         },
         "openai/gpt-5.6-luna-pro": {
@@ -608,7 +630,7 @@
           "price": {
             "input": 0.6,
             "output": 3.5,
-            "cache": 0.15
+            "cache": 0.16
           }
         },
         "anthropic/claude-fable-5": {
@@ -738,8 +760,8 @@
           "context": 262144,
           "released": "2026-04-27",
           "price": {
-            "input": 0.45,
-            "output": 2.7,
+            "input": 0.32,
+            "output": 3.2,
             "cache": null
           }
         },
@@ -771,9 +793,9 @@
           "context": 1048576,
           "released": "2026-04-24",
           "price": {
-            "input": 1.6,
-            "output": 3.2,
-            "cache": 0.135
+            "input": 0.2088,
+            "output": 0.4176,
+            "cache": 0.0174
           }
         },
         "deepseek/deepseek-v4-flash": {
@@ -837,9 +859,9 @@
           "context": 262144,
           "released": "2026-04-03",
           "price": {
-            "input": 0.071,
-            "output": 0.214,
-            "cache": 0.036
+            "input": 0.0675,
+            "output": 0.225,
+            "cache": 0.0375
           }
         },
         "google/gemma-4-31b-it": {
@@ -903,9 +925,9 @@
           "context": 204800,
           "released": "2026-03-18",
           "price": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache": 0.06
+            "input": 0.21,
+            "output": 0.84,
+            "cache": 0.042
           }
         },
         "openai/gpt-5.4-nano": {
@@ -1134,9 +1156,9 @@
           "context": 204800,
           "released": "2026-02-12",
           "price": {
-            "input": 0.27,
-            "output": 0.95,
-            "cache": 0.03
+            "input": 0.3,
+            "output": 1.2,
+            "cache": 0.06
           }
         },
         "z-ai/glm-5": {
@@ -1178,20 +1200,9 @@
           "context": 262144,
           "released": "2026-01-27",
           "price": {
-            "input": 0.5,
-            "output": 2.5,
-            "cache": 0.15
-          }
-        },
-        "minimax/minimax-m2-her": {
-          "vendor": "minimax",
-          "name": "MiniMax: MiniMax M2-her",
-          "context": 65536,
-          "released": "2026-01-23",
-          "price": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache": 0.03
+            "input": 0.532,
+            "output": 3.325,
+            "cache": 0.209
           }
         },
         "openai/gpt-audio": {
@@ -1258,17 +1269,6 @@
             "input": 0.25,
             "output": 2,
             "cache": null
-          }
-        },
-        "minimax/minimax-m2.1": {
-          "vendor": "minimax",
-          "name": "MiniMax: MiniMax M2.1",
-          "context": 204800,
-          "released": "2025-12-23",
-          "price": {
-            "input": 0.3,
-            "output": 1.2,
-            "cache": 0.03
           }
         },
         "z-ai/glm-4.7": {
@@ -1436,17 +1436,6 @@
             "cache": 0.0375
           }
         },
-        "minimax/minimax-m2": {
-          "vendor": "minimax",
-          "name": "MiniMax: MiniMax M2",
-          "context": 204800,
-          "released": "2025-10-23",
-          "price": {
-            "input": 0.255,
-            "output": 1.02,
-            "cache": null
-          }
-        },
         "openai/gpt-5-image-mini": {
           "vendor": "openai",
           "name": "OpenAI: GPT-5 Image Mini",
@@ -1607,9 +1596,9 @@
           "context": 262144,
           "released": "2025-09-11",
           "price": {
-            "input": 0.1,
+            "input": 0.09,
             "output": 1.1,
-            "cache": 0.07
+            "cache": null
           }
         },
         "moonshotai/kimi-k2-0905": {
@@ -1684,9 +1673,9 @@
           "context": 131072,
           "released": "2025-08-05",
           "price": {
-            "input": 0.029,
-            "output": 0.108,
-            "cache": 0.026
+            "input": 0.022,
+            "output": 0.082,
+            "cache": 0.02
           }
         },
         "openai/gpt-oss-20b": {
@@ -1794,9 +1783,9 @@
           "context": 262144,
           "released": "2025-07-21",
           "price": {
-            "input": 0.09,
-            "output": 0.55,
-            "cache": null
+            "input": 0.14,
+            "output": 0.8,
+            "cache": 0.05
           }
         },
         "moonshotai/kimi-k2": {
@@ -2041,25 +2030,14 @@
             "cache": 0.275
           }
         },
-        "minimax/minimax-01": {
-          "vendor": "minimax",
-          "name": "MiniMax: MiniMax-01",
-          "context": 1000192,
-          "released": "2025-01-15",
-          "price": {
-            "input": 0.2,
-            "output": 1.1,
-            "cache": null
-          }
-        },
         "deepseek/deepseek-chat": {
           "vendor": "deepseek",
           "name": "DeepSeek: DeepSeek V3",
           "context": 163840,
           "released": "2024-12-26",
           "price": {
-            "input": 0.2574,
-            "output": 1.0287,
+            "input": 0.32,
+            "output": 0.89,
             "cache": null
           }
         },
@@ -2221,55 +2199,22 @@
     },
     "modelsdev": {
       "ok": true,
-      "checkedAt": "2026-11-04T03:32:13.282Z",
+      "checkedAt": "2026-11-08T16:22:39.448Z",
       "models": {
-        "text-embedding-ada-002": {
+        "o1": {
           "vendor": "openai",
-          "name": "text-embedding-ada-002",
-          "context": 8192,
-          "released": "2022-12-15",
+          "name": "o1",
+          "context": 200000,
+          "released": "2024-12-05",
           "price": {
-            "input": 0.1,
-            "output": 0,
-            "cache": null
+            "input": 15,
+            "output": 60,
+            "cache": 7.5
           }
         },
-        "gpt-6-luna": {
+        "gpt-5.6-sol": {
           "vendor": "openai",
-          "name": "GPT-6 Luna",
-          "context": 1050000,
-          "released": "2026-09-22",
-          "price": {
-            "input": 0.1,
-            "output": 0.5,
-            "cache": 0.01
-          }
-        },
-        "gpt-5-nano": {
-          "vendor": "openai",
-          "name": "GPT-5 Nano",
-          "context": 400000,
-          "released": "2025-08-07",
-          "price": {
-            "input": 0.05,
-            "output": 0.4,
-            "cache": 0.005
-          }
-        },
-        "gpt-5": {
-          "vendor": "openai",
-          "name": "GPT-5",
-          "context": 400000,
-          "released": "2025-08-07",
-          "price": {
-            "input": 1.25,
-            "output": 10,
-            "cache": 0.125
-          }
-        },
-        "gpt-5.6": {
-          "vendor": "openai",
-          "name": "GPT-5.6",
+          "name": "GPT-5.6 Sol",
           "context": 1050000,
           "released": "2026-07-09",
           "price": {
@@ -2278,15 +2223,26 @@
             "cache": 0.4
           }
         },
-        "gpt-5.3-codex": {
+        "gpt-5.6-terra": {
           "vendor": "openai",
-          "name": "GPT-5.3 Codex",
-          "context": 400000,
-          "released": "2026-02-05",
+          "name": "GPT-5.6 Terra",
+          "context": 1050000,
+          "released": "2026-07-09",
           "price": {
-            "input": 1.75,
-            "output": 14,
-            "cache": 0.175
+            "input": 2,
+            "output": 12,
+            "cache": 0.2
+          }
+        },
+        "o1-pro": {
+          "vendor": "openai",
+          "name": "o1-pro",
+          "context": 200000,
+          "released": "2025-03-19",
+          "price": {
+            "input": 150,
+            "output": 600,
+            "cache": null
           }
         },
         "gpt-4o-2024-11-20": {
@@ -2300,36 +2256,69 @@
             "cache": 1.25
           }
         },
-        "o3": {
+        "gpt-6-astra": {
           "vendor": "openai",
-          "name": "o3",
-          "context": 200000,
-          "released": "2025-04-16",
+          "name": "GPT-6 Astra",
+          "context": 1050000,
+          "released": "2026-09-04",
+          "price": {
+            "input": 10,
+            "output": 50,
+            "cache": 1
+          }
+        },
+        "gpt-5.4": {
+          "vendor": "openai",
+          "name": "GPT-5.4",
+          "context": 1050000,
+          "released": "2026-03-05",
+          "price": {
+            "input": 2.5,
+            "output": 15,
+            "cache": 0.25
+          }
+        },
+        "gpt-5.4-mini": {
+          "vendor": "openai",
+          "name": "GPT-5.4 mini",
+          "context": 400000,
+          "released": "2026-03-17",
+          "price": {
+            "input": 0.75,
+            "output": 4.5,
+            "cache": 0.075
+          }
+        },
+        "gpt-4.1": {
+          "vendor": "openai",
+          "name": "GPT-4.1",
+          "context": 1047576,
+          "released": "2025-04-14",
           "price": {
             "input": 2,
             "output": 8,
             "cache": 0.5
           }
         },
-        "text-embedding-3-large": {
+        "gpt-6.1-terra": {
           "vendor": "openai",
-          "name": "text-embedding-3-large",
-          "context": 8191,
-          "released": "2024-01-25",
+          "name": "GPT-6.1 Terra",
+          "context": 1050000,
+          "released": "2026-10-26",
           "price": {
-            "input": 0.13,
-            "output": 0,
-            "cache": null
+            "input": 1,
+            "output": 5,
+            "cache": 0.05
           }
         },
-        "o3-pro": {
+        "gpt-5.5-pro": {
           "vendor": "openai",
-          "name": "o3-pro",
-          "context": 200000,
-          "released": "2025-06-10",
+          "name": "GPT-5.5 Pro",
+          "context": 1050000,
+          "released": "2026-04-23",
           "price": {
-            "input": 20,
-            "output": 80,
+            "input": 30,
+            "output": 180,
             "cache": null
           }
         },
@@ -2344,224 +2333,15 @@
             "cache": null
           }
         },
-        "gpt-5.6-luna": {
+        "gpt-6-luna": {
           "vendor": "openai",
-          "name": "GPT-5.6 Luna",
-          "context": 1050000,
-          "released": "2026-07-09",
-          "price": {
-            "input": 0.2,
-            "output": 1.2,
-            "cache": 0.02
-          }
-        },
-        "gpt-4.1-nano": {
-          "vendor": "openai",
-          "name": "GPT-4.1 nano",
-          "context": 1047576,
-          "released": "2025-04-14",
-          "price": {
-            "input": 0.1,
-            "output": 0.4,
-            "cache": 0.025
-          }
-        },
-        "o1": {
-          "vendor": "openai",
-          "name": "o1",
-          "context": 200000,
-          "released": "2024-12-05",
-          "price": {
-            "input": 15,
-            "output": 60,
-            "cache": 7.5
-          }
-        },
-        "gpt-daybreak-blue-latest": {
-          "vendor": "openai",
-          "name": "Daybreak Blue",
-          "context": 1050000,
-          "released": "2026-08-07",
-          "price": {
-            "input": 4,
-            "output": 20,
-            "cache": 0.4
-          }
-        },
-        "gpt-image-1.5": {
-          "vendor": "openai",
-          "name": "gpt-image-1.5",
-          "context": 0,
-          "released": "2025-11-25",
-          "price": {
-            "input": null,
-            "output": null,
-            "cache": null
-          }
-        },
-        "gpt-6.1-terra": {
-          "vendor": "openai",
-          "name": "GPT-6.1 Terra",
-          "context": 1050000,
-          "released": "2026-10-26",
-          "price": {
-            "input": 1,
-            "output": 5,
-            "cache": 0.05
-          }
-        },
-        "gpt-4o-mini": {
-          "vendor": "openai",
-          "name": "GPT-4o mini",
-          "context": 128000,
-          "released": "2024-07-18",
-          "price": {
-            "input": 0.15,
-            "output": 0.6,
-            "cache": 0.075
-          }
-        },
-        "gpt-5.2-pro": {
-          "vendor": "openai",
-          "name": "GPT-5.2 Pro",
-          "context": 400000,
-          "released": "2025-12-11",
-          "price": {
-            "input": 21,
-            "output": 168,
-            "cache": null
-          }
-        },
-        "gpt-4": {
-          "vendor": "openai",
-          "name": "GPT-4",
-          "context": 8192,
-          "released": "2023-11-06",
-          "price": {
-            "input": 30,
-            "output": 60,
-            "cache": null
-          }
-        },
-        "gpt-6-astra": {
-          "vendor": "openai",
-          "name": "GPT-6 Astra",
-          "context": 1050000,
-          "released": "2026-09-04",
-          "price": {
-            "input": 10,
-            "output": 50,
-            "cache": 1
-          }
-        },
-        "chatgpt-image-latest": {
-          "vendor": "openai",
-          "name": "chatgpt-image-latest",
-          "context": 0,
-          "released": "2025-12-16",
-          "price": {
-            "input": null,
-            "output": null,
-            "cache": null
-          }
-        },
-        "gpt-4o-2024-05-13": {
-          "vendor": "openai",
-          "name": "GPT-4o (2024-05-13)",
-          "context": 128000,
-          "released": "2024-05-13",
-          "price": {
-            "input": 5,
-            "output": 15,
-            "cache": null
-          }
-        },
-        "gpt-5.5": {
-          "vendor": "openai",
-          "name": "GPT-5.5",
-          "context": 1050000,
-          "released": "2026-04-23",
-          "price": {
-            "input": 5,
-            "output": 30,
-            "cache": 0.5
-          }
-        },
-        "gpt-5.4": {
-          "vendor": "openai",
-          "name": "GPT-5.4",
-          "context": 1050000,
-          "released": "2026-03-05",
-          "price": {
-            "input": 2.5,
-            "output": 15,
-            "cache": 0.25
-          }
-        },
-        "gpt-6-sol": {
-          "vendor": "openai",
-          "name": "GPT-6 Sol",
+          "name": "GPT-6 Luna",
           "context": 1050000,
           "released": "2026-09-22",
           "price": {
-            "input": 2,
-            "output": 10,
-            "cache": 0.2
-          }
-        },
-        "gpt-5.3-codex-spark": {
-          "vendor": "openai",
-          "name": "GPT-5.3 Codex Spark",
-          "context": 128000,
-          "released": "2026-02-05",
-          "price": {
-            "input": 1.75,
-            "output": 14,
-            "cache": 0.175
-          }
-        },
-        "gpt-5-pro": {
-          "vendor": "openai",
-          "name": "GPT-5 Pro",
-          "context": 400000,
-          "released": "2025-10-06",
-          "price": {
-            "input": 15,
-            "output": 120,
-            "cache": null
-          }
-        },
-        "gpt-6.1-sol": {
-          "vendor": "openai",
-          "name": "GPT-6.1 Sol",
-          "context": 1050000,
-          "released": "2026-09-29",
-          "price": {
-            "input": 2,
-            "output": 10,
-            "cache": 0.1
-          }
-        },
-        "gpt-3.5-turbo": {
-          "vendor": "openai",
-          "name": "GPT-3.5-turbo",
-          "context": 16385,
-          "released": "2023-03-01",
-          "price": {
-            "input": 0.5,
-            "output": 1.5,
-            "cache": 0
-          }
-        },
-        "gpt-4.1-mini": {
-          "vendor": "openai",
-          "name": "GPT-4.1 mini",
-          "context": 1047576,
-          "released": "2025-04-14",
-          "price": {
-            "input": 0.4,
-            "output": 1.6,
-            "cache": 0.1
+            "input": 0.1,
+            "output": 0.5,
+            "cache": 0.01
           }
         },
         "text-embedding-3-small": {
@@ -2575,146 +2355,25 @@
             "cache": null
           }
         },
-        "gpt-5.4-mini": {
+        "gpt-4.1-mini": {
           "vendor": "openai",
-          "name": "GPT-5.4 mini",
-          "context": 400000,
-          "released": "2026-03-17",
-          "price": {
-            "input": 0.75,
-            "output": 4.5,
-            "cache": 0.075
-          }
-        },
-        "gpt-image-2": {
-          "vendor": "openai",
-          "name": "gpt-image-2",
-          "context": 0,
-          "released": "2026-04-21",
-          "price": {
-            "input": 5,
-            "output": 30,
-            "cache": 1.25
-          }
-        },
-        "gpt-daybreak-red-latest": {
-          "vendor": "openai",
-          "name": "Daybreak Red",
-          "context": 400000,
-          "released": "2026-08-07",
-          "price": {
-            "input": 12.5,
-            "output": 75,
-            "cache": 1.25
-          }
-        },
-        "gpt-5.6-sol": {
-          "vendor": "openai",
-          "name": "GPT-5.6 Sol",
-          "context": 1050000,
-          "released": "2026-07-09",
-          "price": {
-            "input": 4,
-            "output": 20,
-            "cache": 0.4
-          }
-        },
-        "gpt-5.1": {
-          "vendor": "openai",
-          "name": "GPT-5.1",
-          "context": 400000,
-          "released": "2025-11-13",
-          "price": {
-            "input": 1.25,
-            "output": 10,
-            "cache": 0.125
-          }
-        },
-        "gpt-4-turbo": {
-          "vendor": "openai",
-          "name": "GPT-4 Turbo",
-          "context": 128000,
-          "released": "2023-11-06",
-          "price": {
-            "input": 10,
-            "output": 30,
-            "cache": null
-          }
-        },
-        "o3-mini": {
-          "vendor": "openai",
-          "name": "o3-mini",
-          "context": 200000,
-          "released": "2024-12-20",
-          "price": {
-            "input": 1.1,
-            "output": 4.4,
-            "cache": 0.55
-          }
-        },
-        "gpt-4.1": {
-          "vendor": "openai",
-          "name": "GPT-4.1",
+          "name": "GPT-4.1 mini",
           "context": 1047576,
           "released": "2025-04-14",
           "price": {
-            "input": 2,
-            "output": 8,
-            "cache": 0.5
+            "input": 0.4,
+            "output": 1.6,
+            "cache": 0.1
           }
         },
-        "gpt-5.6-terra": {
+        "gpt-5-pro": {
           "vendor": "openai",
-          "name": "GPT-5.6 Terra",
-          "context": 1050000,
-          "released": "2026-07-09",
-          "price": {
-            "input": 2,
-            "output": 12,
-            "cache": 0.2
-          }
-        },
-        "gpt-5.5-pro": {
-          "vendor": "openai",
-          "name": "GPT-5.5 Pro",
-          "context": 1050000,
-          "released": "2026-04-23",
-          "price": {
-            "input": 30,
-            "output": 180,
-            "cache": null
-          }
-        },
-        "gpt-5.4-nano": {
-          "vendor": "openai",
-          "name": "GPT-5.4 nano",
+          "name": "GPT-5 Pro",
           "context": 400000,
-          "released": "2026-03-17",
+          "released": "2025-10-06",
           "price": {
-            "input": 0.2,
-            "output": 1.25,
-            "cache": 0.02
-          }
-        },
-        "gpt-4o": {
-          "vendor": "openai",
-          "name": "GPT-4o",
-          "context": 128000,
-          "released": "2024-05-13",
-          "price": {
-            "input": 2.5,
-            "output": 10,
-            "cache": 1.25
-          }
-        },
-        "o1-pro": {
-          "vendor": "openai",
-          "name": "o1-pro",
-          "context": 200000,
-          "released": "2025-03-19",
-          "price": {
-            "input": 150,
-            "output": 600,
+            "input": 15,
+            "output": 120,
             "cache": null
           }
         },
@@ -2729,26 +2388,37 @@
             "cache": 1.25
           }
         },
-        "gpt-5.2": {
+        "gpt-5-mini": {
           "vendor": "openai",
-          "name": "GPT-5.2",
+          "name": "GPT-5 Mini",
           "context": 400000,
-          "released": "2025-12-11",
+          "released": "2025-08-07",
+          "price": {
+            "input": 0.25,
+            "output": 2,
+            "cache": 0.025
+          }
+        },
+        "gpt-5": {
+          "vendor": "openai",
+          "name": "GPT-5",
+          "context": 400000,
+          "released": "2025-08-07",
+          "price": {
+            "input": 1.25,
+            "output": 10,
+            "cache": 0.125
+          }
+        },
+        "gpt-5.3-codex": {
+          "vendor": "openai",
+          "name": "GPT-5.3 Codex",
+          "context": 400000,
+          "released": "2026-02-05",
           "price": {
             "input": 1.75,
             "output": 14,
             "cache": 0.175
-          }
-        },
-        "gpt-image-1-mini": {
-          "vendor": "openai",
-          "name": "gpt-image-1-mini",
-          "context": 0,
-          "released": "2025-09-26",
-          "price": {
-            "input": null,
-            "output": null,
-            "cache": null
           }
         },
         "gpt-realtime-2.1": {
@@ -2759,6 +2429,72 @@
           "price": {
             "input": 4,
             "output": 24,
+            "cache": 0.4
+          }
+        },
+        "gpt-5.6": {
+          "vendor": "openai",
+          "name": "GPT-5.6",
+          "context": 1050000,
+          "released": "2026-07-09",
+          "price": {
+            "input": 4,
+            "output": 20,
+            "cache": 0.4
+          }
+        },
+        "gpt-4o-mini": {
+          "vendor": "openai",
+          "name": "GPT-4o mini",
+          "context": 128000,
+          "released": "2024-07-18",
+          "price": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache": 0.075
+          }
+        },
+        "gpt-5.1": {
+          "vendor": "openai",
+          "name": "GPT-5.1",
+          "context": 400000,
+          "released": "2025-11-13",
+          "price": {
+            "input": 1.25,
+            "output": 10,
+            "cache": 0.125
+          }
+        },
+        "o3": {
+          "vendor": "openai",
+          "name": "o3",
+          "context": 200000,
+          "released": "2025-04-16",
+          "price": {
+            "input": 2,
+            "output": 8,
+            "cache": 0.5
+          }
+        },
+        "gpt-3.5-turbo": {
+          "vendor": "openai",
+          "name": "GPT-3.5-turbo",
+          "context": 16385,
+          "released": "2023-03-01",
+          "price": {
+            "input": 0.5,
+            "output": 1.5,
+            "cache": 0
+          }
+        },
+        "gpt-daybreak-blue-latest": {
+          "vendor": "openai",
+          "name": "Daybreak Blue",
+          "context": 1050000,
+          "released": "2026-08-07",
+          "price": {
+            "input": 4,
+            "output": 20,
             "cache": 0.4
           }
         },
@@ -2773,59 +2509,268 @@
             "cache": 0.275
           }
         },
-        "gpt-5-mini": {
+        "gpt-4": {
           "vendor": "openai",
-          "name": "GPT-5 Mini",
-          "context": 400000,
-          "released": "2025-08-07",
+          "name": "GPT-4",
+          "context": 8192,
+          "released": "2023-11-06",
           "price": {
-            "input": 0.25,
-            "output": 2,
+            "input": 30,
+            "output": 60,
+            "cache": null
+          }
+        },
+        "gpt-4.1-nano": {
+          "vendor": "openai",
+          "name": "GPT-4.1 nano",
+          "context": 1047576,
+          "released": "2025-04-14",
+          "price": {
+            "input": 0.1,
+            "output": 0.4,
             "cache": 0.025
           }
         },
-        "claude-haiku-4-5-20251001": {
-          "vendor": "anthropic",
-          "name": "Claude Haiku 4.5",
-          "context": 200000,
-          "released": "2025-10-15",
+        "gpt-5.2": {
+          "vendor": "openai",
+          "name": "GPT-5.2",
+          "context": 400000,
+          "released": "2025-12-11",
           "price": {
-            "input": 1,
-            "output": 5,
+            "input": 1.75,
+            "output": 14,
+            "cache": 0.175
+          }
+        },
+        "gpt-6.1-sol": {
+          "vendor": "openai",
+          "name": "GPT-6.1 Sol",
+          "context": 1050000,
+          "released": "2026-09-29",
+          "price": {
+            "input": 2,
+            "output": 10,
             "cache": 0.1
           }
         },
-        "claude-haiku-4-5": {
-          "vendor": "anthropic",
-          "name": "Claude Haiku 4.5 (latest)",
-          "context": 200000,
-          "released": "2025-10-15",
+        "gpt-5-nano": {
+          "vendor": "openai",
+          "name": "GPT-5 Nano",
+          "context": 400000,
+          "released": "2025-08-07",
           "price": {
-            "input": 1,
-            "output": 5,
-            "cache": 0.1
+            "input": 0.05,
+            "output": 0.4,
+            "cache": 0.005
           }
         },
-        "claude-haiku-5-5": {
-          "vendor": "anthropic",
-          "name": "Claude Haiku 5.5",
-          "context": 1000000,
-          "released": "2026-10-07",
+        "gpt-image-2": {
+          "vendor": "openai",
+          "name": "gpt-image-2",
+          "context": 0,
+          "released": "2026-04-21",
+          "price": {
+            "input": 5,
+            "output": 30,
+            "cache": 1.25
+          }
+        },
+        "gpt-5.6-luna": {
+          "vendor": "openai",
+          "name": "GPT-5.6 Luna",
+          "context": 1050000,
+          "released": "2026-07-09",
+          "price": {
+            "input": 0.2,
+            "output": 1.2,
+            "cache": 0.02
+          }
+        },
+        "gpt-5.3-codex-spark": {
+          "vendor": "openai",
+          "name": "GPT-5.3 Codex Spark",
+          "context": 128000,
+          "released": "2026-02-05",
+          "price": {
+            "input": 1.75,
+            "output": 14,
+            "cache": 0.175
+          }
+        },
+        "text-embedding-ada-002": {
+          "vendor": "openai",
+          "name": "text-embedding-ada-002",
+          "context": 8192,
+          "released": "2022-12-15",
           "price": {
             "input": 0.1,
-            "output": 0.5,
-            "cache": 0.01
+            "output": 0,
+            "cache": null
           }
         },
-        "claude-opus-5-5": {
-          "vendor": "anthropic",
-          "name": "Claude Opus 5.5",
-          "context": 1000000,
+        "gpt-4-turbo": {
+          "vendor": "openai",
+          "name": "GPT-4 Turbo",
+          "context": 128000,
+          "released": "2023-11-06",
+          "price": {
+            "input": 10,
+            "output": 30,
+            "cache": null
+          }
+        },
+        "gpt-4o-2024-05-13": {
+          "vendor": "openai",
+          "name": "GPT-4o (2024-05-13)",
+          "context": 128000,
+          "released": "2024-05-13",
+          "price": {
+            "input": 5,
+            "output": 15,
+            "cache": null
+          }
+        },
+        "chatgpt-image-latest": {
+          "vendor": "openai",
+          "name": "chatgpt-image-latest",
+          "context": 0,
+          "released": "2025-12-16",
+          "price": {
+            "input": null,
+            "output": null,
+            "cache": null
+          }
+        },
+        "gpt-5.4-nano": {
+          "vendor": "openai",
+          "name": "GPT-5.4 nano",
+          "context": 400000,
+          "released": "2026-03-17",
+          "price": {
+            "input": 0.2,
+            "output": 1.25,
+            "cache": 0.02
+          }
+        },
+        "gpt-6-sol": {
+          "vendor": "openai",
+          "name": "GPT-6 Sol",
+          "context": 1050000,
           "released": "2026-09-22",
           "price": {
-            "input": 4,
-            "output": 20,
+            "input": 2,
+            "output": 10,
             "cache": 0.2
+          }
+        },
+        "o3-mini": {
+          "vendor": "openai",
+          "name": "o3-mini",
+          "context": 200000,
+          "released": "2024-12-20",
+          "price": {
+            "input": 1.1,
+            "output": 4.4,
+            "cache": 0.55
+          }
+        },
+        "gpt-5.2-pro": {
+          "vendor": "openai",
+          "name": "GPT-5.2 Pro",
+          "context": 400000,
+          "released": "2025-12-11",
+          "price": {
+            "input": 21,
+            "output": 168,
+            "cache": null
+          }
+        },
+        "gpt-daybreak-red-latest": {
+          "vendor": "openai",
+          "name": "Daybreak Red",
+          "context": 400000,
+          "released": "2026-08-07",
+          "price": {
+            "input": 12.5,
+            "output": 75,
+            "cache": 1.25
+          }
+        },
+        "gpt-image-1-mini": {
+          "vendor": "openai",
+          "name": "gpt-image-1-mini",
+          "context": 0,
+          "released": "2025-09-26",
+          "price": {
+            "input": null,
+            "output": null,
+            "cache": null
+          }
+        },
+        "gpt-4o": {
+          "vendor": "openai",
+          "name": "GPT-4o",
+          "context": 128000,
+          "released": "2024-05-13",
+          "price": {
+            "input": 2.5,
+            "output": 10,
+            "cache": 1.25
+          }
+        },
+        "o3-pro": {
+          "vendor": "openai",
+          "name": "o3-pro",
+          "context": 200000,
+          "released": "2025-06-10",
+          "price": {
+            "input": 20,
+            "output": 80,
+            "cache": null
+          }
+        },
+        "gpt-image-1.5": {
+          "vendor": "openai",
+          "name": "gpt-image-1.5",
+          "context": 0,
+          "released": "2025-11-25",
+          "price": {
+            "input": null,
+            "output": null,
+            "cache": null
+          }
+        },
+        "text-embedding-3-large": {
+          "vendor": "openai",
+          "name": "text-embedding-3-large",
+          "context": 8191,
+          "released": "2024-01-25",
+          "price": {
+            "input": 0.13,
+            "output": 0,
+            "cache": null
+          }
+        },
+        "gpt-5.5": {
+          "vendor": "openai",
+          "name": "GPT-5.5",
+          "context": 1050000,
+          "released": "2026-04-23",
+          "price": {
+            "input": 5,
+            "output": 30,
+            "cache": 0.5
+          }
+        },
+        "claude-sonnet-4-5-20250929": {
+          "vendor": "anthropic",
+          "name": "Claude Sonnet 4.5",
+          "context": 200000,
+          "released": "2025-09-29",
+          "price": {
+            "input": 3,
+            "output": 15,
+            "cache": 0.3
           }
         },
         "claude-opus-4-5-20251101": {
@@ -2833,6 +2778,39 @@
           "name": "Claude Opus 4.5",
           "context": 200000,
           "released": "2025-11-24",
+          "price": {
+            "input": 5,
+            "output": 25,
+            "cache": 0.5
+          }
+        },
+        "claude-sonnet-5": {
+          "vendor": "anthropic",
+          "name": "Claude Sonnet 5",
+          "context": 1000000,
+          "released": "2026-06-29",
+          "price": {
+            "input": 2,
+            "output": 10,
+            "cache": 0.2
+          }
+        },
+        "claude-fable-5-1": {
+          "vendor": "anthropic",
+          "name": "Claude Fable 5.1",
+          "context": 1000000,
+          "released": "2026-09-01",
+          "price": {
+            "input": 10,
+            "output": 50,
+            "cache": 0.25
+          }
+        },
+        "claude-opus-5": {
+          "vendor": "anthropic",
+          "name": "Claude Opus 5",
+          "context": 1000000,
+          "released": "2026-07-24",
           "price": {
             "input": 5,
             "output": 25,
@@ -2850,22 +2828,33 @@
             "cache": 1
           }
         },
-        "claude-fable-5-1": {
+        "claude-opus-4-5": {
           "vendor": "anthropic",
-          "name": "Claude Fable 5.1",
-          "context": 1000000,
-          "released": "2026-09-01",
+          "name": "Claude Opus 4.5 (latest)",
+          "context": 200000,
+          "released": "2025-11-24",
           "price": {
-            "input": 10,
-            "output": 50,
-            "cache": 0.25
+            "input": 5,
+            "output": 25,
+            "cache": 0.5
           }
         },
-        "claude-sonnet-4-5-20250929": {
+        "claude-opus-5-5": {
           "vendor": "anthropic",
-          "name": "Claude Sonnet 4.5",
-          "context": 200000,
-          "released": "2025-09-29",
+          "name": "Claude Opus 5.5",
+          "context": 1000000,
+          "released": "2026-09-22",
+          "price": {
+            "input": 4,
+            "output": 20,
+            "cache": 0.2
+          }
+        },
+        "claude-sonnet-4-6": {
+          "vendor": "anthropic",
+          "name": "Claude Sonnet 4.6",
+          "context": 1000000,
+          "released": "2026-02-17",
           "price": {
             "input": 3,
             "output": 15,
@@ -2894,48 +2883,15 @@
             "cache": 0.1
           }
         },
-        "claude-sonnet-5": {
+        "claude-haiku-5-5": {
           "vendor": "anthropic",
-          "name": "Claude Sonnet 5",
+          "name": "Claude Haiku 5.5",
           "context": 1000000,
-          "released": "2026-06-29",
+          "released": "2026-10-07",
           "price": {
-            "input": 2,
-            "output": 10,
-            "cache": 0.2
-          }
-        },
-        "claude-opus-5": {
-          "vendor": "anthropic",
-          "name": "Claude Opus 5",
-          "context": 1000000,
-          "released": "2026-07-24",
-          "price": {
-            "input": 5,
-            "output": 25,
-            "cache": 0.5
-          }
-        },
-        "claude-opus-4-8": {
-          "vendor": "anthropic",
-          "name": "Claude Opus 4.8",
-          "context": 1000000,
-          "released": "2026-05-28",
-          "price": {
-            "input": 5,
-            "output": 25,
-            "cache": 0.5
-          }
-        },
-        "claude-sonnet-4-6": {
-          "vendor": "anthropic",
-          "name": "Claude Sonnet 4.6",
-          "context": 1000000,
-          "released": "2026-02-17",
-          "price": {
-            "input": 3,
-            "output": 15,
-            "cache": 0.3
+            "input": 0.1,
+            "output": 0.5,
+            "cache": 0.01
           }
         },
         "claude-sonnet-4-5": {
@@ -2949,11 +2905,33 @@
             "cache": 0.3
           }
         },
-        "claude-opus-4-5": {
+        "claude-haiku-4-5": {
           "vendor": "anthropic",
-          "name": "Claude Opus 4.5 (latest)",
+          "name": "Claude Haiku 4.5 (latest)",
           "context": 200000,
-          "released": "2025-11-24",
+          "released": "2025-10-15",
+          "price": {
+            "input": 1,
+            "output": 5,
+            "cache": 0.1
+          }
+        },
+        "claude-haiku-4-5-20251001": {
+          "vendor": "anthropic",
+          "name": "Claude Haiku 4.5",
+          "context": 200000,
+          "released": "2025-10-15",
+          "price": {
+            "input": 1,
+            "output": 5,
+            "cache": 0.1
+          }
+        },
+        "claude-opus-4-8": {
+          "vendor": "anthropic",
+          "name": "Claude Opus 4.8",
+          "context": 1000000,
+          "released": "2026-05-28",
           "price": {
             "input": 5,
             "output": 25,
@@ -2971,15 +2949,15 @@
             "cache": 0.5
           }
         },
-        "gemini-omni-flash-preview": {
+        "gemini-2.5-flash": {
           "vendor": "google",
-          "name": "Gemini Omni Flash Preview",
-          "context": 131072,
-          "released": "2026-06-30",
+          "name": "Gemini 2.5 Flash",
+          "context": 1048576,
+          "released": "2025-06-17",
           "price": {
-            "input": 1.5,
-            "output": 17.5,
-            "cache": null
+            "input": 0.3,
+            "output": 2.5,
+            "cache": 0.03
           }
         },
         "gemini-3.5-flash": {
@@ -2993,180 +2971,15 @@
             "cache": 0.15
           }
         },
-        "gemini-flash-lite-latest": {
+        "gemini-3-flash-preview": {
           "vendor": "google",
-          "name": "Gemini Flash-Lite Latest",
+          "name": "Gemini 3 Flash Preview",
           "context": 1048576,
-          "released": "2026-07-21",
-          "price": {
-            "input": 0.3,
-            "output": 2.5,
-            "cache": 0.03
-          }
-        },
-        "gemini-3.1-flash-tts-preview": {
-          "vendor": "google",
-          "name": "Gemini 3.1 Flash TTS Preview",
-          "context": 8192,
-          "released": "2026-04-15",
-          "price": {
-            "input": 1,
-            "output": 20,
-            "cache": null
-          }
-        },
-        "gemini-3.5-live-translate-preview": {
-          "vendor": "google",
-          "name": "Gemini 3.5 Live Translate Preview",
-          "context": 16384,
-          "released": "2026-06-09",
-          "price": {
-            "input": 3.5,
-            "output": 21,
-            "cache": null
-          }
-        },
-        "gemini-2.5-flash": {
-          "vendor": "google",
-          "name": "Gemini 2.5 Flash",
-          "context": 1048576,
-          "released": "2025-06-17",
-          "price": {
-            "input": 0.3,
-            "output": 2.5,
-            "cache": 0.03
-          }
-        },
-        "gemini-3.1-pro-preview-customtools": {
-          "vendor": "google",
-          "name": "Gemini 3.1 Pro Preview Custom Tools",
-          "context": 1048576,
-          "released": "2026-02-19",
-          "price": {
-            "input": 2,
-            "output": 12,
-            "cache": 0.2
-          }
-        },
-        "gemini-embedding-2": {
-          "vendor": "google",
-          "name": "Gemini Embedding 2",
-          "context": 8192,
-          "released": "2026-04-22",
-          "price": {
-            "input": 0.2,
-            "output": 0,
-            "cache": null
-          }
-        },
-        "gemini-3.5-flash-lite": {
-          "vendor": "google",
-          "name": "Gemini 3.5 Flash Lite",
-          "context": 1048576,
-          "released": "2026-07-21",
-          "price": {
-            "input": 0.3,
-            "output": 2.5,
-            "cache": 0.03
-          }
-        },
-        "gemini-2.5-flash-image": {
-          "vendor": "google",
-          "name": "Nano Banana",
-          "context": 32768,
-          "released": "2025-08-26",
-          "price": {
-            "input": 0.3,
-            "output": 30,
-            "cache": 0.075
-          }
-        },
-        "gemini-2.5-computer-use-preview-10-2025": {
-          "vendor": "google",
-          "name": "Gemini 2.5 Computer Use Preview 10-2025",
-          "context": 128000,
-          "released": "2025-10-07",
-          "price": {
-            "input": 1.25,
-            "output": 10,
-            "cache": null
-          }
-        },
-        "gemini-3.6-flash": {
-          "vendor": "google",
-          "name": "Gemini 3.6 Flash",
-          "context": 1048576,
-          "released": "2026-07-21",
-          "price": {
-            "input": 0.75,
-            "output": 3.75,
-            "cache": 0.075
-          }
-        },
-        "gemini-2.5-flash-lite": {
-          "vendor": "google",
-          "name": "Gemini 2.5 Flash-Lite",
-          "context": 1048576,
-          "released": "2025-06-17",
-          "price": {
-            "input": 0.1,
-            "output": 0.4,
-            "cache": 0.01
-          }
-        },
-        "gemini-2.5-flash-preview-tts": {
-          "vendor": "google",
-          "name": "Gemini 2.5 Flash Preview TTS",
-          "context": 8192,
-          "released": "2025-05-01",
+          "released": "2025-12-17",
           "price": {
             "input": 0.5,
-            "output": 10,
-            "cache": null
-          }
-        },
-        "gemini-2.5-pro-preview-tts": {
-          "vendor": "google",
-          "name": "Gemini 2.5 Pro Preview TTS",
-          "context": 8192,
-          "released": "2025-05-01",
-          "price": {
-            "input": 1,
-            "output": 20,
-            "cache": null
-          }
-        },
-        "gemini-embedding-001": {
-          "vendor": "google",
-          "name": "Gemini Embedding 001",
-          "context": 2048,
-          "released": "2025-05-20",
-          "price": {
-            "input": 0.15,
-            "output": 0,
-            "cache": null
-          }
-        },
-        "gemini-3-pro-image": {
-          "vendor": "google",
-          "name": "Nano Banana Pro",
-          "context": 65536,
-          "released": "2026-05-28",
-          "price": {
-            "input": 2,
-            "output": 120,
-            "cache": null
-          }
-        },
-        "gemini-flash-latest": {
-          "vendor": "google",
-          "name": "Gemini Flash Latest",
-          "context": 1048576,
-          "released": "2026-08-13",
-          "price": {
-            "input": 0.75,
-            "output": 3.75,
-            "cache": 0.075
+            "output": 3,
+            "cache": 0.05
           }
         },
         "gemini-3.1-flash-lite-preview": {
@@ -3174,17 +2987,6 @@
           "name": "Gemini 3.1 Flash Lite Preview",
           "context": 1048576,
           "released": "2026-03-03",
-          "price": {
-            "input": 0.25,
-            "output": 1.5,
-            "cache": 0.025
-          }
-        },
-        "gemini-3.1-flash-lite": {
-          "vendor": "google",
-          "name": "Gemini 3.1 Flash Lite",
-          "context": 1048576,
-          "released": "2026-05-07",
           "price": {
             "input": 0.25,
             "output": 1.5,
@@ -3202,70 +3004,15 @@
             "cache": null
           }
         },
-        "gemini-3.1-flash-live-preview": {
+        "gemini-3.1-pro-preview": {
           "vendor": "google",
-          "name": "Gemini 3.1 Flash Live Preview",
-          "context": 131072,
-          "released": "2026-03-26",
-          "price": {
-            "input": 0.75,
-            "output": 4.5,
-            "cache": null
-          }
-        },
-        "gemini-4-argon": {
-          "vendor": "google",
-          "name": "Gemini 4 Argon",
-          "context": 1048576,
-          "released": "2026-10-13",
-          "price": {
-            "input": 2,
-            "output": 10,
-            "cache": 0.1
-          }
-        },
-        "gemini-3-flash-preview": {
-          "vendor": "google",
-          "name": "Gemini 3 Flash Preview",
-          "context": 1048576,
-          "released": "2025-12-17",
-          "price": {
-            "input": 0.5,
-            "output": 3,
-            "cache": 0.05
-          }
-        },
-        "gemini-pro-latest": {
-          "vendor": "google",
-          "name": "Gemini Pro Latest",
+          "name": "Gemini 3.1 Pro Preview",
           "context": 1048576,
           "released": "2026-02-19",
           "price": {
             "input": 2,
             "output": 12,
             "cache": 0.2
-          }
-        },
-        "gemini-2.5-pro": {
-          "vendor": "google",
-          "name": "Gemini 2.5 Pro",
-          "context": 1048576,
-          "released": "2025-06-17",
-          "price": {
-            "input": 1.25,
-            "output": 10,
-            "cache": 0.125
-          }
-        },
-        "gemini-3.7-flash": {
-          "vendor": "google",
-          "name": "Gemini 3.7 Flash",
-          "context": 1048576,
-          "released": "2026-08-13",
-          "price": {
-            "input": 0.75,
-            "output": 3.75,
-            "cache": 0.075
           }
         },
         "gemini-3.8-flash": {
@@ -3279,6 +3026,193 @@
             "cache": 0.075
           }
         },
+        "gemini-3.1-flash-tts-preview": {
+          "vendor": "google",
+          "name": "Gemini 3.1 Flash TTS Preview",
+          "context": 8192,
+          "released": "2026-04-15",
+          "price": {
+            "input": 1,
+            "output": 20,
+            "cache": null
+          }
+        },
+        "gemini-2.5-flash-lite": {
+          "vendor": "google",
+          "name": "Gemini 2.5 Flash-Lite",
+          "context": 1048576,
+          "released": "2025-06-17",
+          "price": {
+            "input": 0.1,
+            "output": 0.4,
+            "cache": 0.01
+          }
+        },
+        "gemini-2.5-pro": {
+          "vendor": "google",
+          "name": "Gemini 2.5 Pro",
+          "context": 1048576,
+          "released": "2025-06-17",
+          "price": {
+            "input": 1.25,
+            "output": 10,
+            "cache": 0.125
+          }
+        },
+        "gemini-flash-latest": {
+          "vendor": "google",
+          "name": "Gemini Flash Latest",
+          "context": 1048576,
+          "released": "2026-08-13",
+          "price": {
+            "input": 0.75,
+            "output": 3.75,
+            "cache": 0.075
+          }
+        },
+        "gemini-flash-lite-latest": {
+          "vendor": "google",
+          "name": "Gemini Flash-Lite Latest",
+          "context": 1048576,
+          "released": "2026-07-21",
+          "price": {
+            "input": 0.3,
+            "output": 2.5,
+            "cache": 0.03
+          }
+        },
+        "gemini-4-argon": {
+          "vendor": "google",
+          "name": "Gemini 4 Argon",
+          "context": 1048576,
+          "released": "2026-10-13",
+          "price": {
+            "input": 2,
+            "output": 10,
+            "cache": 0.1
+          }
+        },
+        "gemini-3.5-live-translate-preview": {
+          "vendor": "google",
+          "name": "Gemini 3.5 Live Translate Preview",
+          "context": 16384,
+          "released": "2026-06-09",
+          "price": {
+            "input": 3.5,
+            "output": 21,
+            "cache": null
+          }
+        },
+        "gemini-2.5-flash-image": {
+          "vendor": "google",
+          "name": "Nano Banana",
+          "context": 32768,
+          "released": "2025-08-26",
+          "price": {
+            "input": 0.3,
+            "output": 30,
+            "cache": 0.075
+          }
+        },
+        "gemini-embedding-001": {
+          "vendor": "google",
+          "name": "Gemini Embedding 001",
+          "context": 2048,
+          "released": "2025-05-20",
+          "price": {
+            "input": 0.15,
+            "output": 0,
+            "cache": null
+          }
+        },
+        "gemini-2.5-flash-preview-tts": {
+          "vendor": "google",
+          "name": "Gemini 2.5 Flash Preview TTS",
+          "context": 8192,
+          "released": "2025-05-01",
+          "price": {
+            "input": 0.5,
+            "output": 10,
+            "cache": null
+          }
+        },
+        "gemini-3.1-pro-preview-customtools": {
+          "vendor": "google",
+          "name": "Gemini 3.1 Pro Preview Custom Tools",
+          "context": 1048576,
+          "released": "2026-02-19",
+          "price": {
+            "input": 2,
+            "output": 12,
+            "cache": 0.2
+          }
+        },
+        "gemini-pro-latest": {
+          "vendor": "google",
+          "name": "Gemini Pro Latest",
+          "context": 1048576,
+          "released": "2026-02-19",
+          "price": {
+            "input": 2,
+            "output": 12,
+            "cache": 0.2
+          }
+        },
+        "gemini-3.5-flash-lite": {
+          "vendor": "google",
+          "name": "Gemini 3.5 Flash Lite",
+          "context": 1048576,
+          "released": "2026-07-21",
+          "price": {
+            "input": 0.3,
+            "output": 2.5,
+            "cache": 0.03
+          }
+        },
+        "gemini-3-pro-image": {
+          "vendor": "google",
+          "name": "Nano Banana Pro",
+          "context": 65536,
+          "released": "2026-05-28",
+          "price": {
+            "input": 2,
+            "output": 120,
+            "cache": null
+          }
+        },
+        "gemini-3.1-flash-lite": {
+          "vendor": "google",
+          "name": "Gemini 3.1 Flash Lite",
+          "context": 1048576,
+          "released": "2026-05-07",
+          "price": {
+            "input": 0.25,
+            "output": 1.5,
+            "cache": 0.025
+          }
+        },
+        "gemini-3.6-flash": {
+          "vendor": "google",
+          "name": "Gemini 3.6 Flash",
+          "context": 1048576,
+          "released": "2026-07-21",
+          "price": {
+            "input": 0.75,
+            "output": 3.75,
+            "cache": 0.075
+          }
+        },
+        "gemini-2.5-computer-use-preview-10-2025": {
+          "vendor": "google",
+          "name": "Gemini 2.5 Computer Use Preview 10-2025",
+          "context": 128000,
+          "released": "2025-10-07",
+          "price": {
+            "input": 1.25,
+            "output": 10,
+            "cache": null
+          }
+        },
         "gemini-3.1-flash-lite-image": {
           "vendor": "google",
           "name": "Nano Banana 2 Lite",
@@ -3290,15 +3224,59 @@
             "cache": null
           }
         },
-        "gemini-3.1-pro-preview": {
+        "gemini-omni-flash-preview": {
           "vendor": "google",
-          "name": "Gemini 3.1 Pro Preview",
-          "context": 1048576,
-          "released": "2026-02-19",
+          "name": "Gemini Omni Flash Preview",
+          "context": 131072,
+          "released": "2026-06-30",
           "price": {
-            "input": 2,
-            "output": 12,
-            "cache": 0.2
+            "input": 1.5,
+            "output": 17.5,
+            "cache": null
+          }
+        },
+        "gemini-3.1-flash-live-preview": {
+          "vendor": "google",
+          "name": "Gemini 3.1 Flash Live Preview",
+          "context": 131072,
+          "released": "2026-03-26",
+          "price": {
+            "input": 0.75,
+            "output": 4.5,
+            "cache": null
+          }
+        },
+        "gemini-embedding-2": {
+          "vendor": "google",
+          "name": "Gemini Embedding 2",
+          "context": 8192,
+          "released": "2026-04-22",
+          "price": {
+            "input": 0.2,
+            "output": 0,
+            "cache": null
+          }
+        },
+        "gemini-2.5-pro-preview-tts": {
+          "vendor": "google",
+          "name": "Gemini 2.5 Pro Preview TTS",
+          "context": 8192,
+          "released": "2025-05-01",
+          "price": {
+            "input": 1,
+            "output": 20,
+            "cache": null
+          }
+        },
+        "gemini-3.7-flash": {
+          "vendor": "google",
+          "name": "Gemini 3.7 Flash",
+          "context": 1048576,
+          "released": "2026-08-13",
+          "price": {
+            "input": 0.75,
+            "output": 3.75,
+            "cache": 0.075
           }
         },
         "deepseek-v4-pro": {
@@ -3310,6 +3288,17 @@
             "input": 0.66,
             "output": 1.98,
             "cache": 0.022
+          }
+        },
+        "deepseek-v4-flash": {
+          "vendor": "deepseek",
+          "name": "DeepSeek V4 Flash",
+          "context": 1048576,
+          "released": "2026-10-17",
+          "price": {
+            "input": 0.15,
+            "output": 0.6,
+            "cache": 0.003
           }
         },
         "deepseek-flash": {
@@ -3334,25 +3323,69 @@
             "cache": 0.003
           }
         },
-        "deepseek-v4-flash": {
-          "vendor": "deepseek",
-          "name": "DeepSeek V4 Flash",
-          "context": 1048576,
-          "released": "2026-10-17",
+        "qwen3.5-397b-a17b": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.5 397B-A17B",
+          "context": 262144,
+          "released": "2026-02-16",
           "price": {
-            "input": 0.15,
-            "output": 0.6,
-            "cache": 0.003
+            "input": 0.172,
+            "output": 1.032,
+            "cache": null
           }
         },
-        "qwen3-omni-flash-realtime": {
+        "qwen3-coder-480b-a35b-instruct": {
           "vendor": "alibaba-bailian",
-          "name": "Qwen3-Omni Flash Realtime",
-          "context": 65536,
-          "released": "2025-09-15",
+          "name": "Qwen3-Coder 480B-A35B Instruct",
+          "context": 262144,
+          "released": "2025-04",
           "price": {
-            "input": 0.23,
-            "output": 0.918,
+            "input": 0.861,
+            "output": 3.441,
+            "cache": null
+          }
+        },
+        "qwen2-5-omni-7b": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen2.5-Omni 7B",
+          "context": 32768,
+          "released": "2024-12",
+          "price": {
+            "input": 0.087,
+            "output": 0.345,
+            "cache": null
+          }
+        },
+        "qwen3.6-plus": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.6 Plus",
+          "context": 1000000,
+          "released": "2026-04-02",
+          "price": {
+            "input": 0.276,
+            "output": 1.651,
+            "cache": 0.0276
+          }
+        },
+        "qwen3-vl-plus": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3-VL Plus",
+          "context": 262144,
+          "released": "2025-09-23",
+          "price": {
+            "input": 0.143353,
+            "output": 1.433525,
+            "cache": 0.028671
+          }
+        },
+        "qwen3-max": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3 Max",
+          "context": 262144,
+          "released": "2026-01-23",
+          "price": {
+            "input": 0.359,
+            "output": 1.434,
             "cache": null
           }
         },
@@ -3367,37 +3400,37 @@
             "cache": null
           }
         },
-        "qwen3.5-397b-a17b": {
+        "qwen3.8-omni-flash": {
           "vendor": "alibaba-bailian",
-          "name": "Qwen3.5 397B-A17B",
-          "context": 262144,
-          "released": "2026-02-16",
-          "price": {
-            "input": 0.172,
-            "output": 1.032,
-            "cache": null
-          }
-        },
-        "qwen3-vl-235b-a22b": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3-VL 235B-A22B",
-          "context": 131072,
-          "released": "2025-04",
-          "price": {
-            "input": 0.286705,
-            "output": 1.14682,
-            "cache": null
-          }
-        },
-        "qwen3.6-flash": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.6 Flash",
+          "name": "Qwen3.8 Omni Flash",
           "context": 1000000,
-          "released": "2026-04-27",
+          "released": "2026-09-17",
           "price": {
-            "input": 0.165,
-            "output": 0.99,
-            "cache": 0.0165
+            "input": 0.113,
+            "output": 0.382,
+            "cache": 0.014
+          }
+        },
+        "qwen3.6-max-preview": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.6 Max Preview",
+          "context": 245800,
+          "released": "2026-04-20",
+          "price": {
+            "input": 1.32,
+            "output": 7.9,
+            "cache": 0.132
+          }
+        },
+        "qwen3.7-max": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.7 Max",
+          "context": 1000000,
+          "released": "2026-05-21",
+          "price": {
+            "input": 1.65,
+            "output": 4.951,
+            "cache": 0.33
           }
         },
         "qwen3-coder-flash": {
@@ -3411,70 +3444,37 @@
             "cache": 0.0288
           }
         },
-        "qwen3.6-plus": {
+        "qwen3.8-max": {
           "vendor": "alibaba-bailian",
-          "name": "Qwen3.6 Plus",
+          "name": "Qwen3.8 Max",
           "context": 1000000,
-          "released": "2026-04-02",
+          "released": "2026-08-03",
           "price": {
-            "input": 0.276,
-            "output": 1.651,
-            "cache": 0.0276
+            "input": 1.77744,
+            "output": 5.33231,
+            "cache": 0.22218
           }
         },
-        "qwen3-vl-30b-a3b": {
+        "qwen3.6-flash": {
           "vendor": "alibaba-bailian",
-          "name": "Qwen3-VL 30B-A3B",
-          "context": 131072,
-          "released": "2025-04",
-          "price": {
-            "input": 0.108,
-            "output": 0.431,
-            "cache": null
-          }
-        },
-        "qwen3-coder-30b-a3b-instruct": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3-Coder 30B-A3B Instruct",
-          "context": 262144,
-          "released": "2025-04",
-          "price": {
-            "input": 0.216,
-            "output": 0.861,
-            "cache": null
-          }
-        },
-        "qwen3-vl-plus": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3-VL Plus",
-          "context": 262144,
-          "released": "2025-09-23",
-          "price": {
-            "input": 0.143353,
-            "output": 1.433525,
-            "cache": 0.028671
-          }
-        },
-        "qwen3-coder-480b-a35b-instruct": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3-Coder 480B-A35B Instruct",
-          "context": 262144,
-          "released": "2025-04",
-          "price": {
-            "input": 0.861,
-            "output": 3.441,
-            "cache": null
-          }
-        },
-        "qwen3.8-flash": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.8 Flash",
+          "name": "Qwen3.6 Flash",
           "context": 1000000,
-          "released": "2026-08-26",
+          "released": "2026-04-27",
           "price": {
-            "input": 0.11875,
-            "output": 0.40073,
-            "cache": 0.014844
+            "input": 0.165,
+            "output": 0.99,
+            "cache": 0.0165
+          }
+        },
+        "qwen3-omni-flash": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3-Omni Flash",
+          "context": 65536,
+          "released": "2025-09-15",
+          "price": {
+            "input": 0.258,
+            "output": 0.989,
+            "cache": null
           }
         },
         "qwen3-235b-a22b": {
@@ -3488,15 +3488,114 @@
             "cache": null
           }
         },
-        "qwen3-max": {
+        "qwen3-omni-flash-realtime": {
           "vendor": "alibaba-bailian",
-          "name": "Qwen3 Max",
-          "context": 262144,
-          "released": "2026-01-23",
+          "name": "Qwen3-Omni Flash Realtime",
+          "context": 65536,
+          "released": "2025-09-15",
           "price": {
-            "input": 0.359,
-            "output": 1.434,
+            "input": 0.23,
+            "output": 0.918,
             "cache": null
+          }
+        },
+        "qwen3.7-plus": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.7 Plus",
+          "context": 1000000,
+          "released": "2026-06-02",
+          "price": {
+            "input": 0.276,
+            "output": 1.101,
+            "cache": 0.0552
+          }
+        },
+        "qwen3.5-plus": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.5 Plus",
+          "context": 1000000,
+          "released": "2026-02-16",
+          "price": {
+            "input": 0.115,
+            "output": 0.688,
+            "cache": null
+          }
+        },
+        "qwen3.7-flash": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.7 Flash",
+          "context": 1000000,
+          "released": "2026-07-15",
+          "price": {
+            "input": 0.02962,
+            "output": 0.1185,
+            "cache": 0.005924
+          }
+        },
+        "qwen3-coder-plus": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3 Coder Plus",
+          "context": 1048576,
+          "released": "2025-07-23",
+          "price": {
+            "input": 0.574,
+            "output": 2.296,
+            "cache": null
+          }
+        },
+        "qwen3-vl-30b-a3b": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3-VL 30B-A3B",
+          "context": 131072,
+          "released": "2025-04",
+          "price": {
+            "input": 0.108,
+            "output": 0.431,
+            "cache": null
+          }
+        },
+        "qwen3-8b": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3 8B",
+          "context": 131072,
+          "released": "2025-04",
+          "price": {
+            "input": 0.072,
+            "output": 0.287,
+            "cache": null
+          }
+        },
+        "qwen3-asr-flash": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3-ASR Flash",
+          "context": 53248,
+          "released": "2025-09-08",
+          "price": {
+            "input": null,
+            "output": null,
+            "cache": null
+          }
+        },
+        "qwen3-14b": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3 14B",
+          "context": 131072,
+          "released": "2025-04",
+          "price": {
+            "input": 0.144,
+            "output": 0.574,
+            "cache": null
+          }
+        },
+        "qwen3.8-flash": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.8 Flash",
+          "context": 1000000,
+          "released": "2026-08-26",
+          "price": {
+            "input": 0.11875,
+            "output": 0.40073,
+            "cache": 0.014844
           }
         },
         "qwen3-next-80b-a3b-thinking": {
@@ -3521,26 +3620,26 @@
             "cache": null
           }
         },
-        "qwen3-14b": {
+        "qwen3-coder-30b-a3b-instruct": {
           "vendor": "alibaba-bailian",
-          "name": "Qwen3 14B",
-          "context": 131072,
+          "name": "Qwen3-Coder 30B-A3B Instruct",
+          "context": 262144,
           "released": "2025-04",
           "price": {
-            "input": 0.144,
-            "output": 0.574,
+            "input": 0.216,
+            "output": 0.861,
             "cache": null
           }
         },
-        "qwen3.7-plus": {
+        "qwen3-vl-235b-a22b": {
           "vendor": "alibaba-bailian",
-          "name": "Qwen3.7 Plus",
-          "context": 1000000,
-          "released": "2026-06-02",
+          "name": "Qwen3-VL 235B-A22B",
+          "context": 131072,
+          "released": "2025-04",
           "price": {
-            "input": 0.276,
-            "output": 1.101,
-            "cache": 0.0552
+            "input": 0.286705,
+            "output": 1.14682,
+            "cache": null
           }
         },
         "qwen3-32b": {
@@ -3551,182 +3650,6 @@
           "price": {
             "input": 0.287,
             "output": 1.147,
-            "cache": null
-          }
-        },
-        "qwen3.7-flash": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.7 Flash",
-          "context": 1000000,
-          "released": "2026-07-15",
-          "price": {
-            "input": 0.02962,
-            "output": 0.1185,
-            "cache": 0.005924
-          }
-        },
-        "qwen3-asr-flash": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3-ASR Flash",
-          "context": 53248,
-          "released": "2025-09-08",
-          "price": {
-            "input": null,
-            "output": null,
-            "cache": null
-          }
-        },
-        "qwen2-5-omni-7b": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen2.5-Omni 7B",
-          "context": 32768,
-          "released": "2024-12",
-          "price": {
-            "input": 0.087,
-            "output": 0.345,
-            "cache": null
-          }
-        },
-        "qwen3.7-max": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.7 Max",
-          "context": 1000000,
-          "released": "2026-05-21",
-          "price": {
-            "input": 1.65,
-            "output": 4.951,
-            "cache": 0.33
-          }
-        },
-        "qwen3-omni-flash": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3-Omni Flash",
-          "context": 65536,
-          "released": "2025-09-15",
-          "price": {
-            "input": 0.258,
-            "output": 0.989,
-            "cache": null
-          }
-        },
-        "qwen3-8b": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3 8B",
-          "context": 131072,
-          "released": "2025-04",
-          "price": {
-            "input": 0.072,
-            "output": 0.287,
-            "cache": null
-          }
-        },
-        "qwen3-coder-plus": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3 Coder Plus",
-          "context": 1048576,
-          "released": "2025-07-23",
-          "price": {
-            "input": 0.574,
-            "output": 2.296,
-            "cache": null
-          }
-        },
-        "qwen3.6-max-preview": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.6 Max Preview",
-          "context": 245800,
-          "released": "2026-04-20",
-          "price": {
-            "input": 1.32,
-            "output": 7.9,
-            "cache": 0.132
-          }
-        },
-        "qwen3.5-plus": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.5 Plus",
-          "context": 1000000,
-          "released": "2026-02-16",
-          "price": {
-            "input": 0.115,
-            "output": 0.688,
-            "cache": null
-          }
-        },
-        "qwen3.8-omni-flash": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.8 Omni Flash",
-          "context": 1000000,
-          "released": "2026-09-17",
-          "price": {
-            "input": 0.113,
-            "output": 0.382,
-            "cache": 0.014
-          }
-        },
-        "qwen3.8-max": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.8 Max",
-          "context": 1000000,
-          "released": "2026-08-03",
-          "price": {
-            "input": 1.77744,
-            "output": 5.33231,
-            "cache": 0.22218
-          }
-        },
-        "qwen3.5-35b-a3b": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.5 35B-A3B",
-          "context": 262144,
-          "released": "2026-02-23",
-          "price": {
-            "input": 0.25,
-            "output": 2,
-            "cache": null
-          }
-        },
-        "qwen3.6-35b-a3b": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.6 35B-A3B",
-          "context": 262144,
-          "released": "2026-04-17",
-          "price": {
-            "input": 0.375,
-            "output": 2.25,
-            "cache": null
-          }
-        },
-        "qwen3.5-27b": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.5 27B",
-          "context": 262144,
-          "released": "2026-02-23",
-          "price": {
-            "input": 0.3,
-            "output": 2.4,
-            "cache": null
-          }
-        },
-        "qwen3.5-122b-a10b": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3.5 122B-A10B",
-          "context": 262144,
-          "released": "2026-02-23",
-          "price": {
-            "input": 0.4,
-            "output": 3.2,
-            "cache": null
-          }
-        },
-        "qwen3-livetranslate-flash-realtime": {
-          "vendor": "alibaba-bailian",
-          "name": "Qwen3-LiveTranslate Flash Realtime",
-          "context": 53248,
-          "released": "2025-09-22",
-          "price": {
-            "input": 10,
-            "output": 10,
             "cache": null
           }
         },
@@ -3741,6 +3664,72 @@
             "cache": null
           }
         },
+        "qwen3-livetranslate-flash-realtime": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3-LiveTranslate Flash Realtime",
+          "context": 53248,
+          "released": "2025-09-22",
+          "price": {
+            "input": 10,
+            "output": 10,
+            "cache": null
+          }
+        },
+        "qwen3.5-27b": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.5 27B",
+          "context": 262144,
+          "released": "2026-02-23",
+          "price": {
+            "input": 0.3,
+            "output": 2.4,
+            "cache": null
+          }
+        },
+        "qwen3.6-35b-a3b": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.6 35B-A3B",
+          "context": 262144,
+          "released": "2026-04-17",
+          "price": {
+            "input": 0.375,
+            "output": 2.25,
+            "cache": null
+          }
+        },
+        "qwen3.5-35b-a3b": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.5 35B-A3B",
+          "context": 262144,
+          "released": "2026-02-23",
+          "price": {
+            "input": 0.25,
+            "output": 2,
+            "cache": null
+          }
+        },
+        "qwen3.5-122b-a10b": {
+          "vendor": "alibaba-bailian",
+          "name": "Qwen3.5 122B-A10B",
+          "context": 262144,
+          "released": "2026-02-23",
+          "price": {
+            "input": 0.4,
+            "output": 3.2,
+            "cache": null
+          }
+        },
+        "kimi-k2.6": {
+          "vendor": "moonshot",
+          "name": "Kimi K2.6",
+          "context": 262144,
+          "released": "2026-04-20",
+          "price": {
+            "input": 0.9711,
+            "output": 4.0337,
+            "cache": 0.1643
+          }
+        },
         "kimi-k3.1-pro-highspeed": {
           "vendor": "moonshot",
           "name": "Kimi K3.1 Pro Highspeed",
@@ -3749,6 +3738,17 @@
           "price": {
             "input": 3.8874,
             "output": 20.3342,
+            "cache": 0.1944
+          }
+        },
+        "kimi-k3.1-pro": {
+          "vendor": "moonshot",
+          "name": "Kimi K3.1 Pro",
+          "context": 1048576,
+          "released": "2026-10-23",
+          "price": {
+            "input": 1.9437,
+            "output": 10.1671,
             "cache": 0.1944
           }
         },
@@ -3763,17 +3763,6 @@
             "cache": 0.2988
           }
         },
-        "kimi-k2.6": {
-          "vendor": "moonshot",
-          "name": "Kimi K2.6",
-          "context": 262144,
-          "released": "2026-04-20",
-          "price": {
-            "input": 0.9711,
-            "output": 4.0337,
-            "cache": 0.1643
-          }
-        },
         "kimi-k2.7-code": {
           "vendor": "moonshot",
           "name": "Kimi K2.7 Code",
@@ -3783,17 +3772,6 @@
             "input": 0.9711,
             "output": 4.0337,
             "cache": 0.1942
-          }
-        },
-        "kimi-k3.1-pro": {
-          "vendor": "moonshot",
-          "name": "Kimi K3.1 Pro",
-          "context": 1048576,
-          "released": "2026-10-23",
-          "price": {
-            "input": 1.9437,
-            "output": 10.1671,
-            "cache": 0.1944
           }
         },
         "kimi-k2.7-code-highspeed": {
@@ -3807,15 +3785,26 @@
             "cache": 0.3884
           }
         },
-        "glm-5": {
+        "glm-4.6v": {
           "vendor": "zhipu",
-          "name": "GLM-5",
-          "context": 204800,
-          "released": "2026-02-12",
+          "name": "GLM-4.6V",
+          "context": 128000,
+          "released": "2025-12-08",
           "price": {
-            "input": 0.59758,
-            "output": 2.68911,
-            "cache": 0.1494
+            "input": 0.1494,
+            "output": 0.44819,
+            "cache": 0.02988
+          }
+        },
+        "glm-5.3-flashx": {
+          "vendor": "zhipu",
+          "name": "GLM-5.3-FlashX",
+          "context": 1000000,
+          "released": "2026-09-18",
+          "price": {
+            "input": 0.29879,
+            "output": 1.04577,
+            "cache": 0.08516
           }
         },
         "glm-5.2": {
@@ -3829,15 +3818,37 @@
             "cache": 0.29879
           }
         },
-        "glm-5.3-flash": {
+        "glm-4.5-flash": {
           "vendor": "zhipu",
-          "name": "GLM-5.3-Flash",
-          "context": 1000000,
-          "released": "2026-08-26",
+          "name": "GLM-4.5-Flash",
+          "context": 131072,
+          "released": "2025-07-28",
           "price": {
-            "input": 0.11952,
-            "output": 0.41831,
-            "cache": 0.03436
+            "input": 0,
+            "output": 0,
+            "cache": 0
+          }
+        },
+        "glm-5": {
+          "vendor": "zhipu",
+          "name": "GLM-5",
+          "context": 204800,
+          "released": "2026-02-12",
+          "price": {
+            "input": 0.59758,
+            "output": 2.68911,
+            "cache": 0.1494
+          }
+        },
+        "glm-5.3": {
+          "vendor": "zhipu",
+          "name": "GLM-5.3",
+          "context": 1000000,
+          "released": "2026-08-14",
+          "price": {
+            "input": 1.19516,
+            "output": 4.18306,
+            "cache": 0.29879
           }
         },
         "glm-4.7-flashx": {
@@ -3851,11 +3862,66 @@
             "cache": 0.01494
           }
         },
+        "glm-5.3-flash": {
+          "vendor": "zhipu",
+          "name": "GLM-5.3-Flash",
+          "context": 1000000,
+          "released": "2026-08-26",
+          "price": {
+            "input": 0.11952,
+            "output": 0.41831,
+            "cache": 0.03436
+          }
+        },
+        "glm-4.5-air": {
+          "vendor": "zhipu",
+          "name": "GLM-4.5-Air",
+          "context": 131072,
+          "released": "2025-07-28",
+          "price": {
+            "input": 0.11952,
+            "output": 0.89637,
+            "cache": 0.0239
+          }
+        },
+        "glm-4.5v": {
+          "vendor": "zhipu",
+          "name": "GLM-4.5V",
+          "context": 64000,
+          "released": "2025-08-11",
+          "price": {
+            "input": 0.29879,
+            "output": 0.89637,
+            "cache": 0.05976
+          }
+        },
+        "glm-5.1": {
+          "vendor": "zhipu",
+          "name": "GLM-5.1",
+          "context": 200000,
+          "released": "2026-04-07",
+          "price": {
+            "input": 0.89637,
+            "output": 3.58548,
+            "cache": 0.19421
+          }
+        },
         "glm-4.6v-flash": {
           "vendor": "zhipu",
           "name": "GLM-4.6V-Flash",
           "context": 128000,
           "released": "2025-12-08",
+          "price": {
+            "input": 0,
+            "output": 0,
+            "cache": 0
+          }
+        },
+        "glm-4.7-flash": {
+          "vendor": "zhipu",
+          "name": "GLM-4.7-Flash",
+          "context": 200000,
+          "released": "2026-01-19",
           "price": {
             "input": 0,
             "output": 0,
@@ -3873,26 +3939,15 @@
             "cache": 0.11
           }
         },
-        "glm-4.6v": {
+        "glm-4.7": {
           "vendor": "zhipu",
-          "name": "GLM-4.6V",
-          "context": 128000,
-          "released": "2025-12-08",
+          "name": "GLM-4.7",
+          "context": 204800,
+          "released": "2025-12-22",
           "price": {
-            "input": 0.1494,
-            "output": 0.44819,
-            "cache": 0.02988
-          }
-        },
-        "glm-4.5-air": {
-          "vendor": "zhipu",
-          "name": "GLM-4.5-Air",
-          "context": 131072,
-          "released": "2025-07-28",
-          "price": {
-            "input": 0.11952,
-            "output": 0.89637,
-            "cache": 0.0239
+            "input": 0.44819,
+            "output": 2.09153,
+            "cache": 0.08964
           }
         },
         "glm-5v-turbo": {
@@ -3906,50 +3961,6 @@
             "cache": 0.17927
           }
         },
-        "glm-4.5v": {
-          "vendor": "zhipu",
-          "name": "GLM-4.5V",
-          "context": 64000,
-          "released": "2025-08-11",
-          "price": {
-            "input": 0.29879,
-            "output": 0.89637,
-            "cache": 0.05976
-          }
-        },
-        "glm-4.7": {
-          "vendor": "zhipu",
-          "name": "GLM-4.7",
-          "context": 204800,
-          "released": "2025-12-22",
-          "price": {
-            "input": 0.44819,
-            "output": 2.09153,
-            "cache": 0.08964
-          }
-        },
-        "glm-5.3-flashx": {
-          "vendor": "zhipu",
-          "name": "GLM-5.3-FlashX",
-          "context": 1000000,
-          "released": "2026-09-18",
-          "price": {
-            "input": 0.29879,
-            "output": 1.04577,
-            "cache": 0.08516
-          }
-        },
-        "glm-4.7-flash": {
-          "vendor": "zhipu",
-          "name": "GLM-4.7-Flash",
-          "context": 200000,
-          "released": "2026-01-19",
-          "price": {
-            "input": 0,
-            "output": 0,
-            "cache": 0
-          }
-        },
         "glm-4.6": {
           "vendor": "zhipu",
           "name": "GLM-4.6",
@@ -3961,37 +3972,48 @@
             "cache": 0.11
           }
         },
-        "glm-5.1": {
-          "vendor": "zhipu",
-          "name": "GLM-5.1",
-          "context": 200000,
-          "released": "2026-04-07",
+        "MiniMax-M2.5-highspeed": {
+          "vendor": "minimax",
+          "name": "MiniMax-M2.5-highspeed",
+          "context": 204800,
+          "released": "2026-02-13",
           "price": {
-            "input": 0.89637,
-            "output": 3.58548,
-            "cache": 0.19421
+            "input": 0.6275,
+            "output": 2.5098,
+            "cache": 0.0314
           }
         },
-        "glm-4.5-flash": {
-          "vendor": "zhipu",
-          "name": "GLM-4.5-Flash",
-          "context": 131072,
-          "released": "2025-07-28",
+        "MiniMax-M2.7": {
+          "vendor": "minimax",
+          "name": "MiniMax-M2.7",
+          "context": 204800,
+          "released": "2026-03-18",
           "price": {
-            "input": 0,
-            "output": 0,
-            "cache": 0
+            "input": 0.3137,
+            "output": 1.2549,
+            "cache": 0.0627
           }
         },
-        "glm-5.3": {
-          "vendor": "zhipu",
-          "name": "GLM-5.3",
-          "context": 1000000,
-          "released": "2026-08-14",
+        "MiniMax-M2.7-highspeed": {
+          "vendor": "minimax",
+          "name": "MiniMax-M2.7-highspeed",
+          "context": 204800,
+          "released": "2026-03-18",
           "price": {
-            "input": 1.19516,
-            "output": 4.18306,
-            "cache": 0.29879
+            "input": 0.6275,
+            "output": 2.5098,
+            "cache": 0.0627
+          }
+        },
+        "MiniMax-M2": {
+          "vendor": "minimax",
+          "name": "MiniMax-M2",
+          "context": 204800,
+          "released": "2025-10-27",
+          "price": {
+            "input": 0.3137,
+            "output": 1.2549,
+            "cache": 0.0314
           }
         },
         "MiniMax-M2.1": {
@@ -4005,15 +4027,15 @@
             "cache": 0.0314
           }
         },
-        "MiniMax-M2.7": {
+        "MiniMax-M2.5": {
           "vendor": "minimax",
-          "name": "MiniMax-M2.7",
+          "name": "MiniMax-M2.5",
           "context": 204800,
-          "released": "2026-03-18",
+          "released": "2026-02-12",
           "price": {
             "input": 0.3137,
             "output": 1.2549,
-            "cache": 0.0627
+            "cache": 0.0314
           }
         },
         "MiniMax-M3.1-Flash": {
@@ -4038,48 +4060,37 @@
             "cache": 0.0627
           }
         },
-        "MiniMax-M2": {
-          "vendor": "minimax",
-          "name": "MiniMax-M2",
-          "context": 204800,
-          "released": "2025-10-27",
+        "doubao-seed-2-0-mini-260428": {
+          "vendor": "volcengine",
+          "name": "Seed 2.0 Mini",
+          "context": 256000,
+          "released": "2026-02-14",
           "price": {
-            "input": 0.3137,
-            "output": 1.2549,
-            "cache": 0.0314
+            "input": 0.02969,
+            "output": 0.29687,
+            "cache": 0.00594
           }
         },
-        "MiniMax-M2.5": {
-          "vendor": "minimax",
-          "name": "MiniMax-M2.5",
-          "context": 204800,
-          "released": "2026-02-12",
+        "doubao-seed-evolving": {
+          "vendor": "volcengine",
+          "name": "Seed Evolving",
+          "context": 256000,
+          "released": "2026-06-23",
           "price": {
-            "input": 0.3137,
-            "output": 1.2549,
-            "cache": 0.0314
+            "input": 0.8906,
+            "output": 4.45301,
+            "cache": 0.17812
           }
         },
-        "MiniMax-M2.5-highspeed": {
-          "vendor": "minimax",
-          "name": "MiniMax-M2.5-highspeed",
-          "context": 204800,
-          "released": "2026-02-13",
+        "doubao-seed-2-0-code-preview-260215": {
+          "vendor": "volcengine",
+          "name": "Seed 2.0 Code",
+          "context": 262144,
+          "released": "2026-02-14",
           "price": {
-            "input": 0.6275,
-            "output": 2.5098,
-            "cache": 0.0314
-          }
-        },
-        "MiniMax-M2.7-highspeed": {
-          "vendor": "minimax",
-          "name": "MiniMax-M2.7-highspeed",
-          "context": 204800,
-          "released": "2026-03-18",
-          "price": {
-            "input": 0.6275,
-            "output": 2.5098,
-            "cache": 0.0627
+            "input": 0.47499,
+            "output": 2.37494,
+            "cache": 0.095
           }
         },
         "doubao-seed-2-1-turbo-260628": {
@@ -4093,15 +4104,59 @@
             "cache": 0.08906
           }
         },
-        "doubao-seed-2-0-mini-260428": {
+        "doubao-seed-2-1-pro-260628": {
           "vendor": "volcengine",
-          "name": "Seed 2.0 Mini",
+          "name": "Seed 2.1 Pro",
+          "context": 256000,
+          "released": "2026-06-23",
+          "price": {
+            "input": 0.8906,
+            "output": 4.45301,
+            "cache": 0.17812
+          }
+        },
+        "doubao-seed-character-260628": {
+          "vendor": "volcengine",
+          "name": "Seed Character",
+          "context": 256000,
+          "released": "2026-06-23",
+          "price": {
+            "input": 0.11875,
+            "output": 0.29687,
+            "cache": 0.02375
+          }
+        },
+        "doubao-seed-1-6-flash-250828": {
+          "vendor": "volcengine",
+          "name": "Seed 1.6 Flash",
+          "context": 256000,
+          "released": "2025-08-28",
+          "price": {
+            "input": 0.02227,
+            "output": 0.22265,
+            "cache": 0.00445
+          }
+        },
+        "doubao-seed-2-0-pro-260215": {
+          "vendor": "volcengine",
+          "name": "Seed 2.0 Pro",
           "context": 256000,
           "released": "2026-02-14",
           "price": {
-            "input": 0.02969,
-            "output": 0.29687,
-            "cache": 0.00594
+            "input": 0.47499,
+            "output": 2.37494,
+            "cache": 0.095
+          }
+        },
+        "doubao-seed-1-8-251228": {
+          "vendor": "volcengine",
+          "name": "Seed 1.8",
+          "context": 256000,
+          "released": "2025-12-28",
+          "price": {
+            "input": 0.11875,
+            "output": 1.18747,
+            "cache": 0.02375
           }
         },
         "doubao-seed-1-6-vision-250815": {
@@ -4109,17 +4164,6 @@
           "name": "Seed 1.6 Vision",
           "context": 256000,
           "released": "2025-08-15",
-          "price": {
-            "input": 0.11875,
-            "output": 1.18747,
-            "cache": 0.02375
-          }
-        },
-        "doubao-seed-1-6-251015": {
-          "vendor": "volcengine",
-          "name": "Seed 1.6",
-          "context": 256000,
-          "released": "2025-10-15",
           "price": {
             "input": 0.11875,
             "output": 1.18747,
@@ -4137,81 +4181,15 @@
             "cache": 0.01781
           }
         },
-        "doubao-seed-1-8-251228": {
+        "doubao-seed-1-6-251015": {
           "vendor": "volcengine",
-          "name": "Seed 1.8",
+          "name": "Seed 1.6",
           "context": 256000,
-          "released": "2025-12-28",
+          "released": "2025-10-15",
           "price": {
             "input": 0.11875,
             "output": 1.18747,
             "cache": 0.02375
-          }
-        },
-        "doubao-seed-character-260628": {
-          "vendor": "volcengine",
-          "name": "Seed Character",
-          "context": 256000,
-          "released": "2026-06-23",
-          "price": {
-            "input": 0.11875,
-            "output": 0.29687,
-            "cache": 0.02375
-          }
-        },
-        "doubao-seed-2-0-code-preview-260215": {
-          "vendor": "volcengine",
-          "name": "Seed 2.0 Code",
-          "context": 262144,
-          "released": "2026-02-14",
-          "price": {
-            "input": 0.47499,
-            "output": 2.37494,
-            "cache": 0.095
-          }
-        },
-        "doubao-seed-evolving": {
-          "vendor": "volcengine",
-          "name": "Seed Evolving",
-          "context": 256000,
-          "released": "2026-06-23",
-          "price": {
-            "input": 0.8906,
-            "output": 4.45301,
-            "cache": 0.17812
-          }
-        },
-        "doubao-seed-2-1-pro-260628": {
-          "vendor": "volcengine",
-          "name": "Seed 2.1 Pro",
-          "context": 256000,
-          "released": "2026-06-23",
-          "price": {
-            "input": 0.8906,
-            "output": 4.45301,
-            "cache": 0.17812
-          }
-        },
-        "doubao-seed-2-0-pro-260215": {
-          "vendor": "volcengine",
-          "name": "Seed 2.0 Pro",
-          "context": 256000,
-          "released": "2026-02-14",
-          "price": {
-            "input": 0.47499,
-            "output": 2.37494,
-            "cache": 0.095
-          }
-        },
-        "doubao-seed-1-6-flash-250828": {
-          "vendor": "volcengine",
-          "name": "Seed 1.6 Flash",
-          "context": 256000,
-          "released": "2025-08-28",
-          "price": {
-            "input": 0.02227,
-            "output": 0.22265,
-            "cache": 0.00445
           }
         }
       }
@@ -4225,7 +4203,7 @@
           "url": "https://developers.openai.com/api/docs/pricing",
           "ok": false,
           "error": "HTTP 403",
-          "checkedAt": "2026-11-04T03:32:14.009Z"
+          "checkedAt": "2026-11-08T16:22:40.187Z"
         },
         "https://openai.com/api/pricing/": {
           "label": "开放平台定价",
@@ -4257,8 +4235,8 @@
             "o6eyyi"
           ],
           "prices": [],
-          "contentLength": 545042,
-          "checkedAt": "2026-11-04T03:32:20.430Z"
+          "contentLength": 764198,
+          "checkedAt": "2026-11-08T16:22:46.368Z"
         }
       }
     },
@@ -4344,8 +4322,8 @@
             "$6.25/ mtok",
             "$8"
           ],
-          "contentLength": 1324719,
-          "checkedAt": "2026-11-04T03:32:14.161Z"
+          "contentLength": 1322961,
+          "checkedAt": "2026-11-08T16:22:40.366Z"
         }
       }
     },
@@ -4357,7 +4335,7 @@
           "ok": true,
           "title": "Gemini Developer API pricing - Gemini API | Google AI Studio",
           "rendered": false,
-          "signal": "b481e5abd1588994",
+          "signal": "a1ec9f0b68852fb4",
           "models": [
             "gemini-2.5-flash",
             "gemini-2.5-flash-image",
@@ -4394,6 +4372,7 @@
             "gemini-embedding-2",
             "gemini-nano-banana-2.1",
             "gemini-omni-1.1-flash",
+            "gemini-omni-1.2-flash",
             "gemini-robotics-er-2",
             "gemini-robotics-er-2-preview",
             "gemini-robotics-er-2-streaming",
@@ -4432,6 +4411,7 @@
             "$0.018/min",
             "$0.0195 per image",
             "$0.02",
+            "$0.023/s",
             "$0.025",
             "$0.0252",
             "$0.03",
@@ -4451,6 +4431,7 @@
             "$0.0567",
             "$0.067",
             "$0.067 per image",
+            "$0.07 per second",
             "$0.0702 per image",
             "$0.075",
             "$0.08 per song",
@@ -4459,6 +4440,7 @@
             "$0.1 per second",
             "$0.101",
             "$0.101 per image",
+            "$0.104/s",
             "$0.113",
             "$0.113 per image",
             "$0.125",
@@ -4470,6 +4452,7 @@
             "$0.151 per image",
             "$0.18",
             "$0.2",
+            "$0.209/s",
             "$0.225",
             "$0.24",
             "$0.24 per image",
@@ -4483,10 +4466,12 @@
             "$0.5",
             "$0.54",
             "$0.625",
+            "$0.7",
             "$0.72",
             "$0.75",
             "$0.9",
             "$1",
+            "$1.04",
             "$1.25",
             "$1.35",
             "$1.5",
@@ -4533,8 +4518,8 @@
             "$8.1",
             "$9"
           ],
-          "contentLength": 139101,
-          "checkedAt": "2026-11-04T03:32:15.615Z"
+          "contentLength": 141216,
+          "checkedAt": "2026-11-08T16:22:41.963Z"
         }
       }
     },
@@ -4570,8 +4555,8 @@
             "$1.98",
             "$3.96"
           ],
-          "contentLength": 62664,
-          "checkedAt": "2026-11-04T03:32:19.693Z"
+          "contentLength": 62415,
+          "checkedAt": "2026-11-08T16:22:45.548Z"
         }
       }
     },
@@ -4583,7 +4568,7 @@
           "ok": true,
           "title": "阿里云百炼模型价格-大模型服务平台百炼(Model Studio)-阿里云帮助中心",
           "rendered": false,
-          "signal": "46de9c2d067d34a6",
+          "signal": "9e8d2c3e2cb886a1",
           "models": [
             "qwen2-audio-instruct",
             "qwen2.5",
@@ -4841,6 +4826,7 @@
             "1.12413 元",
             "1.174 元",
             "1.2 元",
+            "1.3 元",
             "1.321063 元",
             "1.348956 元",
             "1.35 元",
@@ -4897,6 +4883,7 @@
             "14 元",
             "14.4 元",
             "14.438 元",
+            "14.583 元",
             "14.605 元",
             "14.678 元",
             "14.988 元",
@@ -4917,6 +4904,7 @@
             "17.5 元",
             "17.614 元",
             "17.986 元",
+            "175.002 元",
             "179.861 元",
             "18 元",
             "18.055 元",
@@ -5023,6 +5011,7 @@
             "42 元",
             "44.965 元",
             "46.292 元",
+            "46.667 元",
             "46.971 元",
             "464.64 元",
             "47.963 元",
@@ -5033,6 +5022,7 @@
             "5.125 元",
             "5.4 元",
             "5.725 元",
+            "5.833 元",
             "5.871 元",
             "5.995 元",
             "50 积分/次",
@@ -5062,6 +5052,7 @@
             "7.4942 元",
             "70.457 元",
             "72 元",
+            "72.917 元",
             "75.1 元",
             "79 元",
             "8 元",
@@ -5088,8 +5079,8 @@
             "¥0.3",
             "¥50"
           ],
-          "contentLength": 1401523,
-          "checkedAt": "2026-11-04T03:32:14.971Z"
+          "contentLength": 1409275,
+          "checkedAt": "2026-11-08T16:22:41.231Z"
         }
       }
     },
@@ -5101,7 +5092,7 @@
           "ok": true,
           "title": "模型推理价格说明 - Kimi API 开放平台",
           "rendered": false,
-          "signal": "b07ae67aa69f0f2a",
+          "signal": "dc76b0e26669cf6b",
           "models": [
             "kimi-k2.6",
             "kimi-k2.7-code",
@@ -5111,15 +5102,6 @@
             "kimi-k3.1-pro-highspeed"
           ],
           "prices": [
-            "$1",
-            "$10",
-            "$19",
-            "$23",
-            "$36",
-            "$4",
-            "$47",
-            "$53",
-            "$54",
             "¥1.1/ mtok",
             "¥1.3/ mtok",
             "¥100/ mtok",
@@ -5136,8 +5118,8 @@
             "¥6.5/ mtok",
             "¥68/ mtok"
           ],
-          "contentLength": 290714,
-          "checkedAt": "2026-11-04T03:32:15.393Z"
+          "contentLength": 147660,
+          "checkedAt": "2026-11-08T16:22:41.953Z"
         }
       }
     },
@@ -5227,8 +5209,8 @@
             "6 元",
             "80 元"
           ],
-          "contentLength": 220694,
-          "checkedAt": "2026-11-04T03:32:15.430Z"
+          "contentLength": 221425,
+          "checkedAt": "2026-11-08T16:22:41.988Z"
         }
       }
     },
@@ -5240,7 +5222,7 @@
           "ok": true,
           "title": "定价概览 - MiniMax 开放平台文档中心",
           "rendered": false,
-          "signal": "a38ab13b04fdddeb",
+          "signal": "d03e7c24b77eef36",
           "models": [
             "hailuo-02",
             "hailuo-2.3",
@@ -5265,7 +5247,6 @@
           ],
           "prices": [
             "2 元",
-            "¥0.025",
             "¥0.13",
             "¥0.15",
             "¥0.16",
@@ -5299,8 +5280,8 @@
             "¥70",
             "¥700"
           ],
-          "contentLength": 298055,
-          "checkedAt": "2026-11-04T03:32:15.984Z"
+          "contentLength": 299924,
+          "checkedAt": "2026-11-08T16:22:44.913Z"
         }
       }
     },
@@ -5338,8 +5319,8 @@
             "500 元",
             "600 元"
           ],
-          "contentLength": 1858077,
-          "checkedAt": "2026-11-04T03:32:25.520Z"
+          "contentLength": 1859069,
+          "checkedAt": "2026-11-08T16:22:53.835Z"
         }
       }
     },
@@ -5351,7 +5332,7 @@
           "ok": true,
           "title": "Pricing | Black Forest Labs",
           "rendered": false,
-          "signal": "b4f5833205ce8dc2",
+          "signal": "5e321bd33e0eff68",
           "models": [
             "flux-11",
             "flux-2",
@@ -5373,20 +5354,72 @@
           ],
           "prices": [
             "$0.001",
+            "$0.001/mp",
             "$0.002",
+            "$0.002/mp",
             "$0.004",
+            "$0.004/mp",
             "$0.005",
+            "$0.005/mp",
             "$0.006",
+            "$0.008",
+            "$0.008/img",
+            "$0.009",
+            "$0.009/img",
+            "$0.011",
+            "$0.011/img",
             "$0.014",
+            "$0.014/img",
             "$0.015",
+            "$0.015/mp",
+            "$0.025",
+            "$0.025/img",
             "$0.03",
+            "$0.03/mp",
+            "$0.03/s",
+            "$0.035",
+            "$0.035/mp",
+            "$0.036",
+            "$0.036/img",
             "$0.0375",
+            "$0.04",
+            "$0.04/img",
+            "$0.041",
+            "$0.041/img",
             "$0.045",
             "$0.048",
             "$0.048/ image",
+            "$0.048/img",
             "$0.05",
+            "$0.05/img",
+            "$0.05/mp",
+            "$0.06",
+            "$0.06/img",
+            "$0.06/s",
             "$0.07",
+            "$0.07/img",
+            "$0.08",
+            "$0.08/img",
             "$0.1",
+            "$0.1/img",
+            "$0.15",
+            "$0.15/s",
+            "$0.21",
+            "$0.21/s",
+            "$0.24",
+            "$0.24/s",
+            "$0.27",
+            "$0.27/s",
+            "$0.28",
+            "$0.28/s",
+            "$0.31",
+            "$0.31/s",
+            "$0.41",
+            "$0.41/s",
+            "$0.45",
+            "$0.45/s",
+            "$0.607",
+            "$0.607/img",
             "$0.69",
             "$0.99",
             "$1",
@@ -5399,8 +5432,8 @@
             "$51",
             "$53"
           ],
-          "contentLength": 334914,
-          "checkedAt": "2026-11-04T03:32:16.068Z"
+          "contentLength": 404570,
+          "checkedAt": "2026-11-08T16:22:49.206Z"
         }
       }
     },
@@ -5422,7 +5455,7 @@
           ],
           "prices": [],
           "contentLength": 91870,
-          "checkedAt": "2026-11-04T03:32:16.161Z"
+          "checkedAt": "2026-11-08T16:22:45.640Z"
         }
       }
     },
@@ -5434,7 +5467,7 @@
           "ok": true,
           "title": "API Pricing & Costs | Runway Dev",
           "rendered": false,
-          "signal": "7e6e6ffa916b19e3",
+          "signal": "4bd428e34012e708",
           "models": [
             "aleph2",
             "gen4.5",
@@ -5468,12 +5501,14 @@
             "16 credits per second",
             "17 credits per second",
             "18.8 credits per second",
+            "19 credits per image",
             "2 credits per image",
             "2 credits per reference",
             "2 credits per second",
             "20 credits per generated",
             "20 credits per second",
             "21 credits per localized",
+            "21 credits per second",
             "24 credits per second",
             "25 credits per image",
             "28 credits per second",
@@ -5491,6 +5526,7 @@
             "43 credits per second",
             "5 credits per image",
             "5 credits per second",
+            "6.3 credits per second",
             "6.8 credits per second",
             "68 credits per second",
             "7 credits per second",
@@ -5502,8 +5538,8 @@
             "9 credits per second",
             "9.4 credits per second"
           ],
-          "contentLength": 97435,
-          "checkedAt": "2026-11-04T03:32:16.879Z"
+          "contentLength": 101362,
+          "checkedAt": "2026-11-08T16:22:46.310Z"
         }
       }
     },
@@ -5515,15 +5551,15 @@
           "ok": true,
           "title": "Video | Kling AI API Documentation",
           "rendered": true,
-          "signal": "6e4e1443e57c4192",
+          "signal": "b299f450c17fcc60",
           "models": [
             "kling-2.5-turbo",
             "kling-2.6",
             "kling-3.0",
             "kling-3.0-omni",
             "kling-3.0-turbo",
-            "kling-4",
-            "kling-4.0"
+            "kling-4.0",
+            "kling-4.0-flash"
           ],
           "prices": [
             "$1",
@@ -5542,8 +5578,8 @@
             "1.5 units/s",
             "3 units/s"
           ],
-          "contentLength": 170198,
-          "checkedAt": "2026-11-04T03:32:21.944Z"
+          "contentLength": 181186,
+          "checkedAt": "2026-11-08T16:22:51.401Z"
         }
       }
     },
@@ -5667,8 +5703,8 @@
             "¥50",
             "¥6.25"
           ],
-          "contentLength": 838370,
-          "checkedAt": "2026-11-04T03:32:25.376Z"
+          "contentLength": 838630,
+          "checkedAt": "2026-11-08T16:22:52.032Z"
         },
         "https://platform.vidu.cn/models": {
           "label": "模型总览",
@@ -5677,15 +5713,13 @@
           "ok": true,
           "title": "Vidu API 平台",
           "rendered": true,
-          "signal": "408373bae355d39c",
+          "signal": "1debcdea253958ad",
           "models": [
-            "vidu-q1",
             "vidu-q2",
             "vidu-q3",
             "vidu-q4-preview",
             "vidu-s2-avatar",
             "viduq1",
-            "viduq1-image",
             "viduq1classic",
             "viduq2",
             "viduq2-image",
@@ -5701,8 +5735,8 @@
             "viduq4preview"
           ],
           "prices": [],
-          "contentLength": 387954,
-          "checkedAt": "2026-11-04T03:32:25.874Z"
+          "contentLength": 381473,
+          "checkedAt": "2026-11-08T16:22:55.722Z"
         }
       }
     },
@@ -5714,7 +5748,7 @@
           "ok": true,
           "title": "ElevenLabs API Pricing: Plans for Creators & Businesses of All Sizes",
           "rendered": false,
-          "signal": "ffe16871bc733d3d",
+          "signal": "e4c589ab3788e92b",
           "models": [
             "eleven_realtime_v1_max",
             "eleven_realtime_v1_mini",
@@ -5799,9 +5833,9 @@
             "$52",
             "$53",
             "$54",
+            "$55",
             "$6",
             "$6 per month",
-            "$62",
             "$63",
             "$64",
             "$65",
@@ -5811,8 +5845,10 @@
             "$8",
             "$84",
             "$9",
-            "$95",
-            "$97",
+            "$92",
+            "$94",
+            "$96",
+            "$98",
             "$99",
             "$99 per month",
             "$990",
@@ -5832,8 +5868,8 @@
             "5000 credits per minute",
             "67 credits per second"
           ],
-          "contentLength": 899504,
-          "checkedAt": "2026-11-04T03:32:22.113Z"
+          "contentLength": 902374,
+          "checkedAt": "2026-11-08T16:22:51.540Z"
         }
       }
     },
@@ -5845,7 +5881,7 @@
           "ok": true,
           "title": "Deepgram pricing | Scalable speech-to-text, text-to-speech & Voice Agent APIs | Deepgram",
           "rendered": false,
-          "signal": "2facc36aba105f43",
+          "signal": "da20152eaa5ddc99",
           "models": [
             "aura-1",
             "aura-2",
@@ -5914,34 +5950,33 @@
             "$0.87",
             "$0.99",
             "$1",
-            "$12",
+            "$11",
             "$2.46",
             "$200",
             "$3",
             "$3.06",
             "$3.54",
             "$3.9",
-            "$37",
+            "$35",
+            "$39",
             "$4",
             "$4.08",
             "$4.5",
             "$41",
-            "$43",
             "$5",
             "$500",
             "$6.6",
+            "$64",
             "$65",
             "$66",
             "$67",
-            "$68",
-            "$69",
             "$7",
             "$7.32",
             "$8.76",
             "$9.78"
           ],
-          "contentLength": 603079,
-          "checkedAt": "2026-11-04T03:32:22.188Z"
+          "contentLength": 604169,
+          "checkedAt": "2026-11-08T16:22:51.605Z"
         },
         "https://developers.deepgram.com/docs/models-languages-overview": {
           "label": "模型与语言总览",
@@ -5974,8 +6009,8 @@
             "nova-3-pharma"
           ],
           "prices": [],
-          "contentLength": 241012,
-          "checkedAt": "2026-11-04T03:32:23.185Z"
+          "contentLength": 243880,
+          "checkedAt": "2026-11-08T16:22:51.905Z"
         }
       }
     },
@@ -6020,8 +6055,8 @@
             "3 credits per second",
             "800 credits per minute"
           ],
-          "contentLength": 322917,
-          "checkedAt": "2026-11-04T03:32:23.274Z"
+          "contentLength": 320904,
+          "checkedAt": "2026-11-08T16:22:52.001Z"
         },
         "https://docs.cartesia.ai/build-with-cartesia/tts-models/latest": {
           "label": "TTS 模型文档",
@@ -6043,8 +6078,8 @@
             "sonic-3.6-yyyy-mm-dd"
           ],
           "prices": [],
-          "contentLength": 392977,
-          "checkedAt": "2026-11-04T03:32:23.531Z"
+          "contentLength": 393271,
+          "checkedAt": "2026-11-08T16:22:52.145Z"
         }
       }
     },
@@ -6132,8 +6167,8 @@
             "$8",
             "$9"
           ],
-          "contentLength": 325434,
-          "checkedAt": "2026-11-04T03:32:23.600Z"
+          "contentLength": 326813,
+          "checkedAt": "2026-11-08T16:22:52.102Z"
         },
         "https://www.assemblyai.com/docs/getting-started/models": {
           "label": "模型总览",
@@ -6151,8 +6186,8 @@
             "universal-3.6"
           ],
           "prices": [],
-          "contentLength": 446984,
-          "checkedAt": "2026-11-04T03:32:23.691Z"
+          "contentLength": 237845,
+          "checkedAt": "2026-11-08T16:22:52.213Z"
         }
       }
     }
